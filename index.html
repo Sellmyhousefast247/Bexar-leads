@@ -1,1 +1,282 @@
-file:///C:/Users/leode/Downloads/Bexar-intel/files/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bexar Leads — Sell My House Fast 247</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{--bg:#0a0c10;--surface:#111318;--surface2:#181c23;--border:#1e2330;--accent:#e8b84b;--accent2:#f04f4f;--accent3:#4fafea;--text:#e8ecf2;--muted:#6b7485;--green:#4cd976;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;min-height:100vh;overflow-x:hidden;}
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:0;z-index:100;}
+  .logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent);}
+  .logo span{color:var(--text);}
+  .header-meta{display:flex;align-items:center;gap:20px;font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;}
+  .header-meta .live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block;box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+  .shell{display:grid;grid-template-columns:260px 1fr;min-height:calc(100vh - 57px);}
+  aside{background:var(--surface);border-right:1px solid var(--border);padding:24px 16px;display:flex;flex-direction:column;gap:28px;}
+  .stat-block{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:18px;}
+  .stat-block-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;font-family:'DM Mono',monospace;}
+  .stat-big{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--accent);line-height:1;}
+  .stat-sub{font-size:11px;color:var(--muted);margin-top:4px;}
+  .filter-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:10px;}
+  .filter-group{display:flex;flex-direction:column;gap:6px;}
+  .filter-btn{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:7px;border:1px solid transparent;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif;font-size:13px;text-align:left;width:100%;}
+  .filter-btn:hover{background:var(--surface2);color:var(--text);}
+  .filter-btn.active{background:var(--surface2);border-color:var(--border);color:var(--text);}
+  .filter-btn .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-right:8px;}
+  .filter-btn .count-badge{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
+  .filter-label-wrap{display:flex;align-items:center;}
+  .score-filter{margin-top:4px;}
+  .score-filter label{display:block;font-size:12px;color:var(--muted);margin-bottom:8px;}
+  .score-filter input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer;}
+  .score-vals{display:flex;justify-content:space-between;font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);margin-top:4px;}
+  main{padding:0;display:flex;flex-direction:column;}
+  .toolbar{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid var(--border);background:var(--surface);position:sticky;top:57px;z-index:50;flex-wrap:wrap;}
+  .search-wrap{flex:1;min-width:200px;position:relative;}
+  .search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none;}
+  .search-wrap input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:9px 12px 9px 36px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color 0.15s;}
+  .search-wrap input:focus{border-color:var(--accent);}
+  .search-wrap input::placeholder{color:var(--muted);}
+  .sort-select{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;outline:none;}
+  .result-count{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);white-space:nowrap;}
+  .export-btn{background:var(--accent);color:#000;font-weight:600;font-size:12px;border:none;border-radius:7px;padding:9px 16px;cursor:pointer;letter-spacing:0.5px;transition:opacity 0.15s;white-space:nowrap;font-family:'DM Sans',sans-serif;}
+  .export-btn:hover{opacity:0.85;}
+  .table-wrap{flex:1;overflow-x:auto;padding:20px 24px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  thead th{text-align:left;padding:10px 14px;font-family:'DM Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none;}
+  thead th:hover{color:var(--text);}
+  tbody tr{border-bottom:1px solid var(--border);transition:background 0.1s;cursor:pointer;}
+  tbody tr:hover{background:var(--surface2);}
+  tbody td{padding:12px 14px;vertical-align:middle;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .score-pill{display:inline-flex;align-items:center;justify-content:center;width:38px;height:24px;border-radius:5px;font-family:'DM Mono',monospace;font-size:12px;font-weight:500;}
+  .score-high{background:#4cd97622;color:var(--green);border:1px solid #4cd97644;}
+  .score-mid{background:#e8b84b22;color:var(--accent);border:1px solid #e8b84b44;}
+  .score-low{background:#6b748522;color:var(--muted);border:1px solid #6b748544;}
+  .cat-tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:0.5px;white-space:nowrap;}
+  .flag-list{display:flex;gap:4px;flex-wrap:nowrap;}
+  .flag-chip{display:inline-block;padding:2px 6px;border-radius:3px;font-size:10px;background:#ffffff0d;color:var(--muted);white-space:nowrap;font-family:'DM Mono',monospace;}
+  .state-box{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;gap:16px;color:var(--muted);}
+  .state-box .state-icon{font-size:40px;}
+  .state-box h3{color:var(--text);font-size:16px;font-weight:500;}
+  .state-box p{font-size:13px;text-align:center;max-width:360px;line-height:1.6;}
+  .drawer-overlay{position:fixed;inset:0;background:#00000088;z-index:200;display:none;backdrop-filter:blur(2px);}
+  .drawer-overlay.open{display:block;}
+  .drawer{position:fixed;top:0;right:0;bottom:0;width:420px;background:var(--surface);border-left:1px solid var(--border);z-index:201;transform:translateX(100%);transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;overflow-y:auto;}
+  .drawer.open{transform:translateX(0);}
+  .drawer-header{padding:20px 24px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:12px;position:sticky;top:0;background:var(--surface);}
+  .drawer-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--accent);line-height:1.1;}
+  .drawer-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:20px;padding:4px;flex-shrink:0;}
+  .drawer-close:hover{color:var(--text);}
+  .drawer-body{padding:20px 24px;flex:1;display:flex;flex-direction:column;gap:20px;}
+  .detail-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);font-family:'DM Mono',monospace;margin-bottom:10px;}
+  .detail-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);}
+  .detail-row:last-child{border-bottom:none;}
+  .detail-key{color:var(--muted);font-size:12px;flex-shrink:0;}
+  .detail-val{color:var(--text);font-size:13px;font-family:'DM Mono',monospace;text-align:right;word-break:break-word;}
+  .detail-section{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .drawer-action-row{display:flex;gap:10px;flex-wrap:wrap;padding:16px 24px;border-top:1px solid var(--border);background:var(--surface);position:sticky;bottom:0;}
+  .action-btn{flex:1;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);color:var(--text);font-size:12px;font-weight:500;cursor:pointer;text-align:center;transition:border-color 0.15s;text-decoration:none;font-family:'DM Sans',sans-serif;}
+  .action-btn:hover{border-color:var(--accent);color:var(--accent);}
+  .action-btn.primary{background:var(--accent);color:#000;border-color:var(--accent);}
+  .action-btn.primary:hover{opacity:0.85;color:#000;}
+  .spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .pagination{display:flex;align-items:center;justify-content:center;gap:8px;padding:20px 24px;border-top:1px solid var(--border);}
+  .page-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:7px;padding:7px 14px;cursor:pointer;font-size:13px;font-family:'DM Mono',monospace;transition:border-color 0.15s;}
+  .page-btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent);}
+  .page-btn:disabled{opacity:0.3;cursor:default;}
+  .page-btn.active{background:var(--accent);color:#000;border-color:var(--accent);}
+  .page-info{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);}
+  @media(max-width:900px){.shell{grid-template-columns:1fr;}aside{display:none;}.drawer{width:100%;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">BEXAR <span>LEADS</span></div>
+  <div class="header-meta">
+    <span><span class="live-dot"></span>&nbsp;LIVE</span>
+    <span id="hdr-range">—</span>
+    <span id="hdr-source">Bexar County Clerk</span>
+    <span id="hdr-fetched">—</span>
+  </div>
+</header>
+<div class="shell">
+  <aside>
+    <div class="stat-block">
+      <div class="stat-block-label">Total Leads</div>
+      <div class="stat-big" id="stat-total">—</div>
+      <div class="stat-sub" id="stat-addr">— with address</div>
+    </div>
+    <div>
+      <div class="filter-section-title">Lead Type</div>
+      <div class="filter-group" id="cat-filters">
+        <button class="filter-btn active" data-cat="ALL" onclick="setCatFilter('ALL',this)">
+          <div class="filter-label-wrap"><span class="dot" style="background:#e8b84b"></span>All Types</div>
+          <span class="count-badge" id="cnt-ALL">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="score-filter">
+      <div class="filter-section-title">Min Score</div>
+      <label>Score &ge; <span id="score-val">0</span></label>
+      <input type="range" min="0" max="100" value="0" id="score-range" oninput="setScoreFilter(this.value)" />
+      <div class="score-vals"><span>0</span><span>50</span><span>100</span></div>
+    </div>
+    <div>
+      <div class="filter-section-title">Date Range</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <input type="date" id="date-from" onchange="applyFilters()" style="background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:8px 10px;color:var(--text);font-size:12px;outline:none;width:100%;" />
+        <input type="date" id="date-to" onchange="applyFilters()" style="background:var(--surface2);border:1px solid var(--border);border-radius:7px;padding:8px 10px;color:var(--text);font-size:12px;outline:none;width:100%;" />
+      </div>
+    </div>
+  </aside>
+  <main>
+    <div class="toolbar">
+      <div class="search-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="search-input" placeholder="Search owner, address, doc #..." oninput="applyFilters()" />
+      </div>
+      <select class="sort-select" id="sort-select" onchange="applyFilters()">
+        <option value="score_desc">Score &#8595;</option>
+        <option value="score_asc">Score &#8593;</option>
+        <option value="date_desc">Date &#8595;</option>
+        <option value="date_asc">Date &#8593;</option>
+        <option value="amount_desc">Amount &#8595;</option>
+      </select>
+      <span class="result-count" id="result-count">— leads</span>
+      <button class="export-btn" onclick="exportCSV()">&#8615; Export CSV</button>
+    </div>
+    <div class="table-wrap" id="table-area">
+      <div class="state-box"><div class="spinner"></div><h3>Loading leads...</h3></div>
+    </div>
+    <div class="pagination" id="pagination" style="display:none"></div>
+  </main>
+</div>
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="detail-drawer">
+  <div class="drawer-header">
+    <div>
+      <div class="drawer-title" id="drawer-owner">—</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;" id="drawer-doc-num">—</div>
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()">&#x2715;</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-action-row" id="drawer-actions"></div>
+</div>
+<script>
+let allRecords=[],filtered=[],activeCat='ALL',minScore=0,searchQ='',sortKey='score_desc',page=1;
+const PAGE_SIZE=50;
+const CAT={LP:{label:'Lis Pendens',color:'#e8b84b'},FC:{label:'Foreclosure',color:'#f04f4f'},JUD:{label:'Judgment',color:'#b88ef7'},LIEN:{label:'Lien',color:'#4fafea'},PRO:{label:'Probate',color:'#4cd976'},OTHER:{label:'Other',color:'#6b7485'}};
+const cc=c=>CAT[c]?.color||'#6b7485',cl=c=>CAT[c]?.label||c;
+function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):''}
+async function loadData(){
+  try{
+    const r=await fetch('./records.json');
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    allRecords=j.records||[];
+    document.getElementById('hdr-fetched').textContent=j.fetched_at?'Updated '+new Date(j.fetched_at).toLocaleString():'';
+    if(j.date_range)document.getElementById('hdr-range').textContent=j.date_range.start+' to '+j.date_range.end;
+    document.getElementById('hdr-source').textContent=j.source||'Bexar County Clerk';
+    document.getElementById('stat-total').textContent=j.total??allRecords.length;
+    document.getElementById('stat-addr').textContent=(j.with_address??allRecords.filter(r=>r.prop_address).length)+' with address';
+    buildFilters();applyFilters();
+  }catch(e){document.getElementById('table-area').innerHTML='<div class="state-box"><div class="state-icon">&#9888;</div><h3>Could not load leads</h3><p>'+e.message+'<br>Make sure records.json is in the dashboard/ folder.</p></div>';}
+}
+function buildFilters(){
+  const counts={};
+  allRecords.forEach(r=>{const c=r.cat||'OTHER';counts[c]=(counts[c]||0)+1;});
+  counts['ALL']=allRecords.length;
+  const w=document.getElementById('cat-filters');w.innerHTML='';
+  ['ALL','LP','FC','JUD','LIEN','PRO','OTHER'].forEach(cat=>{
+    if(cat!=='ALL'&&!counts[cat])return;
+    const color=cat==='ALL'?'#e8b84b':cc(cat),label=cat==='ALL'?'All Types':cl(cat);
+    const b=document.createElement('button');
+    b.className='filter-btn'+(cat===activeCat?' active':'');
+    b.dataset.cat=cat;b.onclick=()=>setCat(cat,b);
+    b.innerHTML='<div class="filter-label-wrap"><span class="dot" style="background:'+color+';margin-right:8px;"></span>'+label+'</div><span class="count-badge">'+(counts[cat]||0)+'</span>';
+    w.appendChild(b);
+  });
+}
+function setCat(cat,btn){activeCat=cat;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');page=1;applyFilters();}
+function setScoreFilter(v){minScore=parseInt(v);document.getElementById('score-val').textContent=v;page=1;applyFilters();}
+function applyFilters(){
+  searchQ=document.getElementById('search-input').value.toLowerCase();
+  sortKey=document.getElementById('sort-select').value;
+  const df=document.getElementById('date-from').value,dt=document.getElementById('date-to').value;
+  filtered=allRecords.filter(r=>{
+    if(activeCat!=='ALL'&&(r.cat||'OTHER')!==activeCat)return false;
+    if((r.score||0)<minScore)return false;
+    if(df&&r.filed&&r.filed<df)return false;
+    if(dt&&r.filed&&r.filed>dt)return false;
+    if(searchQ&&![r.owner,r.grantee,r.prop_address,r.doc_num,r.doc_type,r.legal].join(' ').toLowerCase().includes(searchQ))return false;
+    return true;
+  });
+  filtered.sort((a,b)=>{
+    if(sortKey==='score_desc')return(b.score||0)-(a.score||0);
+    if(sortKey==='score_asc')return(a.score||0)-(b.score||0);
+    if(sortKey==='date_desc')return(b.filed||'').localeCompare(a.filed||'');
+    if(sortKey==='date_asc')return(a.filed||'').localeCompare(b.filed||'');
+    return(b.amount||0)-(a.amount||0);
+  });
+  document.getElementById('result-count').textContent=filtered.length+' leads';
+  renderTable();renderPagination();
+}
+function renderTable(){
+  const area=document.getElementById('table-area'),start=(page-1)*PAGE_SIZE,rows=filtered.slice(start,start+PAGE_SIZE);
+  if(!allRecords.length){area.innerHTML='<div class="state-box"><div class="state-icon">&#128203;</div><h3>No leads yet</h3><p>The scraper has not pulled any records yet. Wait for the daily 7 AM scrape or trigger the GitHub Action manually.</p></div>';return;}
+  if(!rows.length){area.innerHTML='<div class="state-box"><div class="state-icon">&#128269;</div><h3>No matches</h3><p>Try adjusting your filters or search query.</p></div>';return;}
+  let h='<table><thead><tr><th>Score</th><th>Type</th><th>Filed</th><th>Owner</th><th>Property Address</th><th>Amount</th><th>Flags</th><th>Doc #</th></tr></thead><tbody>';
+  rows.forEach((r,i)=>{
+    const s=r.score||0,sc=s>=70?'score-high':s>=40?'score-mid':'score-low',cat=r.cat||'OTHER',col=cc(cat);
+    const flags=(r.flags||[]).slice(0,3).map(f=>'<span class="flag-chip">'+f.replace(/_/g,' ').toLowerCase()+'</span>').join('');
+    h+='<tr onclick="openDrawer('+(start+i)+')" ><td><span class="score-pill '+sc+'">'+s+'</span></td><td><span class="cat-tag" style="background:'+col+'22;color:'+col+';border:1px solid '+col+'44;">'+cl(cat)+'</span></td><td style="font-family:'DM Mono',monospace;font-size:12px;">'+(r.filed||'—')+'</td><td title="'+esc(r.owner)+'">'+(esc(r.owner)||'—')+'</td><td title="'+esc(r.prop_address)+'">'+(esc(r.prop_address)||'<span style="color:var(--muted)">no address</span>')+'</td><td style="font-family:'DM Mono',monospace;">'+(r.amount?'$'+Number(r.amount).toLocaleString():'—')+'</td><td><div class="flag-list">'+(flags||'<span style="color:var(--muted)">—</span>')+'</div></td><td><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);">'+(esc(r.doc_num)||'—')+'</span></td></tr>';
+  });
+  h+='</tbody></table>';area.innerHTML=h;
+}
+function renderPagination(){
+  const total=filtered.length,tp=Math.ceil(total/PAGE_SIZE),w=document.getElementById('pagination');
+  if(tp<=1){w.style.display='none';return;}w.style.display='flex';
+  let h='<button class="page-btn" onclick="goPage('+(page-1)+')" '+(page===1?'disabled':'')+'>&#8592; Prev</button>';
+  for(let p2=Math.max(1,page-2);p2<=Math.min(tp,page+2);p2++)h+='<button class="page-btn'+(p2===page?' active':'')+'" onclick="goPage('+p2+')">'+p2+'</button>';
+  h+='<button class="page-btn" onclick="goPage('+(page+1)+')" '+(page===tp?'disabled':'')+'>Next &#8594;</button><span class="page-info">'+((page-1)*PAGE_SIZE+1)+'&ndash;'+Math.min(page*PAGE_SIZE,total)+' of '+total+'</span>';
+  w.innerHTML=h;
+}
+function goPage(p){page=p;renderTable();renderPagination();}
+function openDrawer(idx){
+  const r=filtered[idx];if(!r)return;
+  document.getElementById('drawer-owner').textContent=r.owner||r.grantee||'Unknown Owner';
+  document.getElementById('drawer-doc-num').textContent=r.doc_num?'Doc #'+r.doc_num:'';
+  const s=r.score||0,sc=s>=70?'score-high':s>=40?'score-mid':'score-low',cat=r.cat||'OTHER',col=cc(cat);
+  const flags=(r.flags||[]).map(f=>'<span class="flag-chip" style="font-size:12px;padding:4px 8px;">'+f.replace(/_/g,' ')+'</span>').join(' ');
+  document.getElementById('drawer-body').innerHTML='<div class="detail-section"><div class="detail-section-title">Lead Score</div><div style="display:flex;align-items:center;gap:12px;"><span class="score-pill '+sc+'" style="width:52px;height:32px;font-size:16px;">'+s+'</span><div style="font-size:12px;color:var(--muted);">out of 100</div></div>'+(flags?'<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:6px;">'+flags+'</div>':'')+'</div><div class="detail-section"><div class="detail-section-title">Document</div><div class="detail-row"><span class="detail-key">Type</span><span class="detail-val">'+(esc(r.cat_label||r.doc_type)||'—')+'</span></div><div class="detail-row"><span class="detail-key">Category</span><span class="detail-val"><span class="cat-tag" style="background:'+col+'22;color:'+col+';border:1px solid '+col+'44;">'+cl(cat)+'</span></span></div><div class="detail-row"><span class="detail-key">Filed</span><span class="detail-val">'+(esc(r.filed)||'—')+'</span></div><div class="detail-row"><span class="detail-key">Doc #</span><span class="detail-val">'+(esc(r.doc_num)||'—')+'</span></div><div class="detail-row"><span class="detail-key">Amount</span><span class="detail-val">'+(r.amount?'$'+Number(r.amount).toLocaleString():'—')+'</span></div></div><div class="detail-section"><div class="detail-section-title">Parties</div><div class="detail-row"><span class="detail-key">Owner</span><span class="detail-val">'+(esc(r.owner)||'—')+'</span></div><div class="detail-row"><span class="detail-key">Grantee</span><span class="detail-val">'+(esc(r.grantee)||'—')+'</span></div></div><div class="detail-section"><div class="detail-section-title">Property</div><div class="detail-row"><span class="detail-key">Address</span><span class="detail-val">'+(esc(r.prop_address)||'—')+'</span></div><div class="detail-row"><span class="detail-key">City</span><span class="detail-val">'+(esc(r.prop_city)||'—')+' '+(esc(r.prop_state)||'')+' '+(esc(r.prop_zip)||'')+'</span></div><div class="detail-row"><span class="detail-key">Legal</span><span class="detail-val" style="font-size:11px;">'+(esc(r.legal)||'—')+'</span></div></div><div class="detail-section"><div class="detail-section-title">Mailing Address</div><div class="detail-row"><span class="detail-key">Address</span><span class="detail-val">'+(esc(r.mail_address)||'—')+'</span></div><div class="detail-row"><span class="detail-key">City</span><span class="detail-val">'+(esc(r.mail_city)||'—')+' '+(esc(r.mail_state)||'')+' '+(esc(r.mail_zip)||'')+'</span></div></div>';
+  const acts=document.getElementById('drawer-actions');acts.innerHTML='';
+  if(r.clerk_url){const a=document.createElement('a');a.href=r.clerk_url;a.target='_blank';a.rel='noopener';a.className='action-btn';a.textContent='Clerk Record';acts.appendChild(a);}
+  if(r.prop_address){const q=encodeURIComponent(r.prop_address+' '+(r.prop_city||'')+' TX');const a=document.createElement('a');a.href='https://maps.google.com/?q='+q;a.target='_blank';a.rel='noopener';a.className='action-btn';a.textContent='Map';acts.appendChild(a);const b=document.createElement('a');b.href='https://esearch.bcad.org/?search='+q;b.target='_blank';b.rel='noopener';b.className='action-btn';b.textContent='BCAD';acts.appendChild(b);}
+  const cb=document.createElement('button');cb.className='action-btn primary';cb.textContent='Copy Lead';
+  cb.onclick=()=>{navigator.clipboard.writeText(['Owner: '+(r.owner||'—'),'Doc: '+(r.cat_label||r.doc_type||'—'),'Filed: '+(r.filed||'—'),'Amount: '+(r.amount?'$'+Number(r.amount).toLocaleString():'—'),'Property: '+(r.prop_address||'—')+' '+(r.prop_city||''),'Score: '+(r.score||0),r.clerk_url?'Clerk: '+r.clerk_url:''].filter(Boolean).join('
+')).then(()=>{cb.textContent='Copied!';setTimeout(()=>cb.textContent='Copy Lead',1800);});};
+  acts.appendChild(cb);
+  document.getElementById('drawer-overlay').classList.add('open');
+  document.getElementById('detail-drawer').classList.add('open');
+}
+function closeDrawer(){document.getElementById('drawer-overlay').classList.remove('open');document.getElementById('detail-drawer').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+function exportCSV(){
+  const cols=['doc_num','doc_type','cat','cat_label','filed','owner','grantee','amount','prop_address','prop_city','prop_state','prop_zip','mail_address','mail_city','mail_state','mail_zip','legal','clerk_url','score','flags'];
+  const rows=filtered.map(r=>cols.map(c=>{const v=c==='flags'?(r.flags||[]).join('|'):(r[c]??'');return'"'+String(v).replace(/"/g,'""')+'"';}).join(','));
+  const blob=new Blob([cols.join(',')+'
+'+rows.join('
+')],{type:'text/csv'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='bexar-leads-'+new Date().toISOString().slice(0,10)+'.csv';a.click();
+}
+loadData();
+</script>
+</body>
+</html>

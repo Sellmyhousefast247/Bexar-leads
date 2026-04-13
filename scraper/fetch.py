@@ -19,20 +19,15 @@ Run:
 from __future__ import annotations
 
 import argparse
-import asyncio
 import csv
 import json
 import logging
-import os
 import re
-import sys
 import time
-import traceback
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote, urlencode
 
 import requests
 from bs4 import BeautifulSoup
@@ -41,26 +36,20 @@ from bs4 import BeautifulSoup
 # Configuration
 # ---------------------------------------------------------------------------
 COUNTY = "Bexar"
-STATE = "TX"
-STATE_FULL = "Texas"
+STATE  = "TX"
 
-CLERK_PORTAL_URL = "https://bexar.tx.publicsearch.us/"
-CLERK_SEARCH_URL = "https://bexar.tx.publicsearch.us/results"
-CLERK_DOC_URL = "https://bexar.tx.publicsearch.us/doc/{doc_id}"
+CLERK_BASE_URL  = "https://bexar.tx.publicsearch.us"
+CLERK_RESULTS   = f"{CLERK_BASE_URL}/results"
+PARCEL_API_URL  = "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer/0/query"
+FORECLOSURE_URL = "https://maps.bexar.org/foreclosures/"
 
-PARCEL_API_URL = (
-    "https://maps.bexar.org/arcgis/rest/services/Parcels/MapServer/0/query"
-)
-FORECLOSURE_MAP_URL = "https://maps.bexar.org/foreclosures/"
+LOOKBACK_DAYS    = 7
+PAGE_SIZE        = 50
+REQUEST_TIMEOUT  = 30
+PARCEL_BATCH     = 25
+RETRY_COUNT      = 3
+RETRY_DELAY      = 3
 
-LOOKBACK_DAYS = 7
-MAX_RETRIES = 3
-RETRY_DELAY = 2          # seconds between retries
-PAGE_SIZE = 50            # results per clerk-portal page
-REQUEST_TIMEOUT = 30      # seconds
-PARCEL_BATCH_SIZE = 25    # owner-name lookups per ArcGIS call
-
-# Logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s  %(levelname)-8s  %(message)s",
@@ -69,880 +58,480 @@ logging.basicConfig(
 log = logging.getLogger("bexar_scraper")
 
 # ---------------------------------------------------------------------------
-# Document-type mapping
+# Search terms -> category mapping
 # ---------------------------------------------------------------------------
-DOC_CATEGORIES: dict[str, tuple[str, str]] = {
-    # key in clerk portal → (internal category code, human label)
-    "LIS PENDENS":              ("LP",       "Lis Pendens"),
-    "LIS PENDEN":               ("LP",       "Lis Pendens"),
-    "NOTICE OF FORECLOSURE":    ("NOFC",     "Notice of Foreclosure"),
-    "NOTICE OF TRUSTEE SALE":   ("NOFC",     "Notice of Foreclosure"),
-    "NOTICE OF SUBSTITUTE TRUSTEE SALE": ("NOFC", "Notice of Foreclosure"),
-    "NOTICE TRUSTEE":           ("NOFC",     "Notice of Foreclosure"),
-    "TAX DEED":                 ("TAXDEED",  "Tax Deed"),
-    "TAX SALE":                 ("TAXDEED",  "Tax Deed"),
-    "JUDGMENT":                 ("JUD",      "Judgment"),
-    "DEFAULT JUDGMENT":         ("JUD",      "Judgment"),
-    "ABSTRACT OF JUDGMENT":     ("JUD",      "Judgment"),
-    "CERTIFIED JUDGMENT":       ("CCJ",      "Certified Judgment"),
-    "DOMESTIC JUDGMENT":        ("DRJUD",    "Domestic Judgment"),
-    "FEDERAL TAX LIEN":         ("LNFED",    "Federal Tax Lien"),
-    "STATE TAX LIEN":           ("LNCORPTX", "Corp / State Tax Lien"),
-    "IRS LIEN":                 ("LNIRS",    "IRS Lien"),
-    "TAX LIEN":                 ("LNCORPTX", "Tax Lien"),
-    "LIEN":                     ("LN",       "Lien"),
-    "MECHANIC LIEN":            ("LNMECH",   "Mechanic Lien"),
-    "MECHANICS LIEN":           ("LNMECH",   "Mechanic Lien"),
-    "MATERIALMAN LIEN":         ("LNMECH",   "Mechanic Lien"),
-    "HOA LIEN":                 ("LNHOA",    "HOA Lien"),
-    "HOSPITAL LIEN":            ("MEDLN",    "Medicaid / Hospital Lien"),
-    "MEDICAID LIEN":            ("MEDLN",    "Medicaid Lien"),
-    "PROBATE":                  ("PRO",      "Probate"),
-    "LETTERS TESTAMENTARY":     ("PRO",      "Probate"),
-    "LETTERS OF ADMINISTRATION":("PRO",      "Probate"),
-    "AFFIDAVIT OF HEIRSHIP":    ("PRO",      "Probate / Heirship"),
-    "NOTICE OF COMMENCEMENT":   ("NOC",      "Notice of Commencement"),
-    "RELEASE LIS PENDENS":      ("RELLP",    "Release Lis Pendens"),
-    "RELEASE OF LIS PENDENS":   ("RELLP",    "Release Lis Pendens"),
-}
-
-# Which doc_type keywords to search for on the clerk portal
-SEARCH_KEYWORDS: list[str] = [
-    "lis pendens",
-    "notice of foreclosure",
-    "notice of trustee sale",
-    "notice of substitute trustee",
-    "tax deed",
-    "judgment",
-    "abstract of judgment",
-    "default judgment",
-    "federal tax lien",
-    "state tax lien",
-    "tax lien",
-    "mechanic lien",
-    "mechanics lien",
-    "hospital lien",
-    "hoa lien",
-    "probate",
-    "affidavit of heirship",
-    "letters testamentary",
-    "notice of commencement",
-    "release lis pendens",
+SEARCH_TERMS = [
+    ("lis pendens",              "LP",   "Lis Pendens"),
+    ("notice of foreclosure",    "FC",   "Notice of Foreclosure"),
+    ("notice of trustee sale",   "FC",   "Notice of Trustee Sale"),
+    ("tax deed",                 "FC",   "Tax Deed / Tax Sale"),
+    ("judgment",                 "JUD",  "Judgment"),
+    ("abstract of judgment",     "JUD",  "Abstract of Judgment"),
+    ("federal tax lien",         "LIEN", "Federal Tax Lien"),
+    ("state tax lien",           "LIEN", "State Tax Lien"),
+    ("mechanic lien",            "LIEN", "Mechanic Lien"),
+    ("hoa lien",                 "LIEN", "HOA Lien"),
+    ("hospital lien",            "LIEN", "Hospital Lien"),
+    ("probate",                  "PRO",  "Probate"),
+    ("affidavit of heirship",    "PRO",  "Affidavit of Heirship"),
+    ("letters testamentary",     "PRO",  "Letters Testamentary"),
+    ("notice of commencement",   "OTHER","Notice of Commencement"),
 ]
-
 
 # ---------------------------------------------------------------------------
 # Data model
 # ---------------------------------------------------------------------------
 @dataclass
 class LeadRecord:
-    doc_num: str = ""
-    doc_type: str = ""
-    filed: str = ""
-    cat: str = ""
-    cat_label: str = ""
-    owner: str = ""
-    grantee: str = ""
-    amount: float = 0.0
-    legal: str = ""
+    doc_num:      str = ""
+    doc_type:     str = ""
+    cat:          str = ""
+    cat_label:    str = ""
+    filed:        str = ""
+    owner:        str = ""
+    grantee:      str = ""
+    amount:       float = 0.0
+    legal:        str = ""
     prop_address: str = ""
-    prop_city: str = ""
-    prop_state: str = STATE
-    prop_zip: str = ""
+    prop_city:    str = ""
+    prop_state:   str = STATE
+    prop_zip:     str = ""
     mail_address: str = ""
-    mail_city: str = ""
-    mail_state: str = STATE
-    mail_zip: str = ""
-    clerk_url: str = ""
-    flags: list[str] = field(default_factory=list)
-    score: int = 0
-
+    mail_city:    str = ""
+    mail_state:   str = STATE
+    mail_zip:     str = ""
+    clerk_url:    str = ""
+    flags:        list = field(default_factory=list)
+    score:        int = 0
 
 # ---------------------------------------------------------------------------
-# Utility helpers
+# Helpers
 # ---------------------------------------------------------------------------
-def safe(func, *a, default=None, **kw):
-    """Call *func* and swallow exceptions, returning *default* on failure."""
-    try:
-        return func(*a, **kw)
-    except Exception:
-        return default
-
-
-def retry(func, *args, attempts: int = MAX_RETRIES, **kwargs):
-    """Retry a callable up to *attempts* times with exponential back-off."""
-    last_err = None
-    for i in range(attempts):
+def retry_get(session, url, **kwargs):
+    for attempt in range(RETRY_COUNT):
         try:
-            return func(*args, **kwargs)
+            r = session.get(url, timeout=REQUEST_TIMEOUT, **kwargs)
+            if r.status_code == 200:
+                return r
+            log.warning("HTTP %d for %s (attempt %d)", r.status_code, url, attempt + 1)
         except Exception as exc:
-            last_err = exc
-            wait = RETRY_DELAY * (2 ** i)
-            log.warning("Attempt %d/%d failed: %s — retrying in %ds", i + 1, attempts, exc, wait)
-            time.sleep(wait)
-    log.error("All %d attempts failed. Last error: %s", attempts, last_err)
+            log.warning("Request error %s (attempt %d): %s", url, attempt + 1, exc)
+        if attempt < RETRY_COUNT - 1:
+            time.sleep(RETRY_DELAY)
     return None
 
 
-def parse_currency(text: str) -> float:
-    """Extract a dollar amount from text like '$123,456.78'."""
-    if not text:
-        return 0.0
-    m = re.search(r"[\d,]+\.?\d*", text.replace("$", "").replace(",", ""))
-    if m:
+def normalize_date(raw):
+    for fmt in ("%m/%d/%Y", "%Y-%m-%d", "%m-%d-%Y"):
         try:
-            return float(m.group().replace(",", ""))
+            return datetime.strptime(raw.strip(), fmt).strftime("%Y-%m-%d")
         except ValueError:
             pass
-    return 0.0
-
-
-def normalize_name(name: str) -> str:
-    """Upper-case, collapse whitespace, strip punctuation."""
-    return re.sub(r"\s+", " ", re.sub(r"[^A-Z0-9 ]", "", name.upper())).strip()
-
-
-def name_variants(name: str) -> list[str]:
-    """
-    Given 'JOHN DOE' return ['JOHN DOE', 'DOE JOHN', 'DOE, JOHN'].
-    Given 'DOE, JOHN' return ['DOE JOHN', 'JOHN DOE', 'DOE, JOHN'].
-    """
-    n = normalize_name(name)
-    if not n:
-        return []
-    parts = [p.strip() for p in n.replace(",", " ").split() if p.strip()]
-    if len(parts) < 2:
-        return [n]
-    first, last = parts[0], parts[-1]
-    return list(
-        dict.fromkeys(
-            [
-                f"{first} {last}",
-                f"{last} {first}",
-                f"{last}, {first}",
-                n,
-            ]
-        )
-    )
-
+    return raw.strip()
 
 # ---------------------------------------------------------------------------
-# Clerk Portal scraper (requests + BeautifulSoup)
+# Clerk portal scraper
 # ---------------------------------------------------------------------------
 class ClerkScraper:
-    """
-    Scrape the Bexar County Clerk's publicsearch.us portal.
-
-    The portal is a fairly standard ASP.NET / React search app that returns
-    JSON from an API endpoint.  We hit the search API directly rather than
-    driving a browser, which is faster and more reliable.
-    """
-
-    API_BASE = "https://bexar.tx.publicsearch.us/api/v2"
-
-    def __init__(self, lookback_days: int = LOOKBACK_DAYS):
+    def __init__(self, start, end):
+        self.start = start
+        self.end   = end
+        # CORRECT format discovered by browser inspection: YYYYMMDD,YYYYMMDD
+        self.date_range = f"{start.strftime('%Y%m%d')},{end.strftime('%Y%m%d')}"
         self.session = requests.Session()
-        self.session.headers.update(
-            {
-                "User-Agent": (
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) "
-                    "Chrome/125.0.0.0 Safari/537.36"
-                ),
-                "Accept": "application/json, text/plain, */*",
-                "Referer": CLERK_PORTAL_URL,
-            }
-        )
-        self.end_date = datetime.now()
-        self.start_date = self.end_date - timedelta(days=lookback_days)
-        log.info(
-            "Clerk scraper: %s → %s (%d days)",
-            self.start_date.strftime("%m/%d/%Y"),
-            self.end_date.strftime("%m/%d/%Y"),
-            lookback_days,
-        )
+        self.session.headers.update({
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Referer": CLERK_BASE_URL,
+        })
 
-    # ---- internal helpers ----
-
-    def _warm_session(self) -> None:
-        """Hit the landing page so the server sets session cookies."""
+    def _warm(self):
         try:
-            r = self.session.get(CLERK_PORTAL_URL, timeout=REQUEST_TIMEOUT)
-            r.raise_for_status()
-            log.info("Session warmed — status %d", r.status_code)
+            r = self.session.get(CLERK_BASE_URL, timeout=REQUEST_TIMEOUT)
+            log.info("Session warmed -- status %d", r.status_code)
         except Exception as exc:
             log.warning("Could not warm session: %s", exc)
 
-    def _search_api(self, keyword: str, page: int = 1) -> dict | None:
+    def _fetch_page(self, search_value, page=1):
         """
-        Call the clerk portal's search API.
+        Fetch one page of results using the CORRECT URL format.
 
-        The publicsearch.us platform exposes a JSON API at:
-            /api/v2/search
-        with query parameters for department, date range, and free-text.
+        Discovered by watching actual browser requests:
+          /results?department=RP
+                  &searchType=quickSearch
+                  &searchValue=<term>
+                  &recordedDateRange=YYYYMMDD,YYYYMMDD
+                  &keywordSearch=false
+                  &searchOcrText=false
+                  &resultsPerPage=50
+                  &currentPage=<n>
         """
         params = {
-            "department": "RP",           # Real Property / Land Records
-            "searchOfficialRecords": True,
-            "searchType": "quickSearch",
-            "query": keyword,
-            "page": page,
-            "pageSize": PAGE_SIZE,
-            "orderBy": "filedDate",
-            "orderDirection": "desc",
-            "startDate": self.start_date.strftime("%m/%d/%Y"),
-            "endDate": self.end_date.strftime("%m/%d/%Y"),
+            "department":        "RP",
+            "searchType":        "quickSearch",
+            "searchValue":       search_value,
+            "recordedDateRange": self.date_range,
+            "keywordSearch":     "false",
+            "searchOcrText":     "false",
+            "resultsPerPage":    PAGE_SIZE,
+            "currentPage":       page,
         }
-        url = f"{self.API_BASE}/search"
-        resp = retry(
-            self.session.get, url, params=params, timeout=REQUEST_TIMEOUT
-        )
-        if resp is None or resp.status_code != 200:
-            # Fallback: try the HTML search results page and parse it
-            return self._search_html_fallback(keyword, page)
-        try:
-            return resp.json()
-        except Exception:
-            return self._search_html_fallback(keyword, page)
-
-    def _search_html_fallback(self, keyword: str, page: int = 1) -> dict | None:
-        """
-        Fallback scraper that loads the HTML results page and parses the table.
-        Used when the JSON API isn't available or returns non-JSON.
-        """
-        params = {
-            "department": "RP",
-            "searchOfficialRecords": True,
-            "searchType": "quickSearch",
-            "query": keyword,
-            "page": page,
-            "pageSize": PAGE_SIZE,
-            "startDate": self.start_date.strftime("%m/%d/%Y"),
-            "endDate": self.end_date.strftime("%m/%d/%Y"),
-        }
-        url = CLERK_SEARCH_URL
-        resp = retry(
-            self.session.get, url, params=params, timeout=REQUEST_TIMEOUT
-        )
+        resp = retry_get(self.session, CLERK_RESULTS, params=params)
         if resp is None:
+            log.warning("No response for '%s' page %d", search_value, page)
             return None
+        return BeautifulSoup(resp.text, "lxml")
 
-        soup = BeautifulSoup(resp.text, "lxml")
+    def _parse_soup(self, soup, cat, cat_label):
+        """
+        Parse the HTML results table.
+        Columns confirmed live: GRANTOR | GRANTEE | DOC TYPE |
+        RECORDED DATE | DOC NUMBER | BOOK/VOLUME/PAGE | LEGAL DESCRIPTION | ...
+        """
         records = []
+        table = soup.find("table")
+        if not table:
+            return records
 
-        # publicsearch.us renders result rows in <div class="result-row"> or
-        # <tr> elements depending on version.  Try both patterns.
-        rows = soup.select("div.result-row, table.results tbody tr, div.search-result")
-        for row in rows:
-            rec = self._parse_html_row(row)
-            if rec:
-                records.append(rec)
+        headers = []
+        header_row = table.find("tr")
+        if header_row:
+            headers = [th.get_text(strip=True).upper()
+                       for th in header_row.find_all(["th", "td"])]
 
-        return {"records": records, "totalResults": len(records), "page": page}
+        def col(cells, *names):
+            for name in names:
+                for i, h in enumerate(headers):
+                    if name in h and i < len(cells):
+                        return cells[i].get_text(strip=True)
+            return ""
 
-    def _parse_html_row(self, el) -> dict | None:
-        """Extract fields from a single HTML result row."""
-        try:
-            text = el.get_text(" | ", strip=True)
-            cells = [c.get_text(strip=True) for c in el.find_all(["td", "span", "div"])]
-            if len(cells) < 3:
-                return None
-            # Try to identify columns by position / label
-            rec: dict[str, Any] = {}
-            for cell_text in cells:
-                if re.match(r"\d{4}-\d+", cell_text):
-                    rec["docNumber"] = cell_text
-                elif re.match(r"\d{1,2}/\d{1,2}/\d{4}", cell_text):
-                    rec["filedDate"] = cell_text
-                elif any(
-                    kw in cell_text.upper()
-                    for kw in ["LIEN", "JUDGMENT", "DEED", "PROBATE", "LIS", "NOTICE", "RELEASE"]
-                ):
-                    rec.setdefault("docType", cell_text)
-            # Grantor / grantee often in specific spans
-            grantor_el = el.select_one(".grantor, [data-label='Grantor']")
-            grantee_el = el.select_one(".grantee, [data-label='Grantee']")
-            if grantor_el:
-                rec["grantor"] = grantor_el.get_text(strip=True)
-            if grantee_el:
-                rec["grantee"] = grantee_el.get_text(strip=True)
-            # Link
-            link = el.find("a", href=True)
-            if link:
-                rec["detailUrl"] = link["href"]
-            return rec if rec.get("docNumber") or rec.get("docType") else None
-        except Exception:
-            return None
+        for tr in table.find_all("tr")[1:]:
+            cells = tr.find_all(["td", "th"])
+            if len(cells) < 4:
+                continue
 
-    # ---- main parsing logic ----
+            if headers:
+                grantor   = col(cells, "GRANTOR")
+                grantee   = col(cells, "GRANTEE")
+                doc_type  = col(cells, "DOC TYPE")
+                filed_raw = col(cells, "RECORDED DATE", "FILED DATE", "DATE")
+                doc_num   = col(cells, "DOC NUMBER", "DOC NUM", "INSTRUMENT")
+                legal     = col(cells, "LEGAL DESCRIPTION", "LEGAL")
+            else:
+                texts = [c.get_text(strip=True) for c in cells]
+                grantor   = texts[0] if len(texts) > 0 else ""
+                grantee   = texts[1] if len(texts) > 1 else ""
+                doc_type  = texts[2] if len(texts) > 2 else ""
+                filed_raw = texts[3] if len(texts) > 3 else ""
+                doc_num   = texts[4] if len(texts) > 4 else ""
+                legal     = texts[5] if len(texts) > 5 else ""
 
-    def _classify(self, doc_type_raw: str) -> tuple[str, str]:
-        """Return (cat, cat_label) for a raw document-type string."""
-        upper = doc_type_raw.upper().strip()
-        for pattern, (cat, label) in DOC_CATEGORIES.items():
-            if pattern in upper:
-                return cat, label
-        return "OTHER", doc_type_raw.title()
+            if not doc_num and not grantor:
+                continue
 
-    def _record_from_api(self, item: dict) -> LeadRecord | None:
-        """Convert a single JSON record from the API into a LeadRecord."""
-        try:
-            doc_type_raw = (
-                item.get("docType", "")
-                or item.get("documentType", "")
-                or item.get("doc_type", "")
-                or ""
+            clerk_url = ""
+            doc_link = tr.find("a", href=True)
+            if doc_link:
+                href = doc_link["href"]
+                clerk_url = href if href.startswith("http") else CLERK_BASE_URL + href
+
+            rec = LeadRecord(
+                doc_num   = doc_num,
+                doc_type  = doc_type,
+                cat       = cat,
+                cat_label = cat_label,
+                filed     = normalize_date(filed_raw) if filed_raw else "",
+                owner     = grantor,
+                grantee   = grantee,
+                legal     = legal,
+                clerk_url = clerk_url,
             )
-            cat, cat_label = self._classify(doc_type_raw)
-            if cat == "OTHER":
-                return None  # skip unrecognized doc types
+            records.append(rec)
 
-            doc_num = (
-                item.get("docNumber", "")
-                or item.get("instrumentNumber", "")
-                or item.get("doc_num", "")
-                or ""
-            )
-            filed_raw = (
-                item.get("filedDate", "")
-                or item.get("recordedDate", "")
-                or item.get("filed", "")
-                or ""
-            )
-            # Normalize date to MM/DD/YYYY
-            filed = ""
-            if filed_raw:
-                for fmt in ("%m/%d/%Y", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d", "%m-%d-%Y"):
-                    parsed = safe(datetime.strptime, filed_raw[:10], fmt)
-                    if parsed:
-                        filed = parsed.strftime("%m/%d/%Y")
-                        break
-                if not filed:
-                    filed = filed_raw[:10]
+        return records
 
-            grantor = (
-                item.get("grantor", "")
-                or item.get("grantors", "")
-                or item.get("owner", "")
-                or ""
-            )
-            if isinstance(grantor, list):
-                grantor = "; ".join(str(g) for g in grantor)
+    def _total_pages(self, soup):
+        for el in soup.find_all(string=re.compile(r"\d+\s+result", re.I)):
+            m = re.search(r"([\d,]+)\s+result", el, re.I)
+            if m:
+                total = int(m.group(1).replace(",", ""))
+                return max(1, -(-total // PAGE_SIZE))
+        pages = soup.find_all("a", string=re.compile(r"^\d+$"))
+        if pages:
+            nums = [int(a.get_text()) for a in pages if a.get_text().isdigit()]
+            return max(nums) if nums else 1
+        return 1
 
-            grantee = item.get("grantee", "") or item.get("grantees", "") or ""
-            if isinstance(grantee, list):
-                grantee = "; ".join(str(g) for g in grantee)
+    def run(self):
+        self._warm()
+        seen = set()
+        all_records = []
 
-            legal = item.get("legalDescription", "") or item.get("legal", "") or ""
-            amount_raw = item.get("amount", "") or item.get("consideration", "") or "0"
-            amount = parse_currency(str(amount_raw))
-
-            detail_id = item.get("id", "") or doc_num
-            clerk_url = (
-                item.get("detailUrl", "")
-                or CLERK_DOC_URL.format(doc_id=detail_id)
-            )
-            if clerk_url and not clerk_url.startswith("http"):
-                clerk_url = CLERK_PORTAL_URL.rstrip("/") + "/" + clerk_url.lstrip("/")
-
-            return LeadRecord(
-                doc_num=str(doc_num),
-                doc_type=doc_type_raw.strip(),
-                filed=filed,
-                cat=cat,
-                cat_label=cat_label,
-                owner=str(grantor).strip(),
-                grantee=str(grantee).strip(),
-                amount=amount,
-                legal=str(legal).strip(),
-                clerk_url=clerk_url,
-            )
-        except Exception as exc:
-            log.debug("Skipping bad record: %s", exc)
-            return None
-
-    # ---- public entry-point ----
-
-    def scrape(self) -> list[LeadRecord]:
-        """Run all searches and return de-duplicated LeadRecords."""
-        self._warm_session()
-
-        seen: set[str] = set()
-        results: list[LeadRecord] = []
-
-        for keyword in SEARCH_KEYWORDS:
-            log.info("Searching: '%s'", keyword)
+        for search_value, cat, cat_label in SEARCH_TERMS:
+            log.info("Searching: '%s'", search_value)
             page = 1
+            term_count = 0
+
             while True:
-                data = self._search_api(keyword, page=page)
-                if not data:
+                soup = self._fetch_page(search_value, page)
+                if soup is None:
                     break
 
-                items = data.get("records", data.get("results", []))
-                if not items:
+                recs = self._parse_soup(soup, cat, cat_label)
+                if not recs:
                     break
 
-                for item in items:
-                    rec = self._record_from_api(item)
-                    if rec is None:
-                        continue
-                    key = f"{rec.doc_num}|{rec.doc_type}|{rec.owner}"
-                    if key in seen:
-                        continue
-                    seen.add(key)
-                    results.append(rec)
+                for r in recs:
+                    key = r.doc_num or f"{r.owner}|{r.filed}|{r.doc_type}"
+                    if key and key not in seen:
+                        seen.add(key)
+                        all_records.append(r)
+                        term_count += 1
 
-                total = data.get("totalResults", data.get("total", 0))
-                if page * PAGE_SIZE >= (total or len(items)):
+                total_pages = self._total_pages(soup)
+                if page >= total_pages:
                     break
                 page += 1
-                time.sleep(0.5)  # politeness delay
+                time.sleep(1)
 
-        log.info("Clerk portal: %d unique records collected", len(results))
-        return results
+            log.info("  -> %d unique records for '%s'", term_count, search_value)
+            time.sleep(1)
+
+        log.info("Clerk portal: %d unique records collected", len(all_records))
+        return all_records
 
 
 # ---------------------------------------------------------------------------
-# Parcel data enrichment via ArcGIS REST API
+# Parcel enrichment
 # ---------------------------------------------------------------------------
-class ParcelEnricher:
-    """
-    Look up property and mailing addresses from the Bexar County
-    ArcGIS Parcel MapServer using owner-name queries.
-    """
+def enrich_parcels(records):
+    needs = [r for r in records if r.owner and not r.prop_address]
+    if not needs:
+        return
+    log.info("Enriching %d records with parcel data...", len(needs))
+    session = requests.Session()
+    session.headers["User-Agent"] = "BexarLeadScraper/2.0"
 
-    OUT_FIELDS = (
-        "Owner,Situs,MailAddr,MailCity,MailState,MailZip,"
-        "SitusCity,SitusZip,PropID"
-    )
-
-    def __init__(self):
-        self.session = requests.Session()
-        self.session.headers["User-Agent"] = (
-            "Mozilla/5.0 BexarLeadScraper/1.0"
-        )
-        self._cache: dict[str, dict] = {}
-
-    def _query(self, where_clause: str) -> list[dict]:
-        """Run a single ArcGIS REST query and return features."""
+    for i in range(0, len(needs), PARCEL_BATCH):
+        batch = needs[i : i + PARCEL_BATCH]
+        names = [r.owner for r in batch]
+        parts = [f"UPPER(OWNER)='{n.upper().replace(chr(39), chr(39)*2)}'" for n in names]
+        where = " OR ".join(parts)
         params = {
-            "where": where_clause,
-            "outFields": self.OUT_FIELDS,
+            "where":          where,
+            "outFields":      "OWNER,SITUS_ADD,SITUS_CITY,SITUS_ZIP,MAIL_ADD,MAIL_CITY,MAIL_STATE,MAIL_ZIP",
             "returnGeometry": "false",
-            "f": "json",
-            "resultRecordCount": 5,
+            "f":              "json",
         }
-        resp = retry(
-            self.session.get,
-            PARCEL_API_URL,
-            params=params,
-            timeout=REQUEST_TIMEOUT,
-        )
-        if resp is None or resp.status_code != 200:
-            return []
         try:
-            data = resp.json()
-            return data.get("features", [])
-        except Exception:
-            return []
-
-    def lookup_owner(self, owner_name: str) -> dict | None:
-        """
-        Search parcels by owner name and return the first match with
-        keys: prop_address, prop_city, prop_zip, mail_address, etc.
-        """
-        norm = normalize_name(owner_name)
-        if not norm or len(norm) < 3:
-            return None
-        if norm in self._cache:
-            return self._cache[norm]
-
-        # Try several name variants
-        for variant in name_variants(owner_name):
-            escaped = variant.replace("'", "''")
-            where = f"UPPER(Owner) LIKE '%{escaped}%'"
-            features = self._query(where)
-            if features:
-                attrs = features[0].get("attributes", {})
-                result = {
-                    "prop_address": (attrs.get("Situs") or "").strip(),
-                    "prop_city": (attrs.get("SitusCity") or "San Antonio").strip(),
-                    "prop_zip": str(attrs.get("SitusZip") or "").strip(),
-                    "mail_address": (attrs.get("MailAddr") or "").strip(),
-                    "mail_city": (attrs.get("MailCity") or "").strip(),
-                    "mail_state": (attrs.get("MailState") or STATE).strip(),
-                    "mail_zip": str(attrs.get("MailZip") or "").strip(),
-                }
-                self._cache[norm] = result
-                return result
-            time.sleep(0.3)
-
-        self._cache[norm] = None
-        return None
-
-    def enrich(self, records: list[LeadRecord]) -> list[LeadRecord]:
-        """Add parcel data (addresses) to each record by owner lookup."""
-        total = len(records)
-        enriched = 0
-        for i, rec in enumerate(records):
-            if rec.prop_address:
-                enriched += 1
-                continue
-            parcel = self.lookup_owner(rec.owner)
-            if parcel:
-                rec.prop_address = parcel["prop_address"]
-                rec.prop_city = parcel["prop_city"]
-                rec.prop_zip = parcel["prop_zip"]
-                rec.mail_address = parcel["mail_address"]
-                rec.mail_city = parcel["mail_city"]
-                rec.mail_state = parcel["mail_state"]
-                rec.mail_zip = parcel["mail_zip"]
-                enriched += 1
-            if (i + 1) % 25 == 0:
-                log.info("Parcel enrichment: %d/%d done (%d matched)", i + 1, total, enriched)
-
-        log.info("Parcel enrichment complete: %d/%d records have addresses", enriched, total)
-        return records
+            r = session.get(PARCEL_API_URL, params=params, timeout=REQUEST_TIMEOUT)
+            features = r.json().get("features", [])
+            addr_map = {}
+            for feat in features:
+                att = feat.get("attributes", {})
+                key = (att.get("OWNER") or "").upper().strip()
+                if key:
+                    addr_map[key] = att
+            for rec in batch:
+                att = addr_map.get(rec.owner.upper().strip())
+                if att:
+                    rec.prop_address = att.get("SITUS_ADD", "").strip()
+                    rec.prop_city    = att.get("SITUS_CITY", "").strip()
+                    rec.prop_zip     = str(att.get("SITUS_ZIP", "")).strip()
+                    rec.mail_address = att.get("MAIL_ADD", "").strip()
+                    rec.mail_city    = att.get("MAIL_CITY", "").strip()
+                    rec.mail_state   = att.get("MAIL_STATE", STATE).strip() or STATE
+                    rec.mail_zip     = str(att.get("MAIL_ZIP", "")).strip()
+        except Exception as exc:
+            log.warning("Parcel batch error: %s", exc)
+        time.sleep(0.5)
 
 
 # ---------------------------------------------------------------------------
-# Foreclosure map scraper (bonus: pull from GIS layer)
+# Scoring
 # ---------------------------------------------------------------------------
-class ForeclosureScraper:
-    """
-    Pull current foreclosure notices from the Bexar County GIS
-    foreclosure ArcGIS layer and merge into the lead set.
-    """
-
-    LAYER_URL = (
-        "https://maps.bexar.org/arcgis/rest/services/"
-        "Foreclosures/MapServer/0/query"
-    )
-
-    def __init__(self):
-        self.session = requests.Session()
-
-    def scrape(self) -> list[LeadRecord]:
-        """Query the foreclosure GIS layer for current-month notices."""
-        params = {
-            "where": "1=1",
-            "outFields": "*",
-            "returnGeometry": "false",
-            "f": "json",
-            "resultRecordCount": 500,
-        }
-        resp = retry(
-            self.session.get,
-            self.LAYER_URL,
-            params=params,
-            timeout=REQUEST_TIMEOUT,
-        )
-        if resp is None or resp.status_code != 200:
-            log.warning("Foreclosure GIS layer unavailable — skipping")
-            return []
-        try:
-            data = resp.json()
-        except Exception:
-            log.warning("Foreclosure GIS layer returned invalid JSON")
-            return []
-
-        features = data.get("features", [])
-        records: list[LeadRecord] = []
-        for feat in features:
-            attrs = feat.get("attributes", {})
+def score_records(records, start):
+    for r in records:
+        s = 30
+        flags = []
+        if r.cat == "LP":
+            s += 10; flags.append("LIS_PENDENS")
+        if r.cat == "FC":
+            s += 15; flags.append("FORECLOSURE")
+        if r.cat in ("LP", "FC"):
+            s += 5
+        if r.cat == "JUD":
+            s += 8;  flags.append("JUDGMENT")
+        if r.cat == "LIEN":
+            s += 7;  flags.append("LIEN")
+        if r.cat == "PRO":
+            s += 6;  flags.append("PROBATE")
+        if r.amount > 100000:
+            s += 15; flags.append("HIGH_AMOUNT")
+        elif r.amount > 50000:
+            s += 10; flags.append("MID_AMOUNT")
+        if r.filed:
             try:
-                rec = LeadRecord(
-                    doc_num=str(attrs.get("InstrNo", attrs.get("OBJECTID", ""))),
-                    doc_type="Notice of Foreclosure (GIS)",
-                    filed=self._epoch_to_date(attrs.get("RecDate", attrs.get("PostDate", 0))),
-                    cat="NOFC",
-                    cat_label="Notice of Foreclosure",
-                    owner=(attrs.get("Grantor", "") or attrs.get("Owner", "") or "").strip(),
-                    grantee=(attrs.get("Grantee", "") or "").strip(),
-                    amount=float(attrs.get("Amount", 0) or 0),
-                    legal=(attrs.get("Legal", "") or "").strip(),
-                    prop_address=(attrs.get("Situs", "") or attrs.get("Address", "") or "").strip(),
-                    prop_city=(attrs.get("City", "") or "San Antonio").strip(),
-                    prop_zip=str(attrs.get("Zip", "") or "").strip(),
-                    clerk_url=FORECLOSURE_MAP_URL,
-                )
+                if datetime.strptime(r.filed, "%Y-%m-%d") >= start:
+                    s += 5; flags.append("NEW_THIS_WEEK")
+            except ValueError:
+                pass
+        if r.prop_address:
+            s += 5; flags.append("HAS_ADDRESS")
+        r.score = min(s, 100)
+        r.flags = flags
+
+
+# ---------------------------------------------------------------------------
+# Foreclosure GIS
+# ---------------------------------------------------------------------------
+def fetch_foreclosure_gis(start, end):
+    records = []
+    try:
+        gis_url = "https://maps.bexar.org/arcgis/rest/services/ForeclosureNotices/MapServer/0/query"
+        params = {"where": "1=1", "outFields": "*", "returnGeometry": "false", "f": "json"}
+        r = requests.get(gis_url, params=params, timeout=REQUEST_TIMEOUT)
+        features = r.json().get("features", [])
+        for feat in features:
+            att = feat.get("attributes", {}) or {}
+            sale_ms = att.get("SALEDATE") or att.get("SaleDate") or att.get("SALE_DATE")
+            filed = ""
+            if sale_ms:
+                try:
+                    dt = datetime.fromtimestamp(int(sale_ms) / 1000)
+                    if start <= dt <= end + timedelta(days=60):
+                        filed = dt.strftime("%Y-%m-%d")
+                    else:
+                        continue
+                except Exception:
+                    pass
+            rec = LeadRecord(
+                doc_type     = "FORECLOSURE_GIS",
+                cat          = "FC",
+                cat_label    = "Foreclosure (GIS)",
+                filed        = filed,
+                owner        = (att.get("OWNER") or "").strip(),
+                prop_address = (att.get("SITUS_ADD") or att.get("SITEADD") or "").strip(),
+                prop_city    = (att.get("SITUS_CITY") or att.get("CITY") or "").strip(),
+                prop_zip     = str(att.get("SITUS_ZIP") or "").strip(),
+                legal        = (att.get("LEGAL") or att.get("LEGALDESC") or "").strip(),
+            )
+            if rec.owner or rec.prop_address:
                 records.append(rec)
-            except Exception:
-                continue
-
         log.info("Foreclosure GIS layer: %d records", len(records))
-        return records
-
-    @staticmethod
-    def _epoch_to_date(epoch_ms) -> str:
-        """Convert epoch-milliseconds to MM/DD/YYYY or return empty."""
-        try:
-            if epoch_ms and int(epoch_ms) > 0:
-                return datetime.fromtimestamp(int(epoch_ms) / 1000).strftime("%m/%d/%Y")
-        except Exception:
-            pass
-        return ""
-
-
-# ---------------------------------------------------------------------------
-# Scoring engine
-# ---------------------------------------------------------------------------
-def compute_flags(rec: LeadRecord) -> list[str]:
-    """Determine which distress flags apply to a record."""
-    flags: list[str] = []
-    cat = rec.cat.upper()
-
-    if cat == "LP":
-        flags.append("Lis pendens")
-    if cat in ("NOFC", "TAXDEED"):
-        flags.append("Pre-foreclosure")
-    if cat in ("JUD", "CCJ", "DRJUD"):
-        flags.append("Judgment lien")
-    if cat in ("LNCORPTX", "LNIRS", "LNFED"):
-        flags.append("Tax lien")
-    if cat in ("LNMECH",):
-        flags.append("Mechanic lien")
-    if cat in ("LNHOA",):
-        flags.append("HOA lien")
-    if cat in ("LN", "MEDLN"):
-        flags.append("Lien")
-    if cat in ("PRO",):
-        flags.append("Probate / estate")
-    # LLC / corp owner
-    owner_upper = rec.owner.upper()
-    if any(kw in owner_upper for kw in ("LLC", "INC", "CORP", "TRUST", "LTD", "LP")):
-        flags.append("LLC / corp owner")
-    # New this week
-    if rec.filed:
-        try:
-            filed_dt = datetime.strptime(rec.filed, "%m/%d/%Y")
-            if (datetime.now() - filed_dt).days <= 7:
-                flags.append("New this week")
-        except Exception:
-            pass
-
-    return flags
-
-
-def compute_score(rec: LeadRecord) -> int:
-    """
-    Seller Score (0-100):
-      Base 30
-      +10 per flag
-      +20 if LP + Foreclosure combo
-      +15 if amount > $100k
-      +10 if amount > $50k
-      +5  if new this week
-      +5  if has property address
-    """
-    score = 30
-    flag_names = [f.lower() for f in rec.flags]
-
-    score += 10 * len(rec.flags)
-
-    if "lis pendens" in flag_names and "pre-foreclosure" in flag_names:
-        score += 20
-    if rec.amount > 100_000:
-        score += 15
-    elif rec.amount > 50_000:
-        score += 10
-    if "new this week" in flag_names:
-        score += 5
-    if rec.prop_address:
-        score += 5
-
-    return min(score, 100)
-
-
-def score_all(records: list[LeadRecord]) -> list[LeadRecord]:
-    """Compute flags and score for every record."""
-    for rec in records:
-        rec.flags = compute_flags(rec)
-        rec.score = compute_score(rec)
-    records.sort(key=lambda r: r.score, reverse=True)
+    except Exception as exc:
+        log.warning("Foreclosure GIS error: %s", exc)
     return records
 
 
 # ---------------------------------------------------------------------------
-# Output writers
+# Export
 # ---------------------------------------------------------------------------
-def split_name(full_name: str) -> tuple[str, str]:
-    """Best-effort split of 'LAST, FIRST' or 'FIRST LAST' into (first, last)."""
-    name = full_name.strip()
-    if not name:
-        return ("", "")
-    if "," in name:
-        parts = [p.strip() for p in name.split(",", 1)]
-        return (parts[1] if len(parts) > 1 else "", parts[0])
-    parts = name.split()
-    if len(parts) == 1:
-        return ("", parts[0])
-    return (parts[0], " ".join(parts[1:]))
+GHL_FIELDS = [
+    "doc_num","doc_type","cat","cat_label","filed",
+    "owner","grantee","amount",
+    "prop_address","prop_city","prop_state","prop_zip",
+    "mail_address","mail_city","mail_state","mail_zip",
+    "legal","clerk_url","score","flags",
+]
+GHL_HEADERS = {
+    "doc_num":"Document Number","doc_type":"Document Type",
+    "cat":"Category Code","cat_label":"Category","filed":"Filed Date",
+    "owner":"First Name","grantee":"Last Name","amount":"Amount",
+    "prop_address":"Address","prop_city":"City","prop_state":"State","prop_zip":"Postal Code",
+    "mail_address":"Mailing Address","mail_city":"Mailing City",
+    "mail_state":"Mailing State","mail_zip":"Mailing Zip",
+    "legal":"Legal Description","clerk_url":"Clerk URL",
+    "score":"Lead Score","flags":"Flags",
+}
 
 
-def write_json(records: list[LeadRecord], path: Path, lookback_days: int) -> None:
-    """Write the JSON output file."""
-    now = datetime.now()
+def write_outputs(records, start, end):
+    base     = Path(__file__).parent.parent
+    dash_dir = base / "dashboard"
+    data_dir = base / "data"
+    dash_dir.mkdir(parents=True, exist_ok=True)
+    data_dir.mkdir(parents=True, exist_ok=True)
+
     payload = {
-        "fetched_at": now.isoformat(),
-        "source": f"{COUNTY} County, {STATE_FULL} — Clerk Portal + Parcel API",
-        "date_range": {
-            "start": (now - timedelta(days=lookback_days)).strftime("%Y-%m-%d"),
-            "end": now.strftime("%Y-%m-%d"),
-        },
-        "total": len(records),
+        "fetched_at": datetime.utcnow().isoformat(),
+        "source":     f"{COUNTY} County, {STATE} -- Clerk Portal + Parcel API",
+        "date_range": {"start": start.strftime("%Y-%m-%d"), "end": end.strftime("%Y-%m-%d")},
+        "total":        len(records),
         "with_address": sum(1 for r in records if r.prop_address),
-        "records": [asdict(r) for r in records],
+        "records":      [asdict(r) for r in records],
     }
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=2, default=str)
-    log.info("JSON written: %s (%d records)", path, len(records))
 
+    for path in [dash_dir / "records.json", data_dir / "records.json"]:
+        path.write_text(json.dumps(payload, indent=2, default=str))
+        log.info("JSON written: %s (%d records)", path, len(records))
 
-def write_ghl_csv(records: list[LeadRecord], path: Path) -> None:
-    """Write the GoHighLevel-importable CSV."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = [
-        "First Name",
-        "Last Name",
-        "Mailing Address",
-        "Mailing City",
-        "Mailing State",
-        "Mailing Zip",
-        "Property Address",
-        "Property City",
-        "Property State",
-        "Property Zip",
-        "Lead Type",
-        "Document Type",
-        "Date Filed",
-        "Document Number",
-        "Amount/Debt Owed",
-        "Seller Score",
-        "Motivated Seller Flags",
-        "Source",
-        "Public Records URL",
-    ]
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+    csv_path = data_dir / "ghl_export.csv"
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=list(GHL_HEADERS.values()))
         writer.writeheader()
-        for rec in records:
-            first, last = split_name(rec.owner)
-            writer.writerow(
-                {
-                    "First Name": first,
-                    "Last Name": last,
-                    "Mailing Address": rec.mail_address,
-                    "Mailing City": rec.mail_city,
-                    "Mailing State": rec.mail_state,
-                    "Mailing Zip": rec.mail_zip,
-                    "Property Address": rec.prop_address,
-                    "Property City": rec.prop_city,
-                    "Property State": rec.prop_state,
-                    "Property Zip": rec.prop_zip,
-                    "Lead Type": rec.cat_label,
-                    "Document Type": rec.doc_type,
-                    "Date Filed": rec.filed,
-                    "Document Number": rec.doc_num,
-                    "Amount/Debt Owed": f"${rec.amount:,.2f}" if rec.amount else "",
-                    "Seller Score": rec.score,
-                    "Motivated Seller Flags": "; ".join(rec.flags),
-                    "Source": f"{COUNTY} County Clerk ({STATE_FULL})",
-                    "Public Records URL": rec.clerk_url,
-                }
-            )
-    log.info("GHL CSV written: %s (%d records)", path, len(records))
+        for r in records:
+            d = asdict(r)
+            row = {GHL_HEADERS[k]: ("|".join(d[k]) if k == "flags" else d[k])
+                   for k in GHL_FIELDS}
+            writer.writerow(row)
+    log.info("GHL CSV written: %s (%d records)", csv_path, len(records))
 
 
 # ---------------------------------------------------------------------------
-# Main orchestrator
+# Main
 # ---------------------------------------------------------------------------
 def main():
-    parser = argparse.ArgumentParser(description="Bexar County Motivated Seller Scraper")
-    parser.add_argument("--days", type=int, default=LOOKBACK_DAYS, help="Lookback days (default 7)")
-    parser.add_argument("--skip-parcel", action="store_true", help="Skip parcel enrichment")
-    parser.add_argument("--skip-foreclosure", action="store_true", help="Skip foreclosure GIS layer")
+    parser = argparse.ArgumentParser(description="Bexar County lead scraper")
+    parser.add_argument("--days", type=int, default=LOOKBACK_DAYS)
+    parser.add_argument("--skip-parcel", action="store_true")
     args = parser.parse_args()
+
+    end   = datetime.now()
+    start = end - timedelta(days=args.days)
 
     log.info("=" * 60)
     log.info("Bexar County Motivated Seller Lead Scraper")
     log.info("Lookback: %d days", args.days)
     log.info("=" * 60)
+    log.info("Clerk scraper: %s -> %s (%d days)",
+             start.strftime("%m/%d/%Y"), end.strftime("%m/%d/%Y"), args.days)
 
-    # Determine project root (one level up from scraper/)
-    project_root = Path(__file__).resolve().parent.parent
+    scraper = ClerkScraper(start, end)
+    records = scraper.run()
 
-    # --- Step 1: Scrape clerk portal ---
-    clerk = ClerkScraper(lookback_days=args.days)
-    records = clerk.scrape()
+    gis_records = fetch_foreclosure_gis(start, end)
+    existing_addrs = {r.prop_address.upper() for r in records if r.prop_address}
+    for r in gis_records:
+        if r.prop_address.upper() not in existing_addrs:
+            records.append(r)
 
-    # --- Step 2: Scrape foreclosure GIS layer ---
-    if not args.skip_foreclosure:
-        fc_scraper = ForeclosureScraper()
-        fc_records = fc_scraper.scrape()
-        # Merge, de-duplicate by doc_num
-        existing_nums = {r.doc_num for r in records}
-        for fc in fc_records:
-            if fc.doc_num not in existing_nums:
-                records.append(fc)
-                existing_nums.add(fc.doc_num)
+    if not args.skip_parcel:
+        enrich_parcels(records)
+
+    score_records(records, start)
+    records.sort(key=lambda r: r.score, reverse=True)
 
     if not records:
         log.warning("No records found. Writing empty output files.")
-        records = []
+    else:
+        log.info("Total records after dedup + enrichment: %d", len(records))
 
-    # --- Step 3: Enrich with parcel data ---
-    if not args.skip_parcel and records:
-        enricher = ParcelEnricher()
-        records = enricher.enrich(records)
+    write_outputs(records, start, end)
 
-    # --- Step 4: Score and flag ---
-    records = score_all(records)
-
-    # --- Step 5: Output ---
-    # JSON files
-    write_json(records, project_root / "dashboard" / "records.json", args.days)
-    write_json(records, project_root / "data" / "records.json", args.days)
-
-    # GHL CSV
-    write_ghl_csv(records, project_root / "data" / "ghl_export.csv")
-
-    # --- Summary ---
     log.info("=" * 60)
     log.info("SUMMARY")
     log.info("  Total records   : %d", len(records))
     log.info("  With address    : %d", sum(1 for r in records if r.prop_address))
     log.info("  Score >= 70     : %d", sum(1 for r in records if r.score >= 70))
     log.info("  Score >= 50     : %d", sum(1 for r in records if r.score >= 50))
-    log.info("  Top categories  :")
-    cat_counts: dict[str, int] = {}
-    for r in records:
-        cat_counts[r.cat_label] = cat_counts.get(r.cat_label, 0) + 1
-    for label, count in sorted(cat_counts.items(), key=lambda x: -x[1])[:10]:
-        log.info("    %-30s %d", label, count)
-    log.info("=" * 60)
-
-    return 0
 
 
 if __name__ == "__main__":
-    try:
-        sys.exit(main())
-    except KeyboardInterrupt:
-        log.info("Interrupted by user")
-        sys.exit(1)
-    except Exception as exc:
-        log.error("Fatal error: %s", exc)
-        traceback.print_exc()
-        # Write empty output so the workflow doesn't fail on missing files
-        project_root = Path(__file__).resolve().parent.parent
-        for p in [
-            project_root / "dashboard" / "records.json",
-            project_root / "data" / "records.json",
-        ]:
-            if not p.exists():
-                p.parent.mkdir(parents=True, exist_ok=True)
-                p.write_text(json.dumps({"fetched_at": datetime.now().isoformat(), "total": 0, "records": []}))
-        sys.exit(1)
-
+    main()

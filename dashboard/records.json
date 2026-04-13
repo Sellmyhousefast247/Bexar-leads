@@ -1,7 +1,10 @@
 {
-  "fetched_at": null,
-  "source": "Bexar County, Texas — Clerk Portal + Parcel API",
-  "date_range": { "start": null, "end": null },
+  "fetched_at": "2026-04-13T00:29:37.342468",
+  "source": "Bexar County, Texas \u2014 Clerk Portal + Parcel API",
+  "date_range": {
+    "start": "2026-04-06",
+    "end": "2026-04-13"
+  },
   "total": 0,
   "with_address": 0,
   "records": []

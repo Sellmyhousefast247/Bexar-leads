@@ -63,8 +63,8 @@ log = logging.getLogger("bexar_scraper")
 # ---------------------------------------------------------------------------
 SEARCH_TERMS = [
     ("lis pendens",              "LP",   "Lis Pendens"),
-    ("notice of foreclosure",    "FC",   "Notice of Foreclosure"),
-    ("notice of trustee sale",   "FC",   "Notice of Trustee Sale"),
+    ("substitute trustee",       "FC",   "Substitute Trustee Deed"),
+    ("deed of trust",            "FC",   "Deed of Trust"),
     ("tax deed",                 "FC",   "Tax Deed / Tax Sale"),
     ("judgment",                 "JUD",  "Judgment"),
     ("abstract of judgment",     "JUD",  "Abstract of Judgment"),
@@ -130,7 +130,7 @@ def retry_get(session, url, **kwargs):
     return None
 
 # ---------------------------------------------------------------------------
-# Clerk portal scraper — Playwright
+# Clerk portal scraper â Playwright
 # ---------------------------------------------------------------------------
 class ClerkScraper:
     """
@@ -156,7 +156,7 @@ class ClerkScraper:
     def __init__(self, start: datetime, end: datetime):
         self.start = start
         self.end   = end
-        # YYYYMMDD,YYYYMMDD — confirmed working format
+        # YYYYMMDD,YYYYMMDD â confirmed working format
         self.date_range = f"{start.strftime('%Y%m%d')},{end.strftime('%Y%m%d')}"
 
     def _build_url(self, search_value: str, page: int = 1) -> str:
@@ -272,7 +272,7 @@ class ClerkScraper:
             )
             page = context.new_page()
 
-            # Warm session — load homepage to get cookies
+            # Warm session â load homepage to get cookies
             try:
                 page.goto(CLERK_BASE_URL, wait_until="domcontentloaded", timeout=30000)
                 log.info("Session warmed")
@@ -333,7 +333,7 @@ class ClerkScraper:
 def enrich_parcels(records: list[LeadRecord]) -> None:
     needs = [r for r in records if r.owner and not r.prop_address]
     if not needs:
-        log.info("All records already have addresses — skipping parcel enrichment")
+        log.info("All records already have addresses â skipping parcel enrichment")
         return
     log.info("Enriching %d records with parcel data...", len(needs))
     session = requests.Session()

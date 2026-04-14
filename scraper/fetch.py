@@ -130,7 +130,7 @@ def retry_get(session, url, **kwargs):
     return None
 
 # ---------------------------------------------------------------------------
-# Clerk portal scraper â Playwright
+# Clerk portal scraper Ã¢ÂÂ Playwright
 # ---------------------------------------------------------------------------
 class ClerkScraper:
     """
@@ -156,7 +156,7 @@ class ClerkScraper:
     def __init__(self, start: datetime, end: datetime):
         self.start = start
         self.end   = end
-        # YYYYMMDD,YYYYMMDD â confirmed working format
+        # YYYYMMDD,YYYYMMDD Ã¢ÂÂ confirmed working format
         self.date_range = f"{start.strftime('%Y%m%d')},{end.strftime('%Y%m%d')}"
 
     def _build_url(self, search_value: str, page: int = 1) -> str:
@@ -272,7 +272,7 @@ class ClerkScraper:
             )
             page = context.new_page()
 
-            # Warm session â load homepage to get cookies
+            # Warm session Ã¢ÂÂ load homepage to get cookies
             try:
                 page.goto(CLERK_BASE_URL, wait_until="domcontentloaded", timeout=30000)
                 log.info("Session warmed")
@@ -333,7 +333,7 @@ class ClerkScraper:
 def enrich_parcels(records: list[LeadRecord]) -> None:
     needs = [r for r in records if r.owner and not r.prop_address]
     if not needs:
-        log.info("All records already have addresses â skipping parcel enrichment")
+        log.info("All records already have addresses Ã¢ÂÂ skipping parcel enrichment")
         return
     log.info("Enriching %d records with parcel data...", len(needs))
     session = requests.Session()
@@ -400,63 +400,63 @@ def score_records(records: list[LeadRecord], start: datetime) -> None:
 # ---------------------------------------------------------------------------
 # Foreclosure GIS
 # ---------------------------------------------------------------------------
-def fetch_foreclosure_gis(start: datetime, end: datetime) -> list[LeadRecord]:
+def fetch_foreclosure_gis(start, end):
+    """
+    Pull foreclosure notices from Bexar County official map:
+    https://maps.bexar.org/foreclosures/
+    
+    API discovered from network inspection:
+    - Layer 0: CC/ForeclosuresProd/MapServer/0 = Mortgage foreclosures
+    - Layer 1: CC/ForeclosuresProd/MapServer/1 = Tax foreclosures
+    
+    Fields: ADDRESS, DOC_NUMBER, YEAR, MONTH, SCHOOL_DIST, TYPE, CITY, ZIP
+    These are upcoming trustee sales (first Tuesday of each month).
+    """
     records = []
+    base = "https://maps.bexar.org/arcgis/rest/services/CC/ForeclosuresProd/MapServer"
+    params = {
+        "where": "1=1",
+        "outFields": "ADDRESS,DOC_NUMBER,YEAR,MONTH,TYPE,CITY,ZIP,SCHOOL_DIST",
+        "returnGeometry": "false",
+        "f": "json",
+    }
     try:
-        gis_url = "https://maps.bexar.org/arcgis/rest/services/ForeclosureNotices/MapServer/0/query"
-        r = requests.get(gis_url,
-                         params={"where":"1=1","outFields":"*","returnGeometry":"false","f":"json"},
-                         timeout=REQUEST_TIMEOUT)
-        for feat in r.json().get("features", []):
-            att = feat.get("attributes", {}) or {}
-            sale_ms = att.get("SALEDATE") or att.get("SaleDate") or att.get("SALE_DATE")
-            filed = ""
-            if sale_ms:
-                try:
-                    dt = datetime.fromtimestamp(int(sale_ms) / 1000)
-                    if not (start <= dt <= end + timedelta(days=60)):
-                        continue
-                    filed = dt.strftime("%Y-%m-%d")
-                except Exception:
-                    pass
-            rec = LeadRecord(
-                doc_type     = "FORECLOSURE_GIS",
-                cat          = "FC",
-                cat_label    = "Foreclosure (GIS)",
-                filed        = filed,
-                owner        = (att.get("OWNER") or "").strip(),
-                prop_address = (att.get("SITUS_ADD") or att.get("SITEADD") or "").strip(),
-                prop_city    = (att.get("SITUS_CITY") or att.get("CITY") or "").strip(),
-                prop_zip     = str(att.get("SITUS_ZIP") or "").strip(),
-                legal        = (att.get("LEGAL") or att.get("LEGALDESC") or "").strip(),
-            )
-            if rec.owner or rec.prop_address:
-                records.append(rec)
-        log.info("Foreclosure GIS layer: %d records", len(records))
+        for layer in [0, 1]:
+            url = f"{base}/{layer}/query"
+            r = requests.get(url, params=params, timeout=REQUEST_TIMEOUT)
+            features = r.json().get("features", [])
+            log.info("ForeclosuresProd layer %d: %d features", layer, len(features))
+            for feat in features:
+                att = feat.get("attributes", {}) or {}
+                # Filter to current + next month
+                year = att.get("YEAR", 0) or 0
+                month = att.get("MONTH", 0) or 0
+                if year < start.year or (year == start.year and month < start.month - 1):
+                    continue
+                filed = f"{int(year):04d}-{int(month):02d}-01" if year and month else ""
+                addr_raw = (att.get("ADDRESS") or "").strip()
+                city = (att.get("CITY") or "").strip()
+                zipcode = str(att.get("ZIP") or "").strip()
+                doc_num = (att.get("DOC_NUMBER") or "").strip()
+                fc_type = (att.get("TYPE") or "").strip()
+                rec = LeadRecord(
+                    doc_num      = doc_num,
+                    doc_type     = f"FORECLOSURE_{fc_type}",
+                    cat          = "FC",
+                    cat_label    = f"Foreclosure Notice ({fc_type.title()})",
+                    filed        = filed,
+                    prop_address = addr_raw,
+                    prop_city    = city,
+                    prop_state   = STATE,
+                    prop_zip     = zipcode,
+                    clerk_url    = f"https://maps.bexar.org/foreclosures/" if not doc_num else f"https://bexar.tx.publicsearch.us/results?department=RP&searchType=quickSearch&searchValue={doc_num}&keywordSearch=false&searchOcrText=false",
+                )
+                if rec.prop_address:
+                    records.append(rec)
+        log.info("ForeclosuresProd total: %d records", len(records))
     except Exception as exc:
-        log.warning("Foreclosure GIS error: %s", exc)
+        log.warning("ForeclosuresProd error: %s", exc)
     return records
-
-
-# ---------------------------------------------------------------------------
-# Output
-# ---------------------------------------------------------------------------
-GHL_FIELDS = [
-    "doc_num","doc_type","cat","cat_label","filed","owner","grantee","amount",
-    "prop_address","prop_city","prop_state","prop_zip",
-    "mail_address","mail_city","mail_state","mail_zip",
-    "legal","clerk_url","score","flags",
-]
-GHL_HEADERS = {
-    "doc_num":"Document Number","doc_type":"Document Type",
-    "cat":"Category Code","cat_label":"Category","filed":"Filed Date",
-    "owner":"First Name","grantee":"Last Name","amount":"Amount",
-    "prop_address":"Address","prop_city":"City","prop_state":"State","prop_zip":"Postal Code",
-    "mail_address":"Mailing Address","mail_city":"Mailing City",
-    "mail_state":"Mailing State","mail_zip":"Mailing Zip",
-    "legal":"Legal Description","clerk_url":"Clerk URL",
-    "score":"Lead Score","flags":"Flags",
-}
 
 
 def write_outputs(records: list[LeadRecord], start: datetime, end: datetime) -> None:

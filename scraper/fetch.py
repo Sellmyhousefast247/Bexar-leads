@@ -82,6 +82,17 @@ SEARCH_TERMS = [
 # ---------------------------------------------------------------------------
 # Data model
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# GHL export mapping
+# ---------------------------------------------------------------------------
+GHL_FIELDS = [
+    "doc_num","doc_type","cat","cat_label","filed","owner","grantee",
+    "amount","prop_address","prop_city","prop_state","prop_zip",
+    "mail_address","mail_city","mail_state","mail_zip","legal","clerk_url","score","flags",
+]
+GHL_HEADERS = {f: f.replace("_", " ").title() for f in GHL_FIELDS}
+
+
 @dataclass
 class LeadRecord:
     doc_num:      str = ""
@@ -130,7 +141,7 @@ def retry_get(session, url, **kwargs):
     return None
 
 # ---------------------------------------------------------------------------
-# Clerk portal scraper ÃÂ¢ÃÂÃÂ Playwright
+# Clerk portal scraper ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Playwright
 # ---------------------------------------------------------------------------
 class ClerkScraper:
     """
@@ -156,7 +167,7 @@ class ClerkScraper:
     def __init__(self, start: datetime, end: datetime):
         self.start = start
         self.end   = end
-        # YYYYMMDD,YYYYMMDD ÃÂ¢ÃÂÃÂ confirmed working format
+        # YYYYMMDD,YYYYMMDD ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ confirmed working format
         self.date_range = f"{start.strftime('%Y%m%d')},{end.strftime('%Y%m%d')}"
 
     def _build_url(self, search_value: str, page: int = 1) -> str:
@@ -272,7 +283,7 @@ class ClerkScraper:
             )
             page = context.new_page()
 
-            # Warm session ÃÂ¢ÃÂÃÂ load homepage to get cookies
+            # Warm session ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ load homepage to get cookies
             try:
                 page.goto(CLERK_BASE_URL, wait_until="domcontentloaded", timeout=30000)
                 log.info("Session warmed")
@@ -333,7 +344,7 @@ class ClerkScraper:
 def enrich_parcels(records: list[LeadRecord]) -> None:
     needs = [r for r in records if r.owner and not r.prop_address]
     if not needs:
-        log.info("All records already have addresses ÃÂ¢ÃÂÃÂ skipping parcel enrichment")
+        log.info("All records already have addresses ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ skipping parcel enrichment")
         return
     log.info("Enriching %d records with parcel data...", len(needs))
     session = requests.Session()
@@ -536,14 +547,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()# ---------------------------------------------------------------------------
-# GHL export mapping
-# ---------------------------------------------------------------------------
-GHL_FIELDS = [
-    "doc_num","doc_type","cat","cat_label","filed","owner","grantee",
-    "amount","prop_address","prop_city","prop_state","prop_zip",
-    "mail_address","mail_city","mail_state","mail_zip","legal","clerk_url","score","flags",
-]
-GHL_HEADERS = {f: f.replace("_", " ").title() for f in GHL_FIELDS}
-
-
+    main()

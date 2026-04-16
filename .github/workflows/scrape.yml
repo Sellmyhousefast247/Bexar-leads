@@ -2,13 +2,11 @@ name: Bexar County Lead Scraper
 
 on:
   schedule:
-    # Run daily at 7:00 AM CST (13:00 UTC)
-    - cron: "0 13 * * *"
+    - cron: "0 13 * * 1-6"
   workflow_dispatch:
     inputs:
       lookback_days:
-        description: "Number of days to look back"
-        required: false
+        description: "Days to look back"
         default: "7"
 
 permissions:
@@ -30,44 +28,44 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install requests beautifulsoup4 lxml dbfread playwright
 
-      - name: Install Playwright Chromium
+      - name: Install Playwright browsers
         run: python -m playwright install --with-deps chromium
 
-      - name: Create output directories
-        run: |
-          mkdir -p dashboard data
+      - name: Create directories
+        run: mkdir -p dashboard data state exports/xleads imports/xleads logs archive
 
-      - name: Run scraper
+      - name: Run county scraper
+        run: python scraper/fetch.py --days ${{ github.event.inputs.lookback_days || '7' }}
+        env:
+          PYTHONUNBUFFERED: "1"
+
       - name: Run XLeads pipeline
         run: python scraper/pipeline.py
         env:
           PYTHONUNBUFFERED: "1"
           XLEADS_EMAIL:    ${{ secrets.XLEADS_EMAIL }}
           XLEADS_PASSWORD: ${{ secrets.XLEADS_PASSWORD }}
+          GHL_API_KEY:     ${{ secrets.GHL_API_KEY }}
+          GHL_LOCATION_ID: "47v58a5xVmpgOdpajnj7"
           MIN_SCORE:       "40"
         continue-on-error: true
 
       - name: Update admin stats
         run: python scraper/admin_panel.py
         continue-on-error: true
-        run: |
-          python scraper/fetch.py --days ${{ github.event.inputs.lookback_days || '7' }}
-        env:
-          PYTHONUNBUFFERED: "1"
 
-      - name: Commit and push results
+      - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dashboard/records.json data/records.json data/ghl_export.csv
-          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-          git diff --staged --quiet || git commit -m "Scrape results: ${TIMESTAMP}"
-          git push
+          git add dashboard/ data/ state/ logs/ exports/ imports/ || true
+          git diff --staged --quiet || git commit -m "Daily update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -76,16 +74,14 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
 
       - name: Pull latest changes
         run: git pull origin main
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dashboard

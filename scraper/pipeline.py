@@ -111,42 +111,38 @@ def run_xleads(csv_path,batch_id):
             fr.get_by_role("button", name="Show properties").click()
             fr.wait_for_timeout(5000)
             log.info("S4.6: Clicked Show properties")
-            log.info("S5: Select All")
-            fr.locator("button:has-text('Select')").first.wait_for(state="visible",timeout=15000)
-            fr.locator("button:has-text('Select')").first.click(); fr.wait_for_timeout(1000)
-            fr.locator("text=Select All").first.wait_for(state="visible",timeout=5000)
-            fr.locator("text=Select All").first.click(); fr.wait_for_timeout(1500)
-            log.info("S6: Open list")
-            rb=fr.locator("a[href*='new']").first
-            if not rb.is_visible(): rb=fr.locator("button.bg-red-600").first
-            rb.wait_for(state="visible",timeout=10000); rb.click(); fr.wait_for_timeout(3000)
-            log.info("S7: Export")
-            fr.locator("button:has-text('Export')").first.wait_for(state="visible",timeout=15000)
-            fr.locator("button:has-text('Export')").first.click(); fr.wait_for_timeout(2000)
-            log.info("S8: Lead Trace checkbox")
-            cb=fr.locator("label:has-text('Lead Trace'),text=Lead Trace").first
-            cb.wait_for(state="visible",timeout=10000); cb.click(); fr.wait_for_timeout(1000)
-            log.info("S9: Red Export button")
-            fr.locator("button:has-text('Export')").last.wait_for(state="visible",timeout=10000)
-            fr.locator("button:has-text('Export')").last.click(); fr.wait_for_timeout(3000)
-            log.info("Polling for skip trace completion")
-            for _ in range(30):
-                fr.wait_for_timeout(10000)
-                if any(s in fr.locator("body").inner_text() for s in ["Download","completed","export ready"]): log.info("Done!"); break
-            log.info("S10: Download")
-            fr.goto(XLEADS_URL,wait_until="domcontentloaded",timeout=60000); fr.wait_for_timeout(2000)
-            fr.locator("button:has-text('Exports')").first.wait_for(state="visible",timeout=15000)
-            fr.locator("button:has-text('Exports')").first.click(); fr.wait_for_timeout(2000)
-            with fr.expect_download(timeout=30000) as dli:
-                fr.locator("button:has-text('Download')").first.wait_for(state="visible",timeout=10000)
-                fr.locator("button:has-text('Download')").first.click()
-            dli.value.save_as(str(dl)); log.info("Downloaded -> %s",dl); return dl
+            fr.wait_for_timeout(3000)
+            # S5: Select All properties
+            log.info("S5: Clicking Select dropdown")
+            fr.get_by_role("button", name="Select").click()
+            fr.wait_for_timeout(1000)
+            log.info("S5: Clicking Select All")
+            fr.get_by_text("Select All").click()
+            fr.wait_for_timeout(2000)
+            # S6: Click Exports
+            log.info("S6: Clicking Exports")
+            fr.get_by_role("button", name="Exports").click()
+            fr.wait_for_timeout(1000)
+            # S7: Click Owner contact info
+            log.info("S7: Clicking Owner contact info")
+            fr.get_by_text("Owner contact info").click()
+            fr.wait_for_timeout(3000)
+            # S8: Wait for download and save file
+            log.info("S8: Waiting for download")
+            with page.expect_download(timeout=60000) as dl_info:
+                try:
+                    fr.get_by_role("button", name="Export").click()
+                except Exception:
+                    pass
+            dl = dl_info.value
+            dl_path = IMPORTS_DIR / dl.suggested_filename
+            dl.save_as(str(dl_path))
+            log.info(f"S8: Downloaded to {dl_path}")
+            return str(dl_path)
         except Exception as e:
-            log.error("XLeads err: %s",e,exc_info=True)
-            try: pg.screenshot(path=str(LOGS_DIR/f"xleads_err_{today}.png"))
-            except: pass
+            log.error(f"XLeads error: {e}")
+            page.screenshot(path=str(LOGS_DIR/f"xleads_err_{today}.png"))
             return None
-        finally: ctx.close(); br.close()
 def parse_enriched(ep,mp):
     if not ep.exists(): return []
     mba={}

@@ -105,6 +105,12 @@ def run_xleads(csv_path,batch_id):
             fr.get_by_role("button", name="Import").click()
             fr.wait_for_timeout(8000)
             log.info("S4.5: Clicked Import")
+            # S4.6: Click Show properties on import complete screen
+            log.info("S4.6: Waiting for Show properties button")
+            fr.get_by_role("button", name="Show properties").wait_for(state="visible", timeout=20000)
+            fr.get_by_role("button", name="Show properties").click()
+            fr.wait_for_timeout(5000)
+            log.info("S4.6: Clicked Show properties")
             log.info("S5: Select All")
             fr.locator("button:has-text('Select')").first.wait_for(state="visible",timeout=15000)
             fr.locator("button:has-text('Select')").first.click(); fr.wait_for_timeout(1000)

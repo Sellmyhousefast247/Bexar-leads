@@ -43,6 +43,18 @@ jobs:
           mkdir -p dashboard data
 
       - name: Run scraper
+      - name: Run XLeads pipeline
+        run: python scraper/pipeline.py
+        env:
+          PYTHONUNBUFFERED: "1"
+          XLEADS_EMAIL:    ${{ secrets.XLEADS_EMAIL }}
+          XLEADS_PASSWORD: ${{ secrets.XLEADS_PASSWORD }}
+          MIN_SCORE:       "40"
+        continue-on-error: true
+
+      - name: Update admin stats
+        run: python scraper/admin_panel.py
+        continue-on-error: true
         run: |
           python scraper/fetch.py --days ${{ github.event.inputs.lookback_days || '7' }}
         env:

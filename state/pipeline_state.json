@@ -1,8 +1,8 @@
 {
   "current_batch": {
-    "batch_id": "6bda1b4d-1ac6-40e0-9eee-419906d11cd1",
-    "csv_path": "/home/runner/work/Bexar-leads/Bexar-leads/exports/xleads/xleads_export_2026-04-16_20-50_6bda1b4d.csv",
-    "meta_path": "/home/runner/work/Bexar-leads/Bexar-leads/exports/xleads/xleads_meta_2026-04-16_20-50_6bda1b4d.json",
-    "count": 438
+    "batch_id": "a81f16bf-0f53-40b6-b044-9902ea39b823",
+    "csv_path": "/home/runner/work/Bexar-leads/Bexar-leads/exports/xleads/xleads_export_2026-04-16_21-21_a81f16bf.csv",
+    "meta_path": "/home/runner/work/Bexar-leads/Bexar-leads/exports/xleads/xleads_meta_2026-04-16_21-21_a81f16bf.json",
+    "count": 388
   }
 }

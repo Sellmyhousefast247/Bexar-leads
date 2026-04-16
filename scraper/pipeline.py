@@ -111,23 +111,26 @@ def run_xleads(csv_path,batch_id):
             fr.get_by_role("button", name="Show properties").click()
             fr.wait_for_timeout(5000)
             log.info("S4.6: Clicked Show properties")
-            fr.wait_for_timeout(3000)
-            # S5: Select All properties
+            fr.wait_for_timeout(5000)
+            # S5: Wait for property grid to load then Select All
+            log.info("S5: Waiting for property grid")
+            fr.wait_for_selector("button:has-text('Select')", timeout=15000)
+            fr.wait_for_timeout(2000)
             log.info("S5: Clicking Select dropdown")
-            fr.get_by_role("button", name="Select").click()
-            fr.wait_for_timeout(1000)
+            fr.locator("button:has-text('Select')").first().click()
+            fr.wait_for_timeout(1500)
             log.info("S5: Clicking Select All")
-            fr.get_by_text("Select All").click()
+            fr.get_by_text("Select All", exact=True).click()
             fr.wait_for_timeout(2000)
             # S6: Click Exports
             log.info("S6: Clicking Exports")
             fr.get_by_role("button", name="Exports").click()
-            fr.wait_for_timeout(1000)
+            fr.wait_for_timeout(1500)
             # S7: Click Owner contact info
             log.info("S7: Clicking Owner contact info")
-            fr.get_by_text("Owner contact info").click()
+            fr.get_by_text("Owner contact info", exact=True).click()
             fr.wait_for_timeout(3000)
-            # S8: Wait for download and save file
+            # S8: Download
             log.info("S8: Waiting for download")
             with page.expect_download(timeout=60000) as dl_info:
                 try:

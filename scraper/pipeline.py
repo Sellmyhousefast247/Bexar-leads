@@ -99,10 +99,12 @@ def run_xleads(csv_path,batch_id):
             log.info("S4: Next")
             fr.locator("button:has-text('Next')").wait_for(state="visible",timeout=10000)
             fr.locator("button:has-text('Next')").click(); fr.wait_for_timeout(3000)
-            # S4.5: Click Import button on column mapping screen
-            log.info("S4.5: Clicking Import button on column mapping screen")
-            fr.locator("button:has-text('Import')").wait_for(state="visible",timeout=15000)
-            fr.locator("button:has-text('Import')").click(); fr.wait_for_timeout(5000)
+            # S4.5: Click Import on column mapping screen
+            log.info("S4.5: Waiting for Import button")
+            fr.get_by_role("button", name="Import").wait_for(state="visible", timeout=20000)
+            fr.get_by_role("button", name="Import").click()
+            fr.wait_for_timeout(8000)
+            log.info("S4.5: Clicked Import")
             log.info("S5: Select All")
             fr.locator("button:has-text('Select')").first.wait_for(state="visible",timeout=15000)
             fr.locator("button:has-text('Select')").first.click(); fr.wait_for_timeout(1000)

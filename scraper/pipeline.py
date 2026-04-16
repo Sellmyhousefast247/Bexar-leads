@@ -9,7 +9,6 @@ GHL_API_BASE="https://services.leadconnectorhq.com"
 XLEADS_EMAIL=os.environ.get("XLEADS_EMAIL","")
 XLEADS_PASSWORD=os.environ.get("XLEADS_PASSWORD","")
 XLEADS_URL="https://next.xleads.com/leads"
-XLEADS_GHL_URL=f"https://login.xleads.com/v2/location/{GHL_LOCATION_ID}/custom-menu-link/f6d4da52-2aab-4c3e-8d35-7c1b51c86f46"
 MIN_SCORE=int(os.environ.get("MIN_SCORE","40"))
 DRY_RUN=os.environ.get("DRY_RUN","0")=="1"
 ROOT=pathlib.Path(__file__).parent.parent
@@ -79,31 +78,56 @@ def run_xleads(csv_path,batch_id):
         br=pw.chromium.launch(headless=True,args=["--no-sandbox","--disable-dev-shm-usage"])
         ctx=br.new_context(viewport={"width":1280,"height":800},accept_downloads=True); pg=ctx.new_page()
         try:
-            pg.goto(XLEADS_GHL_URL,wait_until="networkidle",timeout=30000); pg.wait_for_timeout(3000)
-            fr=next((f for f in pg.frames if "next.xleads.com" in f.url),None) or pg
-            if fr is pg:
-                pg.goto(XLEADS_URL,wait_until="networkidle",timeout=30000); pg.wait_for_timeout(3000)
-                if "login" in pg.url.lower() or pg.locator("input[type='email']").is_visible():
-                    pg.fill("input[type='email']",XLEADS_EMAIL); pg.fill("input[type='password']",XLEADS_PASSWORD)
-                    pg.click("button[type='submit']"); pg.wait_for_url("**/leads**",timeout=15000)
-            fr.locator("button:has-text('Import file')").wait_for(state="visible",timeout=15000); fr.locator("button:has-text('Import file')").click(); fr.wait_for_timeout(1500)
-            fi=fr.locator("input[type='file']"); fi.wait_for(state="attached",timeout=10000); fi.set_input_files(str(csv_path)); fr.wait_for_timeout(1500)
-            fr.locator("dialog button:has-text('Next')").wait_for(state="visible",timeout=10000); fr.locator("dialog button:has-text('Next')").click(); fr.wait_for_timeout(3000)
-            fr.locator("button:has-text('Select')").first.wait_for(state="visible",timeout=15000); fr.locator("button:has-text('Select')").first.click(); fr.wait_for_timeout(1000)
-            fr.locator("text=Select All").first.wait_for(state="visible",timeout=5000); fr.locator("text=Select All").first.click(); fr.wait_for_timeout(1500)
+            log.info("S1: Navigate to XLeads directly")
+            pg.goto(XLEADS_URL,wait_until="domcontentloaded",timeout=60000)
+            pg.wait_for_timeout(3000)
+            if pg.locator("input[type='email']").is_visible():
+                log.info("Login required")
+                pg.fill("input[type='email']",XLEADS_EMAIL)
+                pg.fill("input[type='password']",XLEADS_PASSWORD)
+                pg.click("button[type='submit']")
+                pg.wait_for_url("**/leads**",timeout=30000)
+                pg.wait_for_timeout(2000)
+            fr=pg
+            log.info("S2: Import file")
+            fr.locator("button:has-text('Import file')").wait_for(state="visible",timeout=20000)
+            fr.locator("button:has-text('Import file')").click(); fr.wait_for_timeout(1500)
+            log.info("S3: Upload %s",csv_path)
+            fi=fr.locator("input[type='file']")
+            fi.wait_for(state="attached",timeout=10000)
+            fi.set_input_files(str(csv_path)); fr.wait_for_timeout(1500)
+            log.info("S4: Next")
+            fr.locator("dialog button:has-text('Next')").wait_for(state="visible",timeout=10000)
+            fr.locator("dialog button:has-text('Next')").click(); fr.wait_for_timeout(3000)
+            log.info("S5: Select All")
+            fr.locator("button:has-text('Select')").first.wait_for(state="visible",timeout=15000)
+            fr.locator("button:has-text('Select')").first.click(); fr.wait_for_timeout(1000)
+            fr.locator("text=Select All").first.wait_for(state="visible",timeout=5000)
+            fr.locator("text=Select All").first.click(); fr.wait_for_timeout(1500)
+            log.info("S6: Open list")
             rb=fr.locator("a[href*='new']").first
             if not rb.is_visible(): rb=fr.locator("button.bg-red-600").first
             rb.wait_for(state="visible",timeout=10000); rb.click(); fr.wait_for_timeout(3000)
-            fr.locator("button:has-text('Export')").first.wait_for(state="visible",timeout=15000); fr.locator("button:has-text('Export')").first.click(); fr.wait_for_timeout(2000)
-            cb=fr.locator("label:has-text('Lead Trace'),text=Lead Trace").first; cb.wait_for(state="visible",timeout=10000); cb.click(); fr.wait_for_timeout(1000)
-            fr.locator("button:has-text('Export')").last.wait_for(state="visible",timeout=10000); fr.locator("button:has-text('Export')").last.click(); fr.wait_for_timeout(3000)
+            log.info("S7: Export")
+            fr.locator("button:has-text('Export')").first.wait_for(state="visible",timeout=15000)
+            fr.locator("button:has-text('Export')").first.click(); fr.wait_for_timeout(2000)
+            log.info("S8: Lead Trace checkbox")
+            cb=fr.locator("label:has-text('Lead Trace'),text=Lead Trace").first
+            cb.wait_for(state="visible",timeout=10000); cb.click(); fr.wait_for_timeout(1000)
+            log.info("S9: Red Export button")
+            fr.locator("button:has-text('Export')").last.wait_for(state="visible",timeout=10000)
+            fr.locator("button:has-text('Export')").last.click(); fr.wait_for_timeout(3000)
+            log.info("Polling for skip trace completion")
             for _ in range(30):
                 fr.wait_for_timeout(10000)
-                if any(s in fr.locator("body").inner_text() for s in ["Download","completed","export ready"]): break
-            fr.goto(XLEADS_URL,wait_until="networkidle",timeout=30000); fr.wait_for_timeout(2000)
-            fr.locator("button:has-text('Exports')").first.wait_for(state="visible",timeout=15000); fr.locator("button:has-text('Exports')").first.click(); fr.wait_for_timeout(2000)
+                if any(s in fr.locator("body").inner_text() for s in ["Download","completed","export ready"]): log.info("Done!"); break
+            log.info("S10: Download")
+            fr.goto(XLEADS_URL,wait_until="domcontentloaded",timeout=60000); fr.wait_for_timeout(2000)
+            fr.locator("button:has-text('Exports')").first.wait_for(state="visible",timeout=15000)
+            fr.locator("button:has-text('Exports')").first.click(); fr.wait_for_timeout(2000)
             with fr.expect_download(timeout=30000) as dli:
-                fr.locator("button:has-text('Download')").first.wait_for(state="visible",timeout=10000); fr.locator("button:has-text('Download')").first.click()
+                fr.locator("button:has-text('Download')").first.wait_for(state="visible",timeout=10000)
+                fr.locator("button:has-text('Download')").first.click()
             dli.value.save_as(str(dl)); log.info("Downloaded -> %s",dl); return dl
         except Exception as e:
             log.error("XLeads err: %s",e,exc_info=True)
@@ -158,7 +182,9 @@ def run_pipeline(dry_run=False,step="all"):
         if step in ("all","export"):
             recs=select_records(state)
             if not recs: log.info("No new records"); save_state(state); return
-            cp=export_csv(recs,b); state["current_batch"]={"batch_id":b,"csv_path":str(cp),"meta_path":str(cp).replace("xleads_export_","xleads_meta_").replace(".csv",".json"),"count":len(recs)}; save_state(state)
+            cp=export_csv(recs,b)
+            state["current_batch"]={"batch_id":b,"csv_path":str(cp),"meta_path":str(cp).replace("xleads_export_","xleads_meta_").replace(".csv",".json"),"count":len(recs)}
+            save_state(state)
         if step in ("all","xleads"):
             bi=state.get("current_batch",{}); cp=pathlib.Path(bi.get("csv_path",""))
             ep=None if DRY_RUN else run_xleads(cp,b)

@@ -112,30 +112,47 @@ def run_xleads(csv_path,batch_id):
             fr.wait_for_timeout(5000)
             log.info("S4.6: Clicked Show properties")
             fr.wait_for_timeout(5000)
-            # S5: Wait for grid then Select All
+            # S5: Wait for grid then Select All via JS click on chevron
             log.info("S5: Waiting for property grid to load")
             fr.wait_for_selector("button:has-text('Select')", timeout=15000)
             fr.wait_for_timeout(2000)
-            log.info("S5: Opening Select dropdown")
-            fr.locator("button:has-text('Select')").first().click()
+            log.info("S5: Clicking Select dropdown chevron via JS")
+            fr.evaluate("""() => {
+                const btns = Array.from(document.querySelectorAll('button'));
+                const selectBtn = btns.find(b => b.textContent.trim().startsWith('Select'));
+                if (selectBtn) selectBtn.click();
+            }""")
             fr.wait_for_timeout(1000)
             log.info("S5: Clicking Select All")
-            fr.get_by_text("Select All", exact=False).first().click()
+            fr.evaluate("""() => {
+                const items = Array.from(document.querySelectorAll('li, [role="menuitem"], div'));
+                const selectAll = items.find(el => el.textContent.trim().startsWith('Select All'));
+                if (selectAll) selectAll.click();
+            }""")
             fr.wait_for_timeout(2000)
-            # S6: Click the saved list button (red button top right) to open export panel
-            log.info("S6: Clicking saved list button to open export panel")
-            fr.locator("button").filter(has_text="selected").first().click()
+            # S6: Click the red saved-list button (now shows "N selected")
+            log.info("S6: Clicking saved-list button to open export panel")
+            fr.evaluate("""() => {
+                const btns = Array.from(document.querySelectorAll('button'));
+                const redBtn = btns.find(b => /\d+\s*selected/i.test(b.textContent) || b.className.includes('bg-red') || b.className.includes('bg-destructive'));
+                if (redBtn) redBtn.click();
+                else {
+                    // fallback: click last button in header area
+                    const headerBtns = Array.from(document.querySelectorAll('header button, nav button, [class*="header"] button'));
+                    if (headerBtns.length) headerBtns[headerBtns.length-1].click();
+                }
+            }""")
             fr.wait_for_timeout(2000)
             # S7: Click Export button in the panel
             log.info("S7: Clicking Export button")
             fr.get_by_role("button", name="Export").click()
             fr.wait_for_timeout(2000)
-            # S8: Check Lead Trace - Owner Contact Info checkbox
+            # S8: Check Lead Trace - Owner Contact Info
             log.info("S8: Checking Lead Trace - Owner Contact Info")
             fr.get_by_text("Lead Trace - Owner Contact Info", exact=False).click()
             fr.wait_for_timeout(1000)
-            # S9: Click Export to download
-            log.info("S9: Clicking Export to download")
+            # S9: Click final Export to download
+            log.info("S9: Clicking final Export button")
             with page.expect_download(timeout=120000) as dl_info:
                 fr.get_by_role("button", name="Export").last().click()
             dl = dl_info.value
@@ -159,12 +176,12 @@ def run_pipeline():
     log.info(f"{len(new_recs)} new records to import")
 
     if not new_recs:
-        log.info("No new records â nothing to do")
+        log.info("No new records Ã¢ÂÂ nothing to do")
         return
 
     # Import directly to GHL
     if not GHL_API_KEY:
-        log.warning("GHL_API_KEY not set â skipping GHL import")
+        log.warning("GHL_API_KEY not set Ã¢ÂÂ skipping GHL import")
         return
 
     imported = 0
@@ -177,7 +194,7 @@ def run_pipeline():
             log.error(f"GHL import failed for {get_key(r)}: {e}")
 
     save_state(state)
-    log.info(f"Done â imported {imported}/{len(new_recs)} records to GHL")
+    log.info(f"Done Ã¢ÂÂ imported {imported}/{len(new_recs)} records to GHL")
 
 if __name__ == "__main__":
     run_pipeline()

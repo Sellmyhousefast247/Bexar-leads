@@ -185,29 +185,37 @@ def import_ghl(enriched,state,batch_id):
             time.sleep(0.12)
         except Exception as e: log.error("Err %s: %s",k,e); stats["failed"]+=1
     return stats
-def run_pipeline(dry_run=False,step="all"):
-    global DRY_RUN; DRY_RUN=dry_run or DRY_RUN
-    b=str(uuid.uuid4()); state=load_state(); sts={}; err=""; recs=[]
-    log.info("="*60); log.info("Pipeline %s | dry=%s | step=%s",b,DRY_RUN,step); log.info("="*60)
-    try:
-        if step in ("all","export"):
-            recs=select_records(state)
-            if not recs: log.info("No new records"); save_state(state); return
-            cp=export_csv(recs,b)
-            state["current_batch"]={"batch_id":b,"csv_path":str(cp),"meta_path":str(cp).replace("xleads_export_","xleads_meta_").replace(".csv",".json"),"count":len(recs)}
-            save_state(state)
-        if step in ("all","xleads"):
-            bi=state.get("current_batch",{}); cp=pathlib.Path(bi.get("csv_path",""))
-            ep=None if DRY_RUN else run_xleads(cp,b)
-            if not DRY_RUN and not ep: log.error("XLeads failed"); save_state(state); return
-            if ep: state["current_batch"]["enriched_path"]=str(ep); save_state(state)
-        if step in ("all","ghl"):
-            bi=state.get("current_batch",{}); ep=pathlib.Path(bi.get("enriched_path","")); mp=pathlib.Path(bi.get("meta_path",""))
-            enr=parse_enriched(ep,mp)
-            if not enr: return
-            sts=import_ghl(enr,state,b); log.info("GHL: created=%d failed=%d",sts["created"],sts["failed"])
-    except Exception as e: err=str(e); log.error("Pipeline err: %s",e,exc_info=True)
-    finally: save_state(state); log.info("Done.")
-if __name__=="__main__":
-    ap=argparse.ArgumentParser(); ap.add_argument("--dry-run",action="store_true"); ap.add_argument("--step",choices=["all","export","xleads","ghl"],default="all"); args=ap.parse_args()
-    run_pipeline(dry_run=args.dry_run,step=args.step)
+def run_pipeline():
+    log.info("=== Pipeline start ===")
+    state = load_state()
+    records_data = json.loads(RECORDS_JSON.read_text())
+    records = records_data.get("records", [])
+    log.info(f"Loaded {len(records)} total records")
+
+    # Filter to new records not yet imported
+    new_recs = [r for r in records if get_key(r) not in state]
+    log.info(f"{len(new_recs)} new records to import")
+
+    if not new_recs:
+        log.info("No new records — nothing to do")
+        return
+
+    # Import directly to GHL
+    if not GHL_API_KEY:
+        log.warning("GHL_API_KEY not set — skipping GHL import")
+        return
+
+    imported = 0
+    for r in new_recs:
+        try:
+            import_ghl(r)
+            state[get_key(r)] = True
+            imported += 1
+        except Exception as e:
+            log.error(f"GHL import failed for {get_key(r)}: {e}")
+
+    save_state(state)
+    log.info(f"Done — imported {imported}/{len(new_recs)} records to GHL")
+
+if __name__ == "__main__":
+    run_pipeline()

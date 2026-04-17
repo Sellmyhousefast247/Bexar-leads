@@ -6,3 +6,7 @@
 2026-04-17 01:02:19,711 [INFO] Loaded 500 total records
 2026-04-17 01:02:19,711 [INFO] 500 new records to import
 2026-04-17 01:02:19,711 [WARNING] GHL_API_KEY not set Ã¢ÂÂ skipping GHL import
+2026-04-17 01:20:40,256 [INFO] === Pipeline start ===
+2026-04-17 01:20:40,259 [INFO] Loaded 500 total records
+2026-04-17 01:20:40,259 [INFO] 500 new records to import
+2026-04-17 01:20:40,259 [WARNING] GHL_API_KEY not set ÃÂ¢ÃÂÃÂ skipping GHL import

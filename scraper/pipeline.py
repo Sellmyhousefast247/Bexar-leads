@@ -167,35 +167,15 @@ def run_xleads(csv_path,batch_id):
             return None
 def run_pipeline():
     log.info("=== Pipeline start ===")
-    state = load_state()
-    records_data = json.loads(RECORDS_JSON.read_text())
-    records = records_data.get("records", [])
-    log.info(f"Loaded {len(records)} total records")
+    log.info("Step 1: Running XLeads skip trace export")
+    enriched_csv = run_xleads()
+    if enriched_csv:
+        log.info(f"XLeads export complete: {enriched_csv}")
+    else:
+        log.error("XLeads export failed")
+        sys.exit(2)
+    log.info("Pipeline complete.")
 
-    # Filter to new records not yet imported
-    new_recs = [r for r in records if get_key(r) not in state]
-    log.info(f"{len(new_recs)} new records to import")
-
-    if not new_recs:
-        log.info("No new records ÃÂ¢ÃÂÃÂ nothing to do")
-        return
-
-    # Import directly to GHL
-    if not GHL_API_KEY:
-        log.warning("GHL_API_KEY not set ÃÂ¢ÃÂÃÂ skipping GHL import")
-        return
-
-    imported = 0
-    for r in new_recs:
-        try:
-            import_ghl(r)
-            state[get_key(r)] = True
-            imported += 1
-        except Exception as e:
-            log.error(f"GHL import failed for {get_key(r)}: {e}")
-
-    save_state(state)
-    log.info(f"Done ÃÂ¢ÃÂÃÂ imported {imported}/{len(new_recs)} records to GHL")
 
 if __name__ == "__main__":
     run_pipeline()

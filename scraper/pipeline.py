@@ -112,79 +112,41 @@ def run_xleads(csv_path,batch_id):
             fr.wait_for_timeout(5000)
             log.info("S4.6: Clicked Show properties")
             fr.wait_for_timeout(5000)
-            # S5: Wait for property grid to load then Select All
-            log.info("S5: Waiting for property grid")
+            # S5: Wait for grid then Select All
+            log.info("S5: Waiting for property grid to load")
             fr.wait_for_selector("button:has-text('Select')", timeout=15000)
             fr.wait_for_timeout(2000)
-            log.info("S5: Clicking Select dropdown")
+            log.info("S5: Opening Select dropdown")
             fr.locator("button:has-text('Select')").first().click()
-            fr.wait_for_timeout(1500)
+            fr.wait_for_timeout(1000)
             log.info("S5: Clicking Select All")
-            fr.get_by_text("Select All", exact=True).click()
+            fr.get_by_text("Select All", exact=False).first().click()
             fr.wait_for_timeout(2000)
-            # S6: Click Exports
-            log.info("S6: Clicking Exports")
-            fr.get_by_role("button", name="Exports").click()
-            fr.wait_for_timeout(1500)
-            # S7: Click Owner contact info
-            log.info("S7: Clicking Owner contact info")
-            fr.get_by_text("Owner contact info", exact=True).click()
-            fr.wait_for_timeout(3000)
-            # S8: Download
-            log.info("S8: Waiting for download")
-            with page.expect_download(timeout=60000) as dl_info:
-                try:
-                    fr.get_by_role("button", name="Export").click()
-                except Exception:
-                    pass
+            # S6: Click the saved list button (red button top right) to open export panel
+            log.info("S6: Clicking saved list button to open export panel")
+            fr.locator("button").filter(has_text="selected").first().click()
+            fr.wait_for_timeout(2000)
+            # S7: Click Export button in the panel
+            log.info("S7: Clicking Export button")
+            fr.get_by_role("button", name="Export").click()
+            fr.wait_for_timeout(2000)
+            # S8: Check Lead Trace - Owner Contact Info checkbox
+            log.info("S8: Checking Lead Trace - Owner Contact Info")
+            fr.get_by_text("Lead Trace - Owner Contact Info", exact=False).click()
+            fr.wait_for_timeout(1000)
+            # S9: Click Export to download
+            log.info("S9: Clicking Export to download")
+            with page.expect_download(timeout=120000) as dl_info:
+                fr.get_by_role("button", name="Export").last().click()
             dl = dl_info.value
             dl_path = IMPORTS_DIR / dl.suggested_filename
             dl.save_as(str(dl_path))
-            log.info(f"S8: Downloaded to {dl_path}")
+            log.info(f"S9: Downloaded enriched CSV to {dl_path}")
             return str(dl_path)
         except Exception as e:
             log.error(f"XLeads error: {e}")
             page.screenshot(path=str(LOGS_DIR/f"xleads_err_{today}.png"))
             return None
-def parse_enriched(ep,mp):
-    if not ep.exists(): return []
-    mba={}
-    if mp.exists():
-        for m in json.loads(mp.read_text()): mba[_n(m.get("street","")+m.get("zip",""))]=m
-    out=[]
-    with open(ep,newline="",encoding="utf-8") as f:
-        for r in csv.DictReader(f):
-            key=_n(r.get("Street Address","")+r.get("Zip","")); meta=mba.get(key,{}); ph=[]; em=[]
-            for c,v in r.items():
-                if v and any(p in c.lower() for p in ["phone","mobile","cell","landline"]):
-                    cl=re.sub(r"[^\d]","",v)
-                    if len(cl)>=10: ph.append(cl)
-                if v and "email" in c.lower() and "@" in v: em.append(v.strip().lower())
-            ph=list(dict.fromkeys(ph))[:3]; em=list(dict.fromkeys(em))[:3]
-            out.append({**meta,"raw":dict(r),"phones":ph,"emails":em,"has_mobile":bool(ph),"has_email":bool(em),"has_any_contact":bool(ph or em)})
-    return out
-def import_ghl(enriched,state,batch_id):
-    stats={"created":0,"failed":0}; now=datetime.now(timezone.utc).isoformat()
-    if "processed_keys" not in state: state["processed_keys"]={}
-    for r in enriched:
-        k=r.get("record_key",get_key(r))
-        try:
-            tags=["county-lead","bexar-county","skip-traced"]
-            if r.get("has_mobile"): tags.append("has-mobile")
-            if r.get("has_email"): tags.append("has-email")
-            ph=r.get("phones",[]); em=r.get("emails",[])
-            pl={"locationId":GHL_LOCATION_ID,"firstName":r.get("owner_first",""),"lastName":r.get("owner_last","") or r.get("owner","").title(),"name":r.get("owner","").title(),"address1":r.get("street",""),"city":r.get("city",""),"state":r.get("state","TX"),"postalCode":r.get("zip",""),"country":"US","source":"Bexar County Dashboard","tags":list(set(tags))}
-            if ph: pl["phone"]=f"+1{ph[0]}" if not ph[0].startswith("+") else ph[0]
-            if em: pl["email"]=em[0]
-            if DRY_RUN: cid=f"dry_{uuid.uuid4().hex[:8]}"; log.info("[DRY] %s",pl.get("name","?"))
-            else:
-                r2=requests.post(f"{GHL_API_BASE}/contacts/",headers={"Authorization":f"Bearer {GHL_API_KEY}","Version":"2021-07-28","Content-Type":"application/json"},json=pl,timeout=15)
-                cid=r2.json().get("contact",{}).get("id") if r2.status_code in (200,201) else None
-            if cid: stats["created"]+=1; state["processed_keys"][k]={"ghl_contact_id":cid,"batch_id":batch_id,"imported_at":now}
-            else: stats["failed"]+=1
-            time.sleep(0.12)
-        except Exception as e: log.error("Err %s: %s",k,e); stats["failed"]+=1
-    return stats
 def run_pipeline():
     log.info("=== Pipeline start ===")
     state = load_state()
@@ -197,12 +159,12 @@ def run_pipeline():
     log.info(f"{len(new_recs)} new records to import")
 
     if not new_recs:
-        log.info("No new records — nothing to do")
+        log.info("No new records â nothing to do")
         return
 
     # Import directly to GHL
     if not GHL_API_KEY:
-        log.warning("GHL_API_KEY not set — skipping GHL import")
+        log.warning("GHL_API_KEY not set â skipping GHL import")
         return
 
     imported = 0
@@ -215,7 +177,7 @@ def run_pipeline():
             log.error(f"GHL import failed for {get_key(r)}: {e}")
 
     save_state(state)
-    log.info(f"Done — imported {imported}/{len(new_recs)} records to GHL")
+    log.info(f"Done â imported {imported}/{len(new_recs)} records to GHL")
 
 if __name__ == "__main__":
     run_pipeline()

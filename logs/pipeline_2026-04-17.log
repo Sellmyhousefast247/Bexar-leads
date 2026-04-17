@@ -16,3 +16,5 @@
 2026-04-17 11:32:21,563 [WARNING] GHL_API_KEY not set ÃÂ¢ÃÂÃÂ skipping GHL import
 2026-04-17 15:36:41,110 [INFO] === Pipeline start ===
 2026-04-17 15:36:41,110 [INFO] Step 1: Running XLeads skip trace export
+2026-04-17 15:46:32,286 [INFO] === Pipeline start ===
+2026-04-17 15:46:32,287 [INFO] Step 1: Running XLeads skip trace export

@@ -68,106 +68,93 @@ def export_csv(records,batch_id):
     with open(cp,"w",newline="",encoding="utf-8") as f:
         w=csv.DictWriter(f,fieldnames=["Street Address","City","State","Zip"]); w.writeheader(); w.writerows(xr)
     mp.write_text(json.dumps(meta,indent=2)); log.info("Exported %d -> %s",len(xr),cp); return cp
-def run_xleads(csv_path,batch_id):
-    try: from playwright.sync_api import sync_playwright
-    except ImportError: log.error("Playwright not installed"); return None
-    IMPORTS_DIR.mkdir(parents=True,exist_ok=True)
-    ts=datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M")
-    dl=IMPORTS_DIR/f"xleads_enriched_{ts}_{batch_id[:8]}.csv"
+def run_xleads(csv_path, batch_id):
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        log.error("playwright not installed")
+        return None
+    log.info("S1: Navigate to XLeads directly")
     with sync_playwright() as pw:
-        br=pw.chromium.launch(headless=True,args=["--no-sandbox","--disable-dev-shm-usage"])
-        ctx=br.new_context(viewport={"width":1280,"height":800},accept_downloads=True); pg=ctx.new_page()
+        browser = pw.chromium.launch(headless=True)
+        ctx = browser.new_context(accept_downloads=True)
+        pg = ctx.new_page()
+        fr = pg.frame_locator("html")
         try:
-            log.info("S1: Navigate to XLeads directly")
-            pg.goto(XLEADS_URL,wait_until="domcontentloaded",timeout=60000)
-            pg.wait_for_timeout(3000)
-            if pg.locator("input[type='email']").is_visible():
+            pg.goto(XLEADS_URL, timeout=60000)
+            if "login" in pg.url or pg.locator("input[type='email']").count() > 0:
                 log.info("Login required")
-                pg.fill("input[type='email']",XLEADS_EMAIL)
-                pg.fill("input[type='password']",XLEADS_PASSWORD)
-                pg.click("button[type='submit']")
-                pg.wait_for_url("**/leads**",timeout=30000)
-                pg.wait_for_timeout(2000)
-            fr=pg
+                fr.locator("input[type='email']").fill(XLEADS_EMAIL)
+                fr.locator("input[type='password']").fill(XLEADS_PASSWORD)
+                fr.get_by_role("button", name="Login").click()
+                pg.wait_for_url("**/leads**", timeout=30000)
             log.info("S2: Import file")
-            fr.locator("button:has-text('Import file')").wait_for(state="visible",timeout=20000)
-            fr.locator("button:has-text('Import file')").click(); fr.wait_for_timeout(1500)
-            log.info("S3: Upload %s",csv_path)
-            fi=fr.locator("input[type='file']")
-            fi.wait_for(state="attached",timeout=10000)
-            fi.set_input_files(str(csv_path)); fr.wait_for_timeout(1500)
+            fr.get_by_role("button", name="Import file").click()
+            pg.wait_for_timeout(2000)
+            log.info("S3: Upload " + str(csv_path))
+            fh = pg.wait_for_event("filechooser", timeout=10000)
+            fh.set_files(str(csv_path))
+            pg.wait_for_timeout(2000)
             log.info("S4: Next")
-            fr.locator("button:has-text('Next')").wait_for(state="visible",timeout=10000)
-            fr.locator("button:has-text('Next')").click(); fr.wait_for_timeout(3000)
-            # S4.5: Click Import on column mapping screen
+            fr.get_by_role("button", name="Next").click()
+            pg.wait_for_timeout(2000)
             log.info("S4.5: Waiting for Import button")
-            fr.get_by_role("button", name="Import").wait_for(state="visible", timeout=20000)
             fr.get_by_role("button", name="Import").click()
-            fr.wait_for_timeout(8000)
-            log.info("S4.5: Clicked Import")
-            # S4.6: Click Show properties on import complete screen
+            pg.wait_for_timeout(8000)
             log.info("S4.6: Waiting for Show properties button")
-            fr.get_by_role("button", name="Show properties").wait_for(state="visible", timeout=20000)
             fr.get_by_role("button", name="Show properties").click()
-            fr.wait_for_timeout(5000)
-            # S5: Wait for grid then Select All via Playwright locators
+            pg.wait_for_timeout(3000)
             log.info("S5: Waiting for property grid")
             fr.wait_for_selector("button:has-text('Select')", timeout=20000)
-            fr.wait_for_timeout(2000)
-            log.info("S5: Clicking Select button dropdown")
+            pg.wait_for_timeout(2000)
+            log.info("S5: Clicking Select dropdown")
             fr.locator("button").filter(has_text="Select").first.click()
-            fr.wait_for_timeout(1500)
-            log.info("S5: Clicking Select All menu item")
+            pg.wait_for_timeout(1500)
+            log.info("S5: Clicking Select All")
             fr.get_by_role("menuitem", name="Select All").click()
-            fr.wait_for_timeout(3000)
-            # S6: Click the red saved-list button (has counter badge)
-            log.info("S6: Clicking saved-list/export panel button")
-            fr.locator("button.bg-red-600, button[class*='bg-red'], button[class*='destructive']").first.click()
-            fr.wait_for_timeout(2000)
-            # S7: Click Export button in panel
+            pg.wait_for_timeout(3000)
+            log.info("S6: Clicking saved-list panel button")
+            fr.locator("button[class*='bg-red'], button[class*='destructive']").first.click()
+            pg.wait_for_timeout(2000)
             log.info("S7: Clicking Export")
             fr.get_by_role("button", name="Export").click()
-            fr.wait_for_timeout(2000)
-            # S8: Check Lead Trace checkbox
+            pg.wait_for_timeout(2000)
             log.info("S8: Selecting Lead Trace - Owner Contact Info")
             fr.get_by_text("Lead Trace - Owner Contact Info", exact=False).click()
-            fr.wait_for_timeout(1000)
-            # S9: Final Export → download
+            pg.wait_for_timeout(1000)
             log.info("S9: Downloading enriched CSV")
-            with fr.page.expect_download(timeout=120000) as dl_info:
+            with pg.expect_download(timeout=120000) as dl_info:
                 fr.get_by_role("button", name="Export").last.click()
             dl = dl_info.value
             dl_path = IMPORTS_DIR / dl.suggested_filename
             dl.save_as(str(dl_path))
             log.info(f"S9: Downloaded to {dl_path}")
             return str(dl_path)
-                except Exception as e:
+        except Exception as e:
             log.error(f"XLeads error: {e}")
-            page.screenshot(path=str(LOGS_DIR/f"xleads_err_{today}.png"))
+            pg.screenshot(path=str(LOGS_DIR/f"xleads_err_{today}.png"))
             return None
+        finally:
+            browser.close()
+
+
 def run_pipeline():
     log.info("=== Pipeline start ===")
     log.info("Step 1: Running XLeads skip trace export")
-
-    # Find the most recent export CSV
     csv_files = sorted(EXPORTS_DIR.glob("xleads_export_*.csv"))
     if not csv_files:
-        log.error("No export CSV found in exports/xleads/ - run fetch.py first")
+        log.error("No export CSV found in exports/xleads/")
         sys.exit(2)
-
     latest_csv = csv_files[-1]
-    # Extract batch_id from filename: xleads_export_DATE_TIME_HASH.csv
     stem_parts = latest_csv.stem.split("_")
-    batch_id = stem_parts[-1]  # last segment is the hash
+    batch_id = stem_parts[-1]
     log.info(f"Using CSV: {latest_csv.name}, batch_id: {batch_id}")
-
     enriched = run_xleads(latest_csv, batch_id)
     if enriched:
         log.info(f"XLeads export complete: {enriched}")
     else:
         log.error("XLeads export failed")
         sys.exit(2)
-
     log.info("Pipeline complete.")
 
 

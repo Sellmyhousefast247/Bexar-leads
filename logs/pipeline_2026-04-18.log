@@ -12,3 +12,13 @@
 2026-04-18 04:16:58,296 [INFO] S5: Waiting for property grid
 2026-04-18 04:17:00,308 [INFO] S5: Opening Select dropdown via page.evaluate
 2026-04-18 04:17:00,308 [ERROR] XLeads error: name 'page' is not defined
+2026-04-18 22:36:27,457 [INFO] === Pipeline start ===
+2026-04-18 22:36:27,457 [INFO] Step 1: Running XLeads skip trace export
+2026-04-18 22:36:27,458 [INFO] Using CSV: xleads_export_2026-04-16_23-47_9ec5fd95.csv, batch_id: 9ec5fd95
+2026-04-18 22:36:27,499 [INFO] S1: Navigate to XLeads directly
+2026-04-18 22:36:28,832 [INFO] S2: Import file
+2026-04-18 22:36:28,838 [ERROR] XLeads error: Locator.click: Error: Selector "html" resolved to <html lang="en">…</html>, <iframe> was expected
+Call log:
+  - waiting for locator("html").content_frame.get_by_role("button", name="Import file")
+
+2026-04-18 22:36:28,940 [ERROR] XLeads export failed

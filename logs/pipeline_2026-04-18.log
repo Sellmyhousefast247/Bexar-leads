@@ -1,0 +1,14 @@
+2026-04-18 04:16:32,187 [INFO] === Pipeline start ===
+2026-04-18 04:16:32,187 [INFO] Step 1: Running XLeads skip trace export
+2026-04-18 04:16:32,188 [INFO] Using CSV: xleads_export_2026-04-16_23-47_9ec5fd95.csv, batch_id: 9ec5fd95
+2026-04-18 04:16:32,727 [INFO] S1: Navigate to XLeads directly
+2026-04-18 04:16:36,298 [INFO] Login required
+2026-04-18 04:16:38,930 [INFO] S2: Import file
+2026-04-18 04:16:40,501 [INFO] S3: Upload /home/runner/work/Bexar-leads/Bexar-leads/exports/xleads/xleads_export_2026-04-16_23-47_9ec5fd95.csv
+2026-04-18 04:16:42,019 [INFO] S4: Next
+2026-04-18 04:16:45,052 [INFO] S4.5: Waiting for Import button
+2026-04-18 04:16:53,102 [INFO] S4.5: Clicked Import
+2026-04-18 04:16:53,102 [INFO] S4.6: Waiting for Show properties button
+2026-04-18 04:16:58,296 [INFO] S5: Waiting for property grid
+2026-04-18 04:17:00,308 [INFO] S5: Opening Select dropdown via page.evaluate
+2026-04-18 04:17:00,308 [ERROR] XLeads error: name 'page' is not defined

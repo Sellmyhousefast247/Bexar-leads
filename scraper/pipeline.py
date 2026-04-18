@@ -168,12 +168,26 @@ def run_xleads(csv_path,batch_id):
 def run_pipeline():
     log.info("=== Pipeline start ===")
     log.info("Step 1: Running XLeads skip trace export")
-    enriched_csv = run_xleads()
-    if enriched_csv:
-        log.info(f"XLeads export complete: {enriched_csv}")
+
+    # Find the most recent export CSV
+    csv_files = sorted(EXPORTS_DIR.glob("xleads_export_*.csv"))
+    if not csv_files:
+        log.error("No export CSV found in exports/xleads/ - run fetch.py first")
+        sys.exit(2)
+
+    latest_csv = csv_files[-1]
+    # Extract batch_id from filename: xleads_export_DATE_TIME_HASH.csv
+    stem_parts = latest_csv.stem.split("_")
+    batch_id = stem_parts[-1]  # last segment is the hash
+    log.info(f"Using CSV: {latest_csv.name}, batch_id: {batch_id}")
+
+    enriched = run_xleads(latest_csv, batch_id)
+    if enriched:
+        log.info(f"XLeads export complete: {enriched}")
     else:
         log.error("XLeads export failed")
         sys.exit(2)
+
     log.info("Pipeline complete.")
 
 

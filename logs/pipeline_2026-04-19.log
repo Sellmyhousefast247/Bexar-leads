@@ -1,0 +1,10 @@
+2026-04-19 02:04:09,246 [INFO] === Pipeline start ===
+2026-04-19 02:04:09,246 [INFO] Step 1: Running XLeads skip trace export
+2026-04-19 02:04:09,247 [INFO] Using CSV: xleads_export_2026-04-16_23-47_9ec5fd95.csv, batch_id: 9ec5fd95
+2026-04-19 02:04:09,292 [INFO] S1: Navigate to XLeads directly
+2026-04-19 02:04:10,531 [INFO] S2: Import file
+2026-04-19 02:04:10,538 [ERROR] XLeads error: Locator.click: Error: Selector "html" resolved to <html lang="en">…</html>, <iframe> was expected
+Call log:
+  - waiting for locator("html").content_frame.get_by_role("button", name="Import file")
+
+2026-04-19 02:04:10,693 [ERROR] XLeads export failed

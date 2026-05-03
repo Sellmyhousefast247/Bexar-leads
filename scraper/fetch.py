@@ -545,7 +545,9 @@ def score_records(records: list, start: datetime) -> None:
         s, flags = 30, []
         if r.cat == "LP": s += 10; flags.append("LIS_PENDENS")
         if r.cat == "FC": s += 15; flags.append("FORECLOSURE")
-        if r.cat in ("LP","FC"): s += 5
+        if r.cat == "TAXFC": s += 18; flags.append("TAX_FORECLOSURE")
+        if r.cat == "TAXDEED": s += 10; flags.append("TAX_DEED")
+        if r.cat in ("LP","FC","TAXFC"): s += 5
         if r.cat == "JUD": s += 8; flags.append("JUDGMENT")
         if r.cat == "LIEN": s += 7; flags.append("LIEN")
         if r.cat == "PRO": s += 12; flags.append("PROBATE")
@@ -592,11 +594,16 @@ def fetch_foreclosure_gis(start, end):
                 zipcode = str(att.get("ZIP") or "").strip()
                 doc_num = (att.get("DOC_NUMBER") or "").strip()
                 fc_type = (att.get("TYPE") or "").strip()
+                is_tax_fc = "TAX" in fc_type.upper()
+                if is_tax_fc:
+                    fc_cat, fc_cat_label = "TAXFC", f"Tax Foreclosure ({fc_type.title()})"
+                else:
+                    fc_cat, fc_cat_label = "FC", f"Foreclosure Notice ({fc_type.title()})"
                 rec = LeadRecord(
                     doc_num=doc_num,
                     doc_type=f"FORECLOSURE_{fc_type}",
-                    cat="FC",
-                    cat_label=f"Foreclosure Notice ({fc_type.title()})",
+                    cat=fc_cat,
+                    cat_label=fc_cat_label,
                     filed=filed,
                     prop_address=addr_raw,
                     prop_city=city,
@@ -621,7 +628,7 @@ def write_outputs(records: list, start: datetime, end: datetime) -> None:
         "date_range": {"start": start.strftime("%Y-%m-%d"), "end": end.strftime("%Y-%m-%d")},
         "total": len(records),
         "with_address": sum(1 for r in records if r.prop_address),
-        "by_cat": {c: sum(1 for r in records if r.cat == c) for c in ("FC","LP","JUD","LIEN","PRO","OTHER")},
+        "by_cat": {c: sum(1 for r in records if r.cat == c) for c in ("FC","TAXFC","TAXDEED","LP","JUD","LIEN","PRO","OTHER")},
         "records": [asdict(r) for r in records],
     }
     for path in [base / "dashboard" / "records.json", base / "data" / "records.json"]:

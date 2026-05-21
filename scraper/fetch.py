@@ -54,6 +54,7 @@ RETRY_COUNT = 3
 RETRY_DELAY = 3
 TABLE_WAIT_MS = 20000
 BCAD_MAX_AMBIGUOUS = 3       # leave address blank if BCAD returns >N matches
+BCAD_MAX_LOOKUPS = 600       # cap per-record BCAD fallback to bound runtime
 
 logging.basicConfig(
     level=logging.INFO,
@@ -66,27 +67,40 @@ log = logging.getLogger("bexar_scraper")
 # Search terms -> (category code, human label)
 # Probate-related terms run with the wider lookback window.
 # ---------------------------------------------------------------------------
-SEARCH_TERMS = [
-    ("lis pendens", "LP", "Lis Pendens"),
-    ("substitute trustee", "FC", "Substitute Trustee Deed"),
-    ("deed of trust", "FC", "Deed of Trust"),
-    ("tax deed", "FC", "Tax Deed / Tax Sale"),
-    ("judgment", "JUD", "Judgment"),
-    ("abstract of judgment", "JUD", "Abstract of Judgment"),
-    ("federal tax lien", "LIEN", "Federal Tax Lien"),
-    ("state tax lien", "LIEN", "State Tax Lien"),
-    ("mechanic lien", "LIEN", "Mechanic Lien"),
-    ("hoa lien", "LIEN", "HOA Lien"),
-    ("hospital lien", "LIEN", "Hospital Lien"),
-    ("probate", "PRO", "Probate"),
-    ("affidavit of heirship", "PRO", "Affidavit of Heirship"),
-    ("letters testamentary", "PRO", "Letters Testamentary"),
-    ("small estate affidavit", "PRO", "Small Estate Affidavit"),
-    ("muniment of title", "PRO", "Muniment of Title"),
-    ("notice of commencement", "OTHER","Notice of Commencement"),
+# Structured advanced-search document types (docTypes codes) -> (cat, label).
+# Replaces the prior free-text quickSearch terms: querying the recorder's
+# exact document-type codes is more precise and covers instrument classes a
+# keyword search misses (affidavits, modifications, powers of attorney,
+# memoranda, summary judgments, etc.).
+DOC_TYPES = [
+    ("LIS PEN", "LP",    "Lis Pendens"),
+    ("FC",      "FC",    "Foreclosure"),
+    ("JUDG",    "JUD",   "Judgment"),
+    ("SJ",      "JUD",   "Summary Judgment"),
+    ("MECHLN",  "LIEN",  "Mechanic's Lien"),
+    ("HOSP LN", "LIEN",  "Hospital Lien"),
+    ("STL",     "LIEN",  "State Tax Lien"),
+    ("FTL",     "LIEN",  "Federal Tax Lien"),
+    ("CSUP LN", "LIEN",  "Child Support Lien"),
+    ("LIEN",    "LIEN",  "Lien"),
+    ("LNLD LN", "LIEN",  "Landlord's Lien"),
+    ("PROBATE", "PRO",   "Probate"),
+    ("WILL",    "PRO",   "Will"),
+    ("LETTERS", "PRO",   "Letters Testamentary"),
+    ("DECREE",  "PRO",   "Decree"),
+    ("AFFIDAV", "OTHER", "Affidavit"),
+    ("NOTICE",  "OTHER", "Notice"),
+    ("MOD",     "OTHER", "Modification"),
+    ("PA",      "OTHER", "Power of Attorney"),
+    ("MEMO",    "OTHER", "Memorandum"),
 ]
 
+# Doc-type codes that move slowly and use the wider probate lookback window.
+PROBATE_CODES = {"PROBATE", "WILL", "LETTERS", "DECREE"}
 PROBATE_CATS = {"PRO"}
+
+# Per-doc-type pagination circuit breaker (50 rows/page).
+MAX_PAGES_PER_DOC_TYPE = 80
 
 # ---------------------------------------------------------------------------
 # Data model
@@ -197,24 +211,43 @@ class ClerkScraper:
         self.default_end = default_end
         self.probate_start = probate_start
 
-    def _date_range(self, cat: str) -> str:
-        if cat in PROBATE_CATS:
+    def _date_range(self, doc_code: str) -> str:
+        if doc_code in PROBATE_CODES:
             return f"{self.probate_start.strftime('%Y%m%d')},{self.default_end.strftime('%Y%m%d')}"
         return f"{self.default_start.strftime('%Y%m%d')},{self.default_end.strftime('%Y%m%d')}"
 
-    def _build_url(self, search_value: str, cat: str, page: int = 1) -> str:
+    def _build_url(self, doc_code: str, offset: int = 0) -> str:
         from urllib.parse import urlencode
         params = {
             "department": "RP",
-            "searchType": "quickSearch",
-            "searchValue": search_value,
-            "recordedDateRange": self._date_range(cat),
-            "keywordSearch": "false",
-            "searchOcrText": "false",
-            "resultsPerPage": PAGE_SIZE,
-            "currentPage": page,
+            "searchType": "advancedSearch",
+            "docTypes": doc_code,
+            "recordedDateRange": self._date_range(doc_code),
+            "limit": PAGE_SIZE,
+            "offset": offset,
         }
         return f"{CLERK_RESULTS}?{urlencode(params)}"
+
+    @staticmethod
+    def _parse_address(addr_raw: str) -> tuple:
+        """Split a "STREET, CITY, STATE, ZIP" cell into (street, city, zip).
+
+        The recorder grid emits a single combined address string. Parse
+        from the end (zip, then state, then city) so the state name is
+        never mistaken for the city. "N/A" / empty -> all blank.
+        """
+        if not addr_raw or addr_raw.strip().upper() in ("N/A", "NA"):
+            return "", "", ""
+        parts = [p.strip() for p in addr_raw.split(",") if p.strip()]
+        zip_code = city = ""
+        if parts and re.fullmatch(r"\d{5}(?:-\d{4})?", parts[-1]):
+            zip_code = parts.pop()
+        if parts and parts[-1].upper() in ("TX", "TEXAS"):
+            parts.pop()
+        if parts:
+            city = parts.pop()
+        street = ", ".join(parts)
+        return (street or addr_raw), city, zip_code
 
     def _parse_html(self, html: str, cat: str, cat_label: str) -> list:
         soup = BeautifulSoup(html, "lxml")
@@ -238,24 +271,16 @@ class ClerkScraper:
             addr_raw = cell(self.COL_ADDR)
             if not doc_num and not grantor:
                 continue
-            prop_address = prop_city = prop_zip = ""
-            if addr_raw:
-                parts = addr_raw.rsplit(",", 2)
-                if len(parts) >= 2:
-                    prop_address = parts[0].strip()
-                    last = parts[-1].strip()
-                    zip_m = re.search(r"(\d{5})", last)
-                    if zip_m:
-                        prop_zip = zip_m.group(1)
-                    if len(parts) >= 3:
-                        prop_city = parts[1].strip()
-                else:
-                    prop_address = addr_raw
+            prop_address, prop_city, prop_zip = self._parse_address(addr_raw)
+            # The advanced-search results grid renders no per-row anchor;
+            # the document's internal id lives in the row checkbox
+            # (id="table-checkbox-<docId>"). Build the deep link from it.
             clerk_url = ""
-            link = tr.find("a", href=True)
-            if link:
-                href = link["href"]
-                clerk_url = href if href.startswith("http") else CLERK_BASE_URL + href
+            cb = tr.find("input", id=re.compile(r"table-checkbox-(\d+)"))
+            if cb and cb.get("id"):
+                m = re.search(r"table-checkbox-(\d+)", cb["id"])
+                if m:
+                    clerk_url = f"{CLERK_BASE_URL}/doc/{m.group(1)}"
             rec = LeadRecord(
                 doc_num=doc_num, doc_type=doc_type, cat=cat, cat_label=cat_label,
                 filed=normalize_date(filed) if filed else "",
@@ -274,6 +299,69 @@ class ClerkScraper:
                 total = int(m.group(1).replace(",", ""))
                 return max(1, -(-total // PAGE_SIZE))
         return 1
+
+    # JS that resolves true once the tbody row count is stable & non-zero for
+    # >=600ms, OR the at-rest empty-results template is fully rendered.
+    # PublicSearch is a React SPA: networkidle fires before the data XHR
+    # completes, and the client-side router briefly re-renders the previous
+    # doc-type's rows during a transition. Requiring a stable, non-zero row
+    # count rejects those transient ghost rows; the empty-state shortcut
+    # requires BOTH unique markers so it cannot fire on a transient.
+    _READY_JS = """() => {
+        if (!window.__xcWait) { window.__xcWait = { lastCount: -1, since: 0 }; }
+        const st = window.__xcWait;
+        const now = Date.now();
+        const count = document.querySelectorAll('tbody tr[role="row"]').length;
+        if (count > 0) {
+          if (count === st.lastCount) {
+            if (now - st.since >= 600) return true;
+          } else { st.lastCount = count; st.since = now; }
+          return false;
+        }
+        const body = (document.body && document.body.innerText) || '';
+        if (body.includes('No Results Found') && body.includes('Suggestions:')) return true;
+        return false;
+    }"""
+
+    _WAIT_TIMEOUT_MS = 45000
+    _AMBIGUOUS_RETRIES = 3
+
+    def _await_ready(self, page, doc_code: str, offset: int) -> None:
+        """Wait until results settle; retry ambiguous timeouts.
+
+        An ambiguous timeout (no rows AND no empty-results markers) usually
+        reflects the portal slowing under sustained load rather than a truly
+        empty page, so re-navigate (about:blank reset + fresh goto) and
+        re-wait before giving up — avoids silently dropping real data.
+        """
+        for attempt in range(1, self._AMBIGUOUS_RETRIES + 1):
+            try:
+                page.evaluate("() => { window.__xcWait = undefined; }")
+            except Exception:
+                pass
+            try:
+                page.wait_for_function(self._READY_JS, timeout=self._WAIT_TIMEOUT_MS)
+                return
+            except PWTimeout:
+                body = ""
+                try:
+                    body = page.evaluate("() => (document.body && document.body.innerText) || ''")
+                except Exception:
+                    pass
+                if "No Results Found" in body and "Suggestions:" in body:
+                    return  # genuine empty page
+                if attempt < self._AMBIGUOUS_RETRIES:
+                    log.warning("  ambiguous wait [%s offset=%d] attempt %d/%d; re-navigating",
+                                doc_code, offset, attempt, self._AMBIGUOUS_RETRIES)
+                    try:
+                        page.goto("about:blank", wait_until="commit", timeout=5000)
+                        page.goto(self._build_url(doc_code, offset),
+                                  wait_until="networkidle", timeout=30000)
+                    except Exception:
+                        pass
+                    continue
+                log.info("  no results (timeout) [%s offset=%d]", doc_code, offset)
+                return
 
     def run(self) -> list:
         seen = set()
@@ -294,38 +382,49 @@ class ClerkScraper:
                 log.info("Session warmed")
             except Exception as exc:
                 log.warning("Warmup failed: %s", exc)
-            for search_value, cat, cat_label in SEARCH_TERMS:
-                log.info("Searching: '%s' [%s]", search_value, cat)
-                pg_num = 1
-                term_count = 0
-                while True:
-                    url = self._build_url(search_value, cat, pg_num)
+
+            for doc_code, cat, cat_label in DOC_TYPES:
+                log.info("Searching docType '%s' [%s]", doc_code, cat)
+                doc_count = 0
+                offset = 0
+                page_idx = 0
+                while page_idx < MAX_PAGES_PER_DOC_TYPE:
+                    url = self._build_url(doc_code, offset)
+                    # Full document reset between fetches so the SPA can't
+                    # carry the previous doc-type's rendered rows across the
+                    # client-side route change.
                     try:
-                        page.goto(url, wait_until="domcontentloaded", timeout=30000)
-                        page.wait_for_selector("table tr:nth-child(2)", timeout=TABLE_WAIT_MS)
-                    except PWTimeout:
-                        log.info("  No results (timeout) for '%s' page %d", search_value, pg_num)
-                        break
+                        page.goto("about:blank", wait_until="commit", timeout=5000)
+                    except Exception:
+                        pass
+                    try:
+                        page.goto(url, wait_until="networkidle", timeout=30000)
                     except Exception as exc:
-                        log.warning("  Page error for '%s' page %d: %s", search_value, pg_num, exc)
+                        log.warning("  page error [%s offset=%d]: %s", doc_code, offset, exc)
                         break
+                    self._await_ready(page, doc_code, offset)
                     html = page.content()
                     recs = self._parse_html(html, cat, cat_label)
                     if not recs:
                         break
+                    new_in_page = 0
                     for r in recs:
                         key = r.doc_num or f"{r.owner}|{r.filed}|{r.doc_type}"
                         if key and key not in seen:
                             seen.add(key)
                             all_records.append(r)
-                            term_count += 1
-                    total_pages = self._count_total_pages(html)
-                    if pg_num >= total_pages:
+                            doc_count += 1
+                            new_in_page += 1
+                    # A partial page (< PAGE_SIZE rows) is necessarily the
+                    # last page — stop rather than fetch an out-of-range
+                    # offset that costs a full wait timeout.
+                    if len(recs) < PAGE_SIZE:
                         break
-                    pg_num += 1
-                    time.sleep(1)
-                log.info("  -> %d unique records for '%s'", term_count, search_value)
-                time.sleep(0.5)
+                    offset += PAGE_SIZE
+                    page_idx += 1
+                    time.sleep(0.6)
+                log.info("  -> %d unique records for '%s'", doc_count, doc_code)
+                time.sleep(0.4)
             browser.close()
         log.info("Clerk portal: %d unique records collected", len(all_records))
         return all_records
@@ -519,6 +618,13 @@ def enrich_parcels(records: list, use_bcad: bool = True) -> None:
     if not still_need:
         log.info("ArcGIS covered all records - skipping BCAD lookup")
         return
+    # BCAD lookups are one HTTP round-trip per record (slow). Cap the
+    # count so the daily GitHub Action can't blow its runtime budget when
+    # the structured doc-type scrape returns many address-less liens.
+    if len(still_need) > BCAD_MAX_LOOKUPS:
+        log.info("Capping BCAD lookups at %d (of %d unmatched)",
+                 BCAD_MAX_LOOKUPS, len(still_need))
+        still_need = still_need[:BCAD_MAX_LOOKUPS]
     log.info("Attempting BCAD owner-lookup for %d unmatched records...", len(still_need))
     bcad = BCADLookup()
     if not bcad.warm():

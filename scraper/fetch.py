@@ -55,6 +55,7 @@ RETRY_DELAY = 3
 TABLE_WAIT_MS = 20000
 BCAD_MAX_AMBIGUOUS = 3       # leave address blank if BCAD returns >N matches
 BCAD_MAX_LOOKUPS = 600       # cap per-record BCAD fallback to bound runtime
+ARCGIS_MAX_LOOKUPS = 1500    # cap per-record ArcGIS owner/address lookups
 
 logging.basicConfig(
     level=logging.INFO,
@@ -572,45 +573,118 @@ class BCADLookup:
 # ---------------------------------------------------------------------------
 # Parcel enrichment (ArcGIS exact-match) + BCAD fallback
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# ArcGIS parcel-layer helpers
+# Live layer schema: Owner, Situs, AddrLn1/2/3 (mailing), AddrCity, AddrSt,
+# Zip, TotVal, YrBlt. (The previous code referenced OWNER/SITUS_ADD/MAIL_ADD,
+# which do not exist on this layer, so ArcGIS enrichment never matched.)
+# ---------------------------------------------------------------------------
+def _norm_ws(s) -> str:
+    return re.sub(r"\s+", " ", str(s or "").strip())
+
+
+def _arc_val(x) -> str:
+    """Normalize an ArcGIS attribute; treat literal 'NULL'/'NONE' as empty."""
+    s = _norm_ws(x)
+    return "" if s.upper() in ("NULL", "NONE") else s
+
+
+def _sql_lit(s: str) -> str:
+    return s.upper().replace("'", "''")
+
+
+def _mailing_from_parcel(att: dict) -> tuple:
+    """(street, city, state, zip) from a parcel record's mailing fields."""
+    street = _arc_val(att.get("AddrLn1")) or _arc_val(att.get("AddrLn2"))
+    city = _arc_val(att.get("AddrCity"))
+    state = _arc_val(att.get("AddrSt")) or STATE
+    zip_code = _arc_val(att.get("Zip"))
+    return street, city, state, zip_code
+
+
+def _addr_key(addr: str) -> tuple:
+    """Split a street address into (house_number, street_core) for matching.
+
+    Drops unit/suite markers so "1111 VICKERS AVE #2" still matches the
+    parcel's "1111  VICKERS AVE". Returns ("","") if no leading number.
+    """
+    m = re.match(r"\s*(\d+)\s+(.*)", addr or "")
+    if not m:
+        return "", ""
+    num = m.group(1)
+    rest = _norm_ws(m.group(2))
+    rest = re.sub(r"\s+(#|APT|UNIT|STE|SUITE|BLDG|LOT)\b.*$", "", rest, flags=re.I).strip()
+    return num, rest
+
+
+def _arcgis_query(session, where: str, count: int = 5) -> list:
+    params = {
+        "where": where,
+        "outFields": "Owner,Situs,AddrLn1,AddrLn2,AddrCity,AddrSt,Zip,TotVal,YrBlt",
+        "returnGeometry": "false",
+        "f": "json",
+        "resultRecordCount": count,
+    }
+    try:
+        r = session.get(PARCEL_API_URL, params=params, timeout=REQUEST_TIMEOUT)
+        return r.json().get("features", []) or []
+    except Exception as exc:
+        log.debug("ArcGIS query error: %s", exc)
+        return []
+
+
 def enrich_parcels(records: list, use_bcad: bool = True) -> None:
-    needs = [r for r in records if r.owner and not r.prop_address]
-    if not needs:
-        log.info("All records already have addresses - skipping enrichment")
-        return
-    log.info("Enriching %d records via ArcGIS parcels...", len(needs))
     session = requests.Session()
-    session.headers["User-Agent"] = "BexarLeadScraper/2.1"
-    for i in range(0, len(needs), PARCEL_BATCH):
-        batch = needs[i: i + PARCEL_BATCH]
-        names = [r.owner for r in batch]
-        parts = [f"UPPER(OWNER)='{n.upper().replace(chr(39), chr(39)*2)}'" for n in names]
-        params = {
-            "where": " OR ".join(parts),
-            "outFields": "OWNER,SITUS_ADD,SITUS_CITY,SITUS_ZIP,MAIL_ADD,MAIL_CITY,MAIL_STATE,MAIL_ZIP",
-            "returnGeometry": "false",
-            "f": "json",
-        }
-        try:
-            r = session.get(PARCEL_API_URL, params=params, timeout=REQUEST_TIMEOUT)
-            addr_map = {}
-            for feat in r.json().get("features", []):
-                att = feat.get("attributes", {})
-                k = (att.get("OWNER") or "").upper().strip()
-                if k:
-                    addr_map[k] = att
-            for rec in batch:
-                att = addr_map.get(rec.owner.upper().strip())
-                if att:
-                    rec.prop_address = att.get("SITUS_ADD", "").strip()
-                    rec.prop_city = att.get("SITUS_CITY", "").strip()
-                    rec.prop_zip = str(att.get("SITUS_ZIP", "")).strip()
-                    rec.mail_address = att.get("MAIL_ADD", "").strip()
-                    rec.mail_city = att.get("MAIL_CITY", "").strip()
-                    rec.mail_state = att.get("MAIL_STATE", STATE).strip() or STATE
-                    rec.mail_zip = str(att.get("MAIL_ZIP", "")).strip()
-        except Exception as exc:
-            log.warning("Parcel batch error: %s", exc)
-        time.sleep(0.5)
+    session.headers["User-Agent"] = "BexarLeadScraper/3.0"
+
+    # PASS 1 — forward by owner: records that have an owner but are missing a
+    # property address and/or a mailing address. Fills the property address
+    # from Situs (only on a unique parcel match, to avoid guessing when an
+    # owner holds several parcels) and always fills mailing when found.
+    fwd = [r for r in records if r.owner and (not r.prop_address or not r.mail_address)]
+    log.info("ArcGIS owner-lookup for %d records...", len(fwd))
+    owner_hits = 0
+    for rec in fwd[:ARCGIS_MAX_LOOKUPS]:
+        feats = _arcgis_query(session, f"Owner LIKE '{_sql_lit(_norm_ws(rec.owner))}%'")
+        if not feats:
+            continue
+        att = feats[0].get("attributes", {})
+        if not rec.prop_address and len(feats) == 1:
+            situs = _norm_ws(att.get("Situs"))
+            if situs:
+                rec.prop_address = situs
+        if not rec.mail_address:
+            ms, mc, mst, mz = _mailing_from_parcel(att)
+            if ms:
+                rec.mail_address, rec.mail_city, rec.mail_state, rec.mail_zip = ms, mc, mst, mz
+                owner_hits += 1
+        time.sleep(0.12)
+    log.info("ArcGIS owner-lookup: %d mailing fills", owner_hits)
+
+    # PASS 2 — reverse by address: records that have a property address but no
+    # owner (e.g. the foreclosure GIS feed). Accept only a UNIQUE Situs match
+    # so a wrong owner is never attached to an address.
+    rev = [r for r in records if r.prop_address and not r.owner]
+    log.info("ArcGIS address-lookup for %d records...", len(rev))
+    addr_hits = 0
+    for rec in rev[:ARCGIS_MAX_LOOKUPS]:
+        num, core = _addr_key(rec.prop_address)
+        if not num or not core:
+            continue
+        feats = _arcgis_query(session, f"Situs LIKE '{_sql_lit(num)}%{_sql_lit(core)}%'")
+        if len(feats) == 1:
+            att = feats[0].get("attributes", {})
+            owner = _norm_ws(att.get("Owner"))
+            if owner:
+                rec.owner = owner
+                addr_hits += 1
+            if not rec.mail_address:
+                ms, mc, mst, mz = _mailing_from_parcel(att)
+                if ms:
+                    rec.mail_address, rec.mail_city, rec.mail_state, rec.mail_zip = ms, mc, mst, mz
+        time.sleep(0.12)
+    log.info("ArcGIS address-lookup: %d owner fills", addr_hits)
+
     # BCAD fallback
     if not use_bcad:
         return

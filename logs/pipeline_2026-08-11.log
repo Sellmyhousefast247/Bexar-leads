@@ -1,0 +1,10 @@
+2026-08-11 13:39:42,579 [INFO] === Pipeline start ===
+2026-08-11 13:39:42,579 [INFO] Step 1: Running XLeads skip trace export
+2026-08-11 13:39:42,579 [INFO] Using CSV: xleads_export_2026-04-16_23-47_9ec5fd95.csv, batch_id: 9ec5fd95
+2026-08-11 13:39:42,626 [INFO] S1: Navigate to XLeads
+2026-08-11 13:39:45,804 [INFO] Login required
+2026-08-11 13:40:15,853 [ERROR] XLeads error: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("button", name="Login")
+
+2026-08-11 13:40:15,968 [ERROR] XLeads export failed

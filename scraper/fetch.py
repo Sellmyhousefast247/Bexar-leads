@@ -605,7 +605,7 @@ async def main():
     export_skiptrace_csv(records)
 
     log.info("DONE | total=%d | new_7d=%d | with_address=%d",
-             payload["total"], payload["new_7d"], payload["new_7d"])
+             payload["total"], payload["new_7d"], payload["with_address"])
 
 
 if __name__ == "__main__":

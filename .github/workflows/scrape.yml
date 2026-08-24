@@ -17,7 +17,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-22.04
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -29,6 +29,9 @@ jobs:
         run: |
           pip install requests beautifulsoup4 lxml playwright
           python -m playwright install --with-deps chromium
+
+      - name: Ensure v2 engine (one-time rebuild from v1 + pipeline patch)
+        run: python scraper/apply_v2_patch.py
 
       - name: Run pipeline
         run: python scraper/fetch.py

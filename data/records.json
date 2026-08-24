@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-08-23T13:16:02.350660Z",
+  "fetched_at": "2026-08-24T13:24:07.943040Z",
   "county": "Bexar",
   "source": "Bexar County Clerk / BCAD",
   "date_range": {
-    "start": "2026-08-16",
-    "end": "2026-08-23"
+    "start": "2026-08-17",
+    "end": "2026-08-24"
   },
   "total": 0,
   "new_7d": 0,

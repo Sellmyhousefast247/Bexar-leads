@@ -12,7 +12,7 @@ SUBS = json.loads(Path(__file__).with_name("v2_patch_data.json").read_text(encod
 
 def main():
     cur = TARGET.read_text(encoding="utf-8") if TARGET.exists() else ""
-    if "detect_changes" in cur:
+    if "CLERK_RESULTS" in cur and "detect_changes" in cur:
         print("fetch.py already v2 - nothing to do"); return
     src = urllib.request.urlopen(V1_URL, timeout=60).read().decode("utf-8")
     for old, new in SUBS:

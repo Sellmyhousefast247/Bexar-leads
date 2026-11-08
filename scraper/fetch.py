@@ -466,10 +466,15 @@ class ClerkScraper:
     # this pass drives the UI: open /search/advanced, click the Foreclosures
     # department, fill the recorded-date range, click Search, then page with
     # the "next page" button.
-    def _fc_wait(self, page, prev_first: str = "", timeout_s: int = 45) -> dict:
+    def _fc_wait(self, page, prev_first: str = "", timeout_s: int = 60) -> dict:
         """Poll until FC results render (or change page), without the RP
-        re-navigation fallback in _await_ready, which would clobber FC state."""
-        state = {"rows": 0, "first": "", "noRes": False}
+        re-navigation fallback in _await_ready, which would clobber FC state.
+
+        IMPORTANT: the SPA's loading shell contains the literal text
+        'No Results Found' while the query is still executing, so that text
+        is NEVER treated as a terminal state - only rendered rows are. A
+        genuinely empty search just spends the timeout once."""
+        state = {"rows": 0, "first": ""}
         for _ in range(timeout_s):
             try:
                 state = page.evaluate(
@@ -478,16 +483,15 @@ class ClerkScraper:
                         return {
                             rows: document.querySelectorAll('tbody tr[role="row"]').length,
                             first: tr ? ((tr.textContent.match(/\\d{9,12}/) || [''])[0]) : '',
-                            noRes: document.body.innerText.includes('No Results Found'),
                         };
                     }"""
                 )
             except Exception:
-                state = {"rows": 0, "first": "", "noRes": False}
+                state = {"rows": 0, "first": ""}
             if prev_first:
                 if state["rows"] and state["first"] and state["first"] != prev_first:
                     break
-            elif state["rows"] or state["noRes"]:
+            elif state["rows"]:
                 break
             time.sleep(1)
         time.sleep(1.5)  # let the full page of rows settle

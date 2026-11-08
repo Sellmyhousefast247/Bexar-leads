@@ -460,18 +460,38 @@ class ClerkScraper:
     # [4]=Recorded Date, [5]=Sale Date, [6]=Doc Number, [7]=Remarks,
     # [8]=Property Address. The row checkbox id table-checkbox-<docId>
     # carries the portal document id -> /doc/<docId> is the viewable filing.
-    def _fc_url(self, offset: int = 0) -> str:
-        from urllib.parse import urlencode
-        start = (self.default_end - timedelta(days=self.FC_LOOKBACK_DAYS)).strftime("%Y%m%d")
-        end = self.default_end.strftime("%Y%m%d")
-        params = {
-            "department": "FC",
-            "searchType": "advancedSearch",
-            "recordedDateRange": f"{start},{end}",
-            "limit": PAGE_SIZE,
-            "offset": offset,
-        }
-        return f"{CLERK_RESULTS}?{urlencode(params)}"
+    # NOTE: FC searches only execute when submitted through the SPA's advanced
+    # search form. A direct /results?department=FC&... URL renders the "No
+    # Results Found" shell without ever running the query (live-verified), so
+    # this pass drives the UI: open /search/advanced, click the Foreclosures
+    # department, fill the recorded-date range, click Search, then page with
+    # the "next page" button.
+    def _fc_wait(self, page, prev_first: str = "", timeout_s: int = 45) -> dict:
+        """Poll until FC results render (or change page), without the RP
+        re-navigation fallback in _await_ready, which would clobber FC state."""
+        state = {"rows": 0, "first": "", "noRes": False}
+        for _ in range(timeout_s):
+            try:
+                state = page.evaluate(
+                    """() => {
+                        const tr = document.querySelector('tbody tr[role="row"]');
+                        return {
+                            rows: document.querySelectorAll('tbody tr[role="row"]').length,
+                            first: tr ? ((tr.textContent.match(/\\d{9,12}/) || [''])[0]) : '',
+                            noRes: document.body.innerText.includes('No Results Found'),
+                        };
+                    }"""
+                )
+            except Exception:
+                state = {"rows": 0, "first": "", "noRes": False}
+            if prev_first:
+                if state["rows"] and state["first"] and state["first"] != prev_first:
+                    break
+            elif state["rows"] or state["noRes"]:
+                break
+            time.sleep(1)
+        time.sleep(1.5)  # let the full page of rows settle
+        return state
 
     def _parse_fc_html(self, html: str) -> list:
         soup = BeautifulSoup(html, "lxml")
@@ -502,22 +522,48 @@ class ClerkScraper:
     def _scrape_fc_postings(self, page) -> dict:
         """Build doc_num -> /doc/ URL (and address -> URL) maps for FC postings."""
         by_docnum, by_addr = {}, {}
-        offset = page_idx = 0
-        log.info("Scraping FC posting index (last %d days)...", self.FC_LOOKBACK_DAYS)
-        while page_idx < self.FC_MAX_PAGES:
-            try:
-                page.goto("about:blank", wait_until="commit", timeout=5000)
-            except Exception:
-                pass
-            try:
-                page.goto(self._fc_url(offset), wait_until="networkidle", timeout=30000)
-            except Exception as exc:
-                log.warning("  FC page error offset=%d: %s", offset, exc)
-                break
-            self._await_ready(page, "FC", offset)
+        start = (self.default_end - timedelta(days=self.FC_LOOKBACK_DAYS)).strftime("%m/%d/%Y")
+        end = self.default_end.strftime("%m/%d/%Y")
+        log.info("Scraping FC posting index %s - %s via advanced-search UI...", start, end)
+
+        page.goto(f"{CLERK_BASE_URL}/search/advanced", wait_until="networkidle", timeout=30000)
+        time.sleep(2.5)
+        clicked = page.evaluate(
+            """() => {
+                const el = [...document.querySelectorAll('span,button,a,div,label')]
+                    .find(e => e.textContent.trim() === 'Foreclosures' && e.children.length === 0);
+                if (el) { el.click(); return true; }
+                return false;
+            }"""
+        )
+        time.sleep(1.5)
+        page.evaluate(
+            """([s, e]) => {
+                const set = (n, v) => {
+                    const i = document.querySelector(`input[name='${n}'],input[id='${n}']`);
+                    if (!i) return;
+                    const d = Object.getOwnPropertyDescriptor(
+                        window.HTMLInputElement.prototype, 'value').set;
+                    d.call(i, v);
+                    i.dispatchEvent(new Event('input', {bubbles: true}));
+                    i.dispatchEvent(new Event('change', {bubbles: true}));
+                };
+                set('recordedDateRange-start', s);
+                set('recordedDateRange-end', e);
+                const btn = [...document.querySelectorAll('button')]
+                    .find(x => x.textContent.trim() === 'Search');
+                if (btn) btn.click();
+            }""",
+            [start, end],
+        )
+        state = self._fc_wait(page)
+        if not state["rows"]:
+            log.warning("FC search rendered no rows (dept toggle clicked=%s)", clicked)
+            return {"by_docnum": by_docnum, "by_addr": by_addr}
+
+        pages_done = 0
+        while pages_done < self.FC_MAX_PAGES:
             recs = self._parse_fc_html(page.content())
-            if not recs:
-                break
             for r in recs:
                 by_docnum.setdefault(r["doc_num"], r["url"])
                 street = (r["address"] or "").split(",")[0]
@@ -526,10 +572,24 @@ class ClerkScraper:
                     by_addr.setdefault(f"{num} {core}", r["url"])
             if len(recs) < PAGE_SIZE:
                 break
-            offset += PAGE_SIZE
-            page_idx += 1
-            time.sleep(0.5)
-        log.info("FC posting index: %d doc numbers, %d addresses", len(by_docnum), len(by_addr))
+            prev_first = recs[0]["doc_num"]
+            advanced = page.evaluate(
+                """() => {
+                    const n = [...document.querySelectorAll('button,a')]
+                        .find(b => /next page/i.test(b.getAttribute('aria-label') || ''));
+                    if (!n || n.disabled) return false;
+                    n.click();
+                    return true;
+                }"""
+            )
+            if not advanced:
+                break
+            pages_done += 1
+            state = self._fc_wait(page, prev_first=prev_first)
+            if not state["rows"] or state["first"] == prev_first:
+                break
+        log.info("FC posting index: %d doc numbers, %d addresses (%d pages)",
+                 len(by_docnum), len(by_addr), pages_done + 1)
         return {"by_docnum": by_docnum, "by_addr": by_addr}
 
 # ---------------------------------------------------------------------------

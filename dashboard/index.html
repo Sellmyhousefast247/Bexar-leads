@@ -81,6 +81,8 @@ td{padding:12px 14px;vertical-align:top}
 .badge-chg{display:inline-block;font-size:8px;font-weight:800;letter-spacing:.08em;color:var(--orange);margin-left:6px;vertical-align:middle}
 .dtype{font-weight:700;font-size:12.5px}
 .dt-foreclosure{color:var(--red)}.dt-tax_lien{color:var(--yellow)}.dt-judgment{color:var(--cyan)}.dt-probate{color:var(--purple)}
+.row-doc{display:block;margin-top:5px;font-size:10px;font-weight:700;color:var(--blue);text-decoration:none;width:fit-content}
+.row-doc:hover{text-decoration:underline}
 .tag-active{display:inline-block;border:1px dashed var(--orange);color:var(--orange);border-radius:10px;font-size:8px;font-weight:800;padding:1px 7px;margin-left:7px;letter-spacing:.06em}
 .addr{font-weight:700;font-size:13px}
 .addr-sub{font-size:10px;color:var(--muted);margin-top:2px;text-transform:uppercase}
@@ -302,7 +304,8 @@ function row(r,idx){
   const active=(r.cat==='foreclosure'&&r.status!=='EXISTING')?'<span class="tag-active">ACTIVE</span>':'';
   const sc=r.score||0,scls=sc>=70?'s-hi':sc>=50?'s-md':'s-lo';
   const addr=r.prop_address?`<div class="addr">${esc(r.prop_address)}${r.prop_zip?' '+esc(r.prop_zip):''}</div><div class="addr-sub">${esc(r.owner)||''}</div>`:`<div class="addr">${esc(r.doc_num)||'—'}</div><div class="addr-sub">${esc(r.owner)||''}</div>`;
-  return `<tr onclick="showDetail(${idx},this)"><td class="rec-date">${r.first_seen||r.filed||'—'}${badge}</td><td><span class="dtype dt-${r.cat}">${esc(r.cat_label)}</span>${active}</td><td>${addr}</td><td class="parties">${esc([r.owner,r.grantee].filter(Boolean).join(', '))}</td><td class="scorecell ${scls}">${sc}</td></tr>`;
+  const doclink=r.clerk_url?`<a class="row-doc" href="${esc(r.clerk_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View filing ↗</a>`:'';
+  return `<tr onclick="showDetail(${idx},this)"><td class="rec-date">${r.first_seen||r.filed||'—'}${badge}</td><td><span class="dtype dt-${r.cat}">${esc(r.cat_label)}</span>${active}${doclink}</td><td>${addr}</td><td class="parties">${esc([r.owner,r.grantee].filter(Boolean).join(', '))}</td><td class="scorecell ${scls}">${sc}</td></tr>`;
 }
 
 function showDetail(idx,tr){

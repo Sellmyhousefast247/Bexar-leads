@@ -285,6 +285,16 @@ class ClerkScraper:
                 m = re.search(r"table-checkbox-(\d+)", cb["id"])
                 if m:
                     clerk_url = f"{CLERK_BASE_URL}/doc/{m.group(1)}"
+            if not clerk_url:
+                a = tr.find("a", href=re.compile(r"/doc/\d+"))
+                if a:
+                    m = re.search(r"/doc/(\d+)", a["href"])
+                    if m:
+                        clerk_url = f"{CLERK_BASE_URL}/doc/{m.group(1)}"
+            if not clerk_url and doc_num:
+                clerk_url = (f"{CLERK_BASE_URL}/results?department=RP"
+                             f"&searchType=quickSearch&searchValue={doc_num}"
+                             "&keywordSearch=false&searchOcrText=false")
             rec = LeadRecord(
                 doc_num=doc_num, doc_type=doc_type, cat=cat, cat_label=cat_label,
                 filed=normalize_date(filed) if filed else "",

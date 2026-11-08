@@ -209,11 +209,19 @@ class ClerkScraper:
     COL_LEGAL = 9
     COL_ADDR = 14
 
+    # The Foreclosures (FC) department holds the actual mortgage/tax sale
+    # postings that the ForeclosuresProd GIS feed references by DOC_NUMBER.
+    # Postings precede sale dates by weeks, so look back far enough to cover
+    # every sale month the GIS feed carries.
+    FC_LOOKBACK_DAYS = 120
+    FC_MAX_PAGES = 60
+
     def __init__(self, default_start: datetime, default_end: datetime,
                  probate_start: datetime):
         self.default_start = default_start
         self.default_end = default_end
         self.probate_start = probate_start
+        self.fc_index = {"by_docnum": {}, "by_addr": {}}
 
     def _date_range(self, doc_code: str) -> str:
         if doc_code in PROBATE_CODES:
@@ -439,9 +447,90 @@ class ClerkScraper:
                     time.sleep(0.6)
                 log.info("  -> %d unique records for '%s'", doc_count, doc_code)
                 time.sleep(0.4)
+            try:
+                self.fc_index = self._scrape_fc_postings(page)
+            except Exception as exc:
+                log.warning("FC posting index scrape failed: %s", exc)
             browser.close()
         log.info("Clerk portal: %d unique records collected", len(all_records))
         return all_records
+
+    # ── Foreclosures (FC) department posting index ──────────────────────────
+    # Grid columns (live-verified): [0-2]=controls, [3]=Doc Type,
+    # [4]=Recorded Date, [5]=Sale Date, [6]=Doc Number, [7]=Remarks,
+    # [8]=Property Address. The row checkbox id table-checkbox-<docId>
+    # carries the portal document id -> /doc/<docId> is the viewable filing.
+    def _fc_url(self, offset: int = 0) -> str:
+        from urllib.parse import urlencode
+        start = (self.default_end - timedelta(days=self.FC_LOOKBACK_DAYS)).strftime("%Y%m%d")
+        end = self.default_end.strftime("%Y%m%d")
+        params = {
+            "department": "FC",
+            "searchType": "advancedSearch",
+            "recordedDateRange": f"{start},{end}",
+            "limit": PAGE_SIZE,
+            "offset": offset,
+        }
+        return f"{CLERK_RESULTS}?{urlencode(params)}"
+
+    def _parse_fc_html(self, html: str) -> list:
+        soup = BeautifulSoup(html, "lxml")
+        table = soup.find("table")
+        if not table:
+            return []
+        out = []
+        for tr in table.find_all("tr")[1:]:
+            cells = tr.find_all(["td", "th"])
+            if len(cells) < 9:
+                continue
+            doc_num = cells[6].get_text(" ", strip=True)
+            if not re.fullmatch(r"\d{9,12}", doc_num):
+                continue
+            cb = tr.find("input", id=re.compile(r"table-checkbox-(\d+)"))
+            if not (cb and cb.get("id")):
+                continue
+            m = re.search(r"table-checkbox-(\d+)", cb["id"])
+            if not m:
+                continue
+            out.append({
+                "doc_num": doc_num,
+                "url": f"{CLERK_BASE_URL}/doc/{m.group(1)}",
+                "address": cells[8].get_text(" ", strip=True),
+            })
+        return out
+
+    def _scrape_fc_postings(self, page) -> dict:
+        """Build doc_num -> /doc/ URL (and address -> URL) maps for FC postings."""
+        by_docnum, by_addr = {}, {}
+        offset = page_idx = 0
+        log.info("Scraping FC posting index (last %d days)...", self.FC_LOOKBACK_DAYS)
+        while page_idx < self.FC_MAX_PAGES:
+            try:
+                page.goto("about:blank", wait_until="commit", timeout=5000)
+            except Exception:
+                pass
+            try:
+                page.goto(self._fc_url(offset), wait_until="networkidle", timeout=30000)
+            except Exception as exc:
+                log.warning("  FC page error offset=%d: %s", offset, exc)
+                break
+            self._await_ready(page, "FC", offset)
+            recs = self._parse_fc_html(page.content())
+            if not recs:
+                break
+            for r in recs:
+                by_docnum.setdefault(r["doc_num"], r["url"])
+                street = (r["address"] or "").split(",")[0]
+                num, core = _addr_key(street)
+                if num and core:
+                    by_addr.setdefault(f"{num} {core}", r["url"])
+            if len(recs) < PAGE_SIZE:
+                break
+            offset += PAGE_SIZE
+            page_idx += 1
+            time.sleep(0.5)
+        log.info("FC posting index: %d doc numbers, %d addresses", len(by_docnum), len(by_addr))
+        return {"by_docnum": by_docnum, "by_addr": by_addr}
 
 # ---------------------------------------------------------------------------
 # BCAD owner-name lookup (fallback enrichment for probate / no-address records)
@@ -967,6 +1056,25 @@ def main() -> None:
     scraper = ClerkScraper(start, end, probate_start)
     records = scraper.run()
     gis_recs = fetch_foreclosure_gis(start, end)
+    # Attach the actual viewable filing (/doc/<id>) to GIS records via the FC
+    # posting index: match by posting doc number first, then by street address.
+    # Never ship a recorder quickSearch link for these - posting numbers are
+    # not RP instruments, so that search returns "No Results Found".
+    fc = getattr(scraper, "fc_index", None) or {"by_docnum": {}, "by_addr": {}}
+    fc_hits = 0
+    for r in gis_recs:
+        url = fc["by_docnum"].get(r.doc_num)
+        if not url and r.prop_address:
+            num, core = _addr_key(r.prop_address.split(",")[0])
+            if num and core:
+                url = fc["by_addr"].get(f"{num} {core}")
+        if url:
+            r.clerk_url = url
+            fc_hits += 1
+        else:
+            r.clerk_url = "https://maps.bexar.org/foreclosures/"
+    log.info("FC deep links: %d/%d GIS records matched to viewable filings",
+             fc_hits, len(gis_recs))
     existing = {r.prop_address.upper() for r in records if r.prop_address}
     for r in gis_recs:
         if r.prop_address.upper() not in existing:

@@ -524,6 +524,7 @@ class ClerkScraper:
                 "url": f"{CLERK_BASE_URL}/doc/{m.group(1)}",
                 "address": cells[8].get_text(" ", strip=True),
                 "sale": normalize_date(cells[5].get_text(" ", strip=True)),
+                "recorded": normalize_date(cells[4].get_text(" ", strip=True)),
             })
         return out
 
@@ -573,7 +574,10 @@ class ClerkScraper:
         while pages_done < self.FC_MAX_PAGES:
             recs = self._parse_fc_html(page.content())
             for r in recs:
-                entry = {"url": r["url"], "sale": r.get("sale", "")}
+                entry = {"url": r["url"], "sale": r.get("sale", ""),
+                         "recorded": r.get("recorded", ""),
+                         "address": r.get("address", ""),
+                         "doc_num": r["doc_num"]}
                 by_docnum.setdefault(r["doc_num"], entry)
                 street = (r["address"] or "").split(",")[0]
                 num, core = _addr_key(street)
@@ -1224,6 +1228,35 @@ def main() -> None:
             r.clerk_url = "https://maps.bexar.org/foreclosures/"
     log.info("FC deep links: %d/%d GIS records matched to viewable filings",
              fc_hits, len(gis_recs))
+    # The GIS feed lags the clerk by weeks for next-month sales, so promote
+    # FC postings it does not carry yet (future sale date only) to records.
+    # Owner + mailing address are filled by the address-reverse parcel pass.
+    today_s = datetime.now().strftime("%Y-%m-%d")
+    gis_docnums = {r.doc_num for r in gis_recs if r.doc_num}
+    fc_new = 0
+    for dn, e in fc["by_docnum"].items():
+        if dn in gis_docnums:
+            continue
+        sale = e.get("sale") or ""
+        if len(sale) != 10 or sale < today_s:
+            continue
+        street, fc_city, fc_zip = ClerkScraper._parse_address(e.get("address") or "")
+        rec = LeadRecord(
+            doc_num=dn,
+            doc_type="FORECLOSURE_POSTING",
+            cat="FC",
+            cat_label="Foreclosure Notice (Posting)",
+            filed=e.get("recorded") or "",
+            prop_address=street,
+            prop_city=fc_city,
+            prop_state=STATE,
+            prop_zip=fc_zip,
+            clerk_url=e["url"],
+        )
+        rec.auction_date = sale
+        gis_recs.append(rec)
+        fc_new += 1
+    log.info("FC postings ahead of the GIS feed added as records: %d", fc_new)
     existing = {r.prop_address.upper() for r in records if r.prop_address}
     for r in gis_recs:
         if r.prop_address.upper() not in existing:

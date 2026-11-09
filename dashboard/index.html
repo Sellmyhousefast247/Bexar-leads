@@ -81,6 +81,8 @@ td{padding:12px 14px;vertical-align:top}
 .badge-chg{display:inline-block;font-size:8px;font-weight:800;letter-spacing:.08em;color:var(--orange);margin-left:6px;vertical-align:middle}
 .dtype{font-weight:700;font-size:12.5px}
 .dt-foreclosure{color:var(--red)}.dt-tax_lien{color:var(--yellow)}.dt-judgment{color:var(--cyan)}.dt-probate{color:var(--purple)}
+.badge-cxl{display:inline-block;font-size:8px;font-weight:800;letter-spacing:.08em;color:var(--red);margin-left:6px;vertical-align:middle}
+.row-auction.cxl{color:var(--red);text-decoration:line-through}
 .row-auction{display:block;margin-top:4px;font-size:10px;font-weight:700;color:var(--muted2)}
 .row-auction.soon{color:var(--orange)}
 .row-doc{display:block;margin-top:5px;font-size:10px;font-weight:700;color:var(--blue);text-decoration:none;width:fit-content}
@@ -157,6 +159,7 @@ td{padding:12px 14px;vertical-align:top}
       <option value="">All documents</option>
       <option value="NEW">New only</option>
       <option value="CHANGED">Changed only</option>
+      <option value="CANCELLED">Cancelled sales</option>
     </select>
 
     <div class="sb-label">Document Type</div>
@@ -302,13 +305,15 @@ function render(){
 function go(p){PAGE=p;render();window.scrollTo({top:0,behavior:'smooth'})}
 
 function row(r,idx){
-  const badge=r.status==='NEW'?'<span class="badge-new">NEW</span>':r.status==='CHANGED'?'<span class="badge-chg">CHG</span>':'';
+  const badge=r.status==='NEW'?'<span class="badge-new">NEW</span>':r.status==='CHANGED'?'<span class="badge-chg">CHG</span>':r.status==='CANCELLED'?'<span class="badge-cxl">CXL</span>':'';
   const active=(r.cat==='foreclosure'&&r.status!=='EXISTING')?'<span class="tag-active">ACTIVE</span>':'';
   const sc=r.score||0,scls=sc>=70?'s-hi':sc>=50?'s-md':'s-lo';
   const addr=r.prop_address?`<div class="addr">${esc(r.prop_address)}${r.prop_zip?' '+esc(r.prop_zip):''}</div><div class="addr-sub">${esc(r.owner)||''}</div>`:`<div class="addr">${esc(r.doc_num)||'—'}</div><div class="addr-sub">${esc(r.owner)||''}</div>`;
   const doclink=r.clerk_url?`<a class="row-doc" href="${esc(r.clerk_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View filing ↗</a>`:'';
   let auct='';
-  if(r.auction_date){
+  if(r.status==='CANCELLED'){
+    auct=`<div class="row-auction cxl">⚖ Sale cancelled${r.auction_date?' · was '+r.auction_date:''}</div>`;
+  }else if(r.auction_date){
     const days=Math.round((new Date(r.auction_date+'T12:00:00')-Date.now())/864e5);
     const soon=days>=0&&days<=21;
     auct=`<div class="row-auction${soon?' soon':''}">⚖ Auction ${r.auction_date}${days>=0?` (${days}d)`:''}</div>`;

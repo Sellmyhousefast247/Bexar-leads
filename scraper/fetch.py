@@ -140,6 +140,7 @@ class LeadRecord:
     rid: str = ""
     content_hash: str = ""
     auction_date: str = ""
+    cancelled_date: str = ""
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -1107,6 +1108,78 @@ def write_outputs(records: list, start: datetime, end: datetime) -> None:
     log.info("Skip trace CSV written: %s (%d records)", skip_path, len(records))
 
 
+def carry_cancelled(records: list) -> list:
+    """Detect cancelled foreclosure sales by disappearance.
+
+    Bexar removes a posting from the GIS/FC feeds when a sale is pulled.
+    A foreclosure present in the previous run but missing today, whose
+    auction date had NOT yet passed when it vanished, is carried forward
+    for 21 days with status CANCELLED. One that vanishes after its auction
+    date is presumed sold and dropped."""
+    KEEP_DAYS = 21
+    prev_path = _repo_base() / "data" / "records.json"
+    if not prev_path.exists():
+        return records
+    try:
+        prev = json.loads(prev_path.read_text(encoding="utf-8")).get("records", [])
+    except Exception:
+        return records
+    today = datetime.now().date()
+    current = {r.rid for r in records if r.rid}
+    carried = []
+    for pr in prev:
+        rid = pr.get("rid")
+        if not rid or rid in current:
+            continue
+        if not str(pr.get("doc_type", "")).startswith("FORECLOSURE"):
+            continue
+        try:
+            auct = datetime.strptime(str(pr.get("auction_date", ""))[:10], "%Y-%m-%d").date()
+        except Exception:
+            continue
+        try:
+            first_missing = datetime.strptime(str(pr.get("cancelled_date", ""))[:10], "%Y-%m-%d").date()
+        except Exception:
+            first_missing = today
+        if (today - first_missing).days > KEEP_DAYS:
+            continue
+        if auct < first_missing:
+            continue  # vanished after sale day -> presumed sold, not cancelled
+        rec = LeadRecord(
+            doc_num=str(pr.get("doc_num", "")),
+            doc_type=str(pr.get("doc_type", "")),
+            cat=str(pr.get("cat_code") or pr.get("cat") or ""),
+            cat_label=str(pr.get("cat_label", "")),
+            filed=str(pr.get("filed", "")),
+            owner=str(pr.get("owner", "")),
+            grantee=str(pr.get("grantee", "")),
+            amount=float(pr.get("amount") or 0),
+            legal=str(pr.get("legal", "")),
+            prop_address=str(pr.get("prop_address", "")),
+            prop_city=str(pr.get("prop_city", "")),
+            prop_state=str(pr.get("prop_state", "") or STATE),
+            prop_zip=str(pr.get("prop_zip", "")),
+            mail_address=str(pr.get("mail_address", "")),
+            mail_city=str(pr.get("mail_city", "")),
+            mail_state=str(pr.get("mail_state", "") or STATE),
+            mail_zip=str(pr.get("mail_zip", "")),
+            clerk_url=str(pr.get("clerk_url", "")),
+        )
+        rec.rid = rid
+        rec.content_hash = str(pr.get("content_hash", ""))
+        rec.status = "CANCELLED"
+        rec.first_seen = str(pr.get("first_seen", ""))
+        rec.auction_date = str(pr.get("auction_date", ""))
+        rec.cancelled_date = first_missing.isoformat()
+        rec.score = int(pr.get("score") or 0)
+        flags = [f for f in (pr.get("flags") or []) if f and f != "Sale cancelled"]
+        rec.flags = flags + ["Sale cancelled"]
+        carried.append(rec)
+    if carried:
+        log.info("Cancelled foreclosures carried forward: %d", len(carried))
+    return records + carried
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -1159,6 +1232,7 @@ def main() -> None:
         enrich_parcels(records, use_bcad=not args.skip_bcad)
     detect_changes(records)
     score_records(records, start)
+    records = carry_cancelled(records)
     records.sort(key=lambda r: (r.status != "NEW", -r.score))
     if not records:
         log.warning("No records found. Writing empty output files.")

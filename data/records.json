@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-08T23:49:33.805439",
+  "fetched_at": "2026-11-09T00:00:01.212306",
   "county": "Bexar",
   "source": "Bexar County, TX -- Clerk Portal + Parcel API + BCAD",
   "date_range": {
@@ -664,7 +664,7 @@
       "mail_city": "BOERNE",
       "mail_state": "TX",
       "mail_zip": "78015",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160814",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -730,7 +730,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640543",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -763,7 +763,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742034",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -796,7 +796,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742025",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -829,7 +829,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742026",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -862,7 +862,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746851",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -895,7 +895,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746857",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -928,7 +928,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747384",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -961,7 +961,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78231",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332111070",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -994,7 +994,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332158449",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1060,7 +1060,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160855",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1126,7 +1126,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78216",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165525",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1159,7 +1159,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165517",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1192,7 +1192,7 @@
       "mail_city": "HELOTES",
       "mail_state": "TX",
       "mail_zip": "78023",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332111071",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1225,7 +1225,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746496",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1258,7 +1258,7 @@
       "mail_city": "MARTINDALE",
       "mail_state": "TX",
       "mail_zip": "78655",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640133",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1291,7 +1291,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78258",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640128",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1324,7 +1324,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640121",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1357,7 +1357,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640141",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1390,7 +1390,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78232",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640127",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1423,7 +1423,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640123",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1456,7 +1456,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78255",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640132",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1489,7 +1489,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640129",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1522,7 +1522,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640139",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1555,7 +1555,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640131",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1588,7 +1588,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640135",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1621,7 +1621,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640138",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1654,7 +1654,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78233",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640537",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1720,7 +1720,7 @@
       "mail_city": "CORPUS CHRISTI",
       "mail_state": "TX",
       "mail_zip": "78413",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640546",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1753,7 +1753,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78217",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640539",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1786,7 +1786,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78216",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640544",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1819,7 +1819,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78212",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640542",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1885,7 +1885,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640549",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1918,7 +1918,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640548",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1951,7 +1951,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78239",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331718525",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -1984,7 +1984,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331718519",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2017,7 +2017,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78213",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331726096",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2050,7 +2050,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78249",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742009",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2083,7 +2083,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742032",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2116,7 +2116,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742021",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2149,7 +2149,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742031",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2182,7 +2182,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78249",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742024",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2215,7 +2215,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78249",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742036",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2248,7 +2248,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78249",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742030",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2281,7 +2281,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78209",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742027",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2314,7 +2314,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742011",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2347,7 +2347,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742037",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2380,7 +2380,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742012",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2413,7 +2413,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742028",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2446,7 +2446,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742019",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2479,7 +2479,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78222",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331745551",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2512,7 +2512,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78217",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746497",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2545,7 +2545,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78244",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746500",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2578,7 +2578,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746506",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2611,7 +2611,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746511",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2644,7 +2644,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746501",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2677,7 +2677,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746498",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2710,7 +2710,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746504",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2743,7 +2743,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746512",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2776,7 +2776,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746510",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2809,7 +2809,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746509",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2842,7 +2842,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746852",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2875,7 +2875,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746856",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2908,7 +2908,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78224",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746863",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2941,7 +2941,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78227",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746854",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -2974,7 +2974,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746865",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3007,7 +3007,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78239",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746862",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3040,7 +3040,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746866",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3073,7 +3073,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746868",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3106,7 +3106,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747361",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3139,7 +3139,7 @@
       "mail_city": "UNIVERSAL CITY",
       "mail_state": "TX",
       "mail_zip": "78148",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747365",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3172,7 +3172,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78228",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747366",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3205,7 +3205,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747367",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3238,7 +3238,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78247",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747374",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3271,7 +3271,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747392",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3304,7 +3304,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747373",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3337,7 +3337,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747376",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3370,7 +3370,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747379",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3403,7 +3403,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747381",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3436,7 +3436,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78244",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747391",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3469,7 +3469,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747382",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3502,7 +3502,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78232",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747385",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3535,7 +3535,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78232",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747390",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3568,7 +3568,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747393",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3601,7 +3601,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747386",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3634,7 +3634,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78259",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331747380",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3667,7 +3667,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331758744",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3700,7 +3700,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78238",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331761045",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3733,7 +3733,7 @@
       "mail_city": "PLANO",
       "mail_state": "TX",
       "mail_zip": "75025",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331761044",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3766,7 +3766,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78258",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332111069",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3799,7 +3799,7 @@
       "mail_city": "COPPELL",
       "mail_state": "TX",
       "mail_zip": "75019",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332157462",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3832,7 +3832,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332157464",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3865,7 +3865,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332157466",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3898,7 +3898,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332158444",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3931,7 +3931,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78201",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332158443",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3964,7 +3964,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78247",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160812",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -3997,7 +3997,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78264",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160811",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4063,7 +4063,7 @@
       "mail_city": "WINDCREST",
       "mail_state": "TX",
       "mail_zip": "78239",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160822",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4096,7 +4096,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78239",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160818",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4129,7 +4129,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78237",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160825",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4162,7 +4162,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78230",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160840",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4195,7 +4195,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78240",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160836",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4228,7 +4228,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160832",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4261,7 +4261,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160826",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4294,7 +4294,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160838",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4327,7 +4327,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160846",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4360,7 +4360,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78209",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160833",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4393,7 +4393,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160839",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4459,7 +4459,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78228",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160858",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4525,7 +4525,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78207",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160834",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4558,7 +4558,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160845",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4624,7 +4624,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160849",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4657,7 +4657,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78222",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160857",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4789,7 +4789,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78256",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160859",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4822,7 +4822,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160866",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4855,7 +4855,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160860",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4888,7 +4888,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160865",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4921,7 +4921,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78247",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160863",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4954,7 +4954,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160856",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -4987,7 +4987,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160870",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5020,7 +5020,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165522",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5053,7 +5053,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165513",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5086,7 +5086,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165512",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5119,7 +5119,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78247",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165514",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5152,7 +5152,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165524",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5185,7 +5185,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165510",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5218,7 +5218,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165515",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5251,7 +5251,7 @@
       "mail_city": "NEW BRAUNFELS",
       "mail_state": "TX",
       "mail_zip": "78132",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165511",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5284,7 +5284,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78209",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165523",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5317,7 +5317,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165518",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5350,7 +5350,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332178513",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5383,7 +5383,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78249",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332178514",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5416,7 +5416,7 @@
       "mail_city": "AUSTIN",
       "mail_state": "TX",
       "mail_zip": "78702",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332178979",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5449,7 +5449,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78240",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332222926",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5482,7 +5482,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330944981",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5515,7 +5515,7 @@
       "mail_city": "SELMA",
       "mail_state": "TX",
       "mail_zip": "78154",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331742017",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5548,7 +5548,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331746502",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5581,7 +5581,7 @@
       "mail_city": "UNIVERSAL CITY",
       "mail_state": "TX",
       "mail_zip": "78148",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640130",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5614,7 +5614,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332165527",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5647,7 +5647,7 @@
       "mail_city": "AUSTIN",
       "mail_state": "TX",
       "mail_zip": "78702",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332178978",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5680,7 +5680,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640134",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5713,7 +5713,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331640540",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5746,7 +5746,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160844",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5779,7 +5779,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78264",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332186297",
       "flags": [
         "Pre-foreclosure",
         "New this week",
@@ -5792,39 +5792,6 @@
       "content_hash": "cfe3af57b47fd541",
       "cat_code": "FC",
       "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260213777",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "VELA VICTORIA",
-      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: SILOS #9B&9C Lot: 22 Block: 33 CBLK: 5752,, Reference - 20002 / 2552",
-      "prop_address": "7206 OX PL",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78252",
-      "mail_address": "110 BELLVIEW ST",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78209",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198497",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "EXISTING",
-      "first_seen": "2026-11-05",
-      "rid": "67cb49443de87a7f",
-      "content_hash": "47b0d2f41b98b85a",
-      "cat_code": "LP",
-      "absentee": true,
       "out_of_state": false
     },
     {
@@ -5861,6 +5828,39 @@
       "out_of_state": false
     },
     {
+      "doc_num": "20260213777",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "VELA VICTORIA",
+      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: SILOS #9B&9C Lot: 22 Block: 33 CBLK: 5752,, Reference - 20002 / 2552",
+      "prop_address": "7206 OX PL",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78252",
+      "mail_address": "110 BELLVIEW ST",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78209",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198497",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "67cb49443de87a7f",
+      "content_hash": "47b0d2f41b98b85a",
+      "cat_code": "LP",
+      "absentee": true,
+      "out_of_state": false
+    },
+    {
       "doc_num": "20260216516",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
@@ -5889,39 +5889,6 @@
       "first_seen": "2026-11-07",
       "rid": "0af24ac63681765f",
       "content_hash": "a70a364b77b86d23",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260214048",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "SMITH NICHOLAS VINCENT",
-      "grantee": "PROVINCIA VILLAS HOMEOWNERS ASSOCIATION",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: PROVINCIA VILLAS Lot: 9 Block: 11 NCB: 16099,, Reference - 9560 / 31",
-      "prop_address": "6710 BISCAY BAY",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78249",
-      "mail_address": "6710 BISCAY BAY",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78249",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201025",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "EXISTING",
-      "first_seen": "2026-11-05",
-      "rid": "7a3e355dfb6f25a4",
-      "content_hash": "c3a526bdf068fbde",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -5988,6 +5955,39 @@
       "first_seen": "2026-11-05",
       "rid": "dc2465ea6750e947",
       "content_hash": "8d2a91fad0e7b591",
+      "cat_code": "LP",
+      "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260214048",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "SMITH NICHOLAS VINCENT",
+      "grantee": "PROVINCIA VILLAS HOMEOWNERS ASSOCIATION",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: PROVINCIA VILLAS Lot: 9 Block: 11 NCB: 16099,, Reference - 9560 / 31",
+      "prop_address": "6710 BISCAY BAY",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78249",
+      "mail_address": "6710 BISCAY BAY",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78249",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201025",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "7a3e355dfb6f25a4",
+      "content_hash": "c3a526bdf068fbde",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6125,57 +6125,24 @@
       "out_of_state": false
     },
     {
-      "doc_num": "20260213998",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "ABADILLA JANICE LLACAR",
-      "grantee": "RIVERSTONE AT ALAMO RANCH HOMEOWNERS ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: ALAMO RANCH #18B Lot: 10 Block: 41, Reference - 20001 / 96",
-      "prop_address": "5851 SWEETWATER WAY",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78253",
-      "mail_address": "5851 SWEETWATER WAY",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78253",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332200609",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "EXISTING",
-      "first_seen": "2026-11-05",
-      "rid": "9786802141870133",
-      "content_hash": "ae70316d3ec31f82",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260215320",
+      "doc_num": "20260215422",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
       "cat_label": "Lis Pendens",
       "filed": "2026-11-03",
-      "owner": "DAVIS MICHAEL",
-      "grantee": "RANDOLPH CROSSING HOMEOWNERS ASSOCIATION INC",
+      "owner": "HERRERA RYNDI",
+      "grantee": "RIPOSA VITA HOMEOWNERS ASSOCIATION INC",
       "amount": 0.0,
-      "legal": "Subdivision-  Name: RANDOLPH CROSSING #3 Lot: 13 Block: 10 CBLK: 5099,, Reference - 20003 / 1420",
-      "prop_address": "10031 MATHER WAY",
-      "prop_city": "CONVERSE",
+      "legal": "Subdivision-  Name: RIPOSA VITA #5C Lot: 15 Block: 13 NCB: 18239,, Reference - 20001 / 2066",
+      "prop_address": "5515 ROSILLO BLF",
+      "prop_city": "SAN ANTONIO",
       "prop_state": "TX",
-      "prop_zip": "78109",
-      "mail_address": "1619 E HIGHLAND BLVD",
+      "prop_zip": "78222",
+      "mail_address": "5515 ROSILLO BLUFF",
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
-      "mail_zip": "78210",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332224975",
+      "mail_zip": "78222",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332226387",
       "flags": [
         "Lis pendens",
         "New this week",
@@ -6184,8 +6151,8 @@
       "score": 55,
       "status": "EXISTING",
       "first_seen": "2026-11-06",
-      "rid": "be0c828322636872",
-      "content_hash": "61a9158b11fe46f5",
+      "rid": "d0360f7d843e785c",
+      "content_hash": "a064cc1fb1157036",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6257,24 +6224,24 @@
       "out_of_state": false
     },
     {
-      "doc_num": "20260215422",
+      "doc_num": "20260215320",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
       "cat_label": "Lis Pendens",
       "filed": "2026-11-03",
-      "owner": "HERRERA RYNDI",
-      "grantee": "RIPOSA VITA HOMEOWNERS ASSOCIATION INC",
+      "owner": "DAVIS MICHAEL",
+      "grantee": "RANDOLPH CROSSING HOMEOWNERS ASSOCIATION INC",
       "amount": 0.0,
-      "legal": "Subdivision-  Name: RIPOSA VITA #5C Lot: 15 Block: 13 NCB: 18239,, Reference - 20001 / 2066",
-      "prop_address": "5515 ROSILLO BLF",
-      "prop_city": "SAN ANTONIO",
+      "legal": "Subdivision-  Name: RANDOLPH CROSSING #3 Lot: 13 Block: 10 CBLK: 5099,, Reference - 20003 / 1420",
+      "prop_address": "10031 MATHER WAY",
+      "prop_city": "CONVERSE",
       "prop_state": "TX",
-      "prop_zip": "78222",
-      "mail_address": "5515 ROSILLO BLUFF",
+      "prop_zip": "78109",
+      "mail_address": "1619 E HIGHLAND BLVD",
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
-      "mail_zip": "78222",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332226387",
+      "mail_zip": "78210",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332224975",
       "flags": [
         "Lis pendens",
         "New this week",
@@ -6283,8 +6250,8 @@
       "score": 55,
       "status": "EXISTING",
       "first_seen": "2026-11-06",
-      "rid": "d0360f7d843e785c",
-      "content_hash": "a064cc1fb1157036",
+      "rid": "be0c828322636872",
+      "content_hash": "61a9158b11fe46f5",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6320,6 +6287,39 @@
       "content_hash": "73aa03c7ec06fa84",
       "cat_code": "LP",
       "absentee": true,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260213998",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "ABADILLA JANICE LLACAR",
+      "grantee": "RIVERSTONE AT ALAMO RANCH HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: ALAMO RANCH #18B Lot: 10 Block: 41, Reference - 20001 / 96",
+      "prop_address": "5851 SWEETWATER WAY",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78253",
+      "mail_address": "5851 SWEETWATER WAY",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78253",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332200609",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "9786802141870133",
+      "content_hash": "ae70316d3ec31f82",
+      "cat_code": "LP",
+      "absentee": false,
       "out_of_state": false
     },
     {
@@ -6384,72 +6384,6 @@
       "first_seen": "2026-11-05",
       "rid": "f1e6c9c54bdaa36c",
       "content_hash": "21807ea4ee4a7dd1",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260214040",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "ZAFAR NAUSHAD",
-      "grantee": "HUNTINGTON HOMEOWNERS ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: SHAVANO PARK #19C Lot: 2163 Block: 35, Reference - 20001 / 335",
-      "prop_address": "148 KINNAN WAY",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78231",
-      "mail_address": "239 WINDING LN",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78231",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201075",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "EXISTING",
-      "first_seen": "2026-11-05",
-      "rid": "528ac75cb6b1e22f",
-      "content_hash": "2cf51c0de86e54ea",
-      "cat_code": "LP",
-      "absentee": true,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260213774",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "AULD BASHIR NATHANIEL",
-      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: SILOS #2C,3C Lot: 22 Block: 9 CBLK: 5752,, Reference - 20001 / 2427",
-      "prop_address": "6724 BEEHIVE DR",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78252",
-      "mail_address": "6724 BEEHIVE DR",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78252",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198474",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "EXISTING",
-      "first_seen": "2026-11-05",
-      "rid": "4b8accc0278e426f",
-      "content_hash": "49706c78be1e62d8",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6521,24 +6455,24 @@
       "out_of_state": false
     },
     {
-      "doc_num": "20260215347",
+      "doc_num": "20260213774",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
       "cat_label": "Lis Pendens",
-      "filed": "2026-11-03",
-      "owner": "VIVARPEREYRA SAMUEL MARCELO",
-      "grantee": "PROMONTORY POINTE HOMEOWNERS ASSOCIATION INC",
+      "filed": "2026-11-02",
+      "owner": "AULD BASHIR NATHANIEL",
+      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
       "amount": 0.0,
-      "legal": "Subdivision-  Name: PROMONTORY POINTE AT STONE OAK II #1 Lot: 37 Block: 2 NCB: 17626,, Reference - 9534 / 64",
-      "prop_address": "634 REXTON LN",
+      "legal": "Subdivision-  Name: SILOS #2C,3C Lot: 22 Block: 9 CBLK: 5752,, Reference - 20001 / 2427",
+      "prop_address": "6724 BEEHIVE DR",
       "prop_city": "SAN ANTONIO",
       "prop_state": "TX",
-      "prop_zip": "78258",
-      "mail_address": "3435 SUNLIT GRV",
+      "prop_zip": "78252",
+      "mail_address": "6724 BEEHIVE DR",
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
-      "mail_zip": "78247",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332225297",
+      "mail_zip": "78252",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198474",
       "flags": [
         "Lis pendens",
         "New this week",
@@ -6546,11 +6480,11 @@
       ],
       "score": 55,
       "status": "EXISTING",
-      "first_seen": "2026-11-06",
-      "rid": "85ce957e52d43d43",
-      "content_hash": "7ad6887697c278ca",
+      "first_seen": "2026-11-05",
+      "rid": "4b8accc0278e426f",
+      "content_hash": "49706c78be1e62d8",
       "cat_code": "LP",
-      "absentee": true,
+      "absentee": false,
       "out_of_state": false
     },
     {
@@ -6587,6 +6521,39 @@
       "out_of_state": false
     },
     {
+      "doc_num": "20260214040",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "ZAFAR NAUSHAD",
+      "grantee": "HUNTINGTON HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: SHAVANO PARK #19C Lot: 2163 Block: 35, Reference - 20001 / 335",
+      "prop_address": "148 KINNAN WAY",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78231",
+      "mail_address": "239 WINDING LN",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78231",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201075",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "528ac75cb6b1e22f",
+      "content_hash": "2cf51c0de86e54ea",
+      "cat_code": "LP",
+      "absentee": true,
+      "out_of_state": false
+    },
+    {
       "doc_num": "20260214008",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
@@ -6617,6 +6584,39 @@
       "content_hash": "01ae62986e93c75f",
       "cat_code": "LP",
       "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260215347",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-03",
+      "owner": "VIVARPEREYRA SAMUEL MARCELO",
+      "grantee": "PROMONTORY POINTE HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: PROMONTORY POINTE AT STONE OAK II #1 Lot: 37 Block: 2 NCB: 17626,, Reference - 9534 / 64",
+      "prop_address": "634 REXTON LN",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78258",
+      "mail_address": "3435 SUNLIT GRV",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78247",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332225297",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-06",
+      "rid": "85ce957e52d43d43",
+      "content_hash": "7ad6887697c278ca",
+      "cat_code": "LP",
+      "absentee": true,
       "out_of_state": false
     },
     {
@@ -6719,6 +6719,39 @@
       "out_of_state": false
     },
     {
+      "doc_num": "20260214011",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "FRANDSEN MCKAY DAN",
+      "grantee": "RIVERSTONE AT ALAMO RANCH HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: ALAMO RANCH #4 Lot: 74 Block: 2, Reference - 9572 / 28",
+      "prop_address": "6307 BIG BEND COVE",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78253",
+      "mail_address": "6307 BIG BEND CV",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78253",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332200593",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "16484aa859920bc9",
+      "content_hash": "ea3556f96104f59c",
+      "cat_code": "LP",
+      "absentee": true,
+      "out_of_state": false
+    },
+    {
       "doc_num": "20260214004",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
@@ -6752,24 +6785,24 @@
       "out_of_state": false
     },
     {
-      "doc_num": "20260214011",
+      "doc_num": "20260215359",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
       "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "FRANDSEN MCKAY DAN",
-      "grantee": "RIVERSTONE AT ALAMO RANCH HOMEOWNERS ASSOCIATION INC",
+      "filed": "2026-11-03",
+      "owner": "THREAT GREGORY",
+      "grantee": "WILDHORSE HOMEOWNERS ASSOCIATION INC",
       "amount": 0.0,
-      "legal": "Subdivision-  Name: ALAMO RANCH #4 Lot: 74 Block: 2, Reference - 9572 / 28",
-      "prop_address": "6307 BIG BEND COVE",
+      "legal": "Subdivision-  Name: TAUSCH FARMS #6A Lot: 1 Block: 80, Reference - 9621 / 142",
+      "prop_address": "10802 MUSTANG OAK",
       "prop_city": "SAN ANTONIO",
       "prop_state": "TX",
-      "prop_zip": "78253",
-      "mail_address": "6307 BIG BEND CV",
+      "prop_zip": "78254",
+      "mail_address": "10802 MUSTANG OAK DR",
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
-      "mail_zip": "78253",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332200593",
+      "mail_zip": "78254",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332225308",
       "flags": [
         "Lis pendens",
         "New this week",
@@ -6777,9 +6810,9 @@
       ],
       "score": 55,
       "status": "EXISTING",
-      "first_seen": "2026-11-05",
-      "rid": "16484aa859920bc9",
-      "content_hash": "ea3556f96104f59c",
+      "first_seen": "2026-11-06",
+      "rid": "f9d7017fd369308e",
+      "content_hash": "92540214cb9a8dff",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6815,39 +6848,6 @@
       "content_hash": "2b3e9cde1cbec2d7",
       "cat_code": "LP",
       "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260215359",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-03",
-      "owner": "THREAT GREGORY",
-      "grantee": "WILDHORSE HOMEOWNERS ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: TAUSCH FARMS #6A Lot: 1 Block: 80, Reference - 9621 / 142",
-      "prop_address": "10802 MUSTANG OAK",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78254",
-      "mail_address": "10802 MUSTANG OAK DR",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78254",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332225308",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "EXISTING",
-      "first_seen": "2026-11-06",
-      "rid": "f9d7017fd369308e",
-      "content_hash": "92540214cb9a8dff",
-      "cat_code": "LP",
-      "absentee": true,
       "out_of_state": false
     },
     {
@@ -6901,7 +6901,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78251",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330772088",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -6933,7 +6933,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330772093",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -6965,7 +6965,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78233",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330772089",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -6997,7 +6997,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779411",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7029,7 +7029,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78227",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779409",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7061,7 +7061,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779418",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7093,7 +7093,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779425",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7189,7 +7189,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779422",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7221,7 +7221,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779430",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7253,7 +7253,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779428",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7285,7 +7285,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779436",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7349,7 +7349,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779441",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7381,7 +7381,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78222",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779431",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7445,7 +7445,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78264",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779437",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7477,7 +7477,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779852",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7509,7 +7509,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330779856",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7541,7 +7541,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330831124",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7573,7 +7573,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330831123",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7605,7 +7605,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78244",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860420",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7637,7 +7637,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860418",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7669,7 +7669,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78259",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860412",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7701,7 +7701,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78207",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860417",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7733,7 +7733,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860413",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7765,7 +7765,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860416",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7797,7 +7797,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78220",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330860411",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7829,7 +7829,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330861199",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7861,7 +7861,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330861192",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7893,7 +7893,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964878",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7957,7 +7957,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871044",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8021,7 +8021,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871046",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8053,7 +8053,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871041",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8085,7 +8085,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871052",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8149,7 +8149,7 @@
       "mail_city": "KIRBY",
       "mail_state": "TX",
       "mail_zip": "78219",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871051",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8181,7 +8181,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871349",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8213,7 +8213,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871351",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8245,7 +8245,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871369",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8277,7 +8277,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78211",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871362",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8341,7 +8341,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78203",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871354",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8373,7 +8373,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78222",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871355",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8405,7 +8405,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78237",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871370",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8469,7 +8469,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871377",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8501,7 +8501,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871359",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8533,7 +8533,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78233",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871373",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8565,7 +8565,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871372",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8597,7 +8597,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330872299",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8629,7 +8629,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78201",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330872293",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8725,7 +8725,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330872296",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8789,7 +8789,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330872306",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8853,7 +8853,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330872314",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8885,7 +8885,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330880987",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8917,7 +8917,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330918831",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8949,7 +8949,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330961400",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8981,7 +8981,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330961401",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9013,7 +9013,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330961403",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9045,7 +9045,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330961404",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9077,7 +9077,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330961402",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9141,7 +9141,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964874",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9173,7 +9173,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78233",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964876",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9205,7 +9205,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964878",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9237,7 +9237,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964881",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9269,7 +9269,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78201",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964879",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9301,7 +9301,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330964882",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9333,7 +9333,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967470",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9365,7 +9365,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967464",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9397,7 +9397,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967469",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9429,7 +9429,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78251",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967473",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9461,7 +9461,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78228",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967465",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9493,7 +9493,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78209",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967474",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9525,7 +9525,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967485",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9557,7 +9557,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78210",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967479",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9589,7 +9589,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967477",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9621,7 +9621,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78228",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967487",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9653,7 +9653,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78264",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967488",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9685,7 +9685,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78210",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967940",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9717,7 +9717,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78209",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967934",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9749,7 +9749,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967933",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9781,7 +9781,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967928",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9813,7 +9813,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78240",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967945",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9845,7 +9845,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967930",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9877,7 +9877,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78217",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967942",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9909,7 +9909,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78264",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967939",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9941,7 +9941,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78247",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967936",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -9973,7 +9973,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967932",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10005,7 +10005,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78211",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967938",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10037,7 +10037,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330967946",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10069,7 +10069,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78233",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330999507",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10101,7 +10101,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330999503",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10133,7 +10133,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78250",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330999510",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10165,7 +10165,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330999514",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10197,7 +10197,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330999508",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10229,7 +10229,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78201",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330999506",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10261,7 +10261,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331406918",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10293,7 +10293,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78204",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331501738",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10325,7 +10325,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331501740",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10357,7 +10357,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331501743",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10389,7 +10389,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507878",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10421,7 +10421,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78228",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507875",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10453,7 +10453,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507887",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10485,7 +10485,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507888",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10517,7 +10517,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507879",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10549,7 +10549,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78260",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507880",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10581,7 +10581,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331507885",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10613,7 +10613,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522095",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10645,7 +10645,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78217",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522096",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10677,7 +10677,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78222",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522114",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10709,7 +10709,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522107",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10741,7 +10741,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522108",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10837,7 +10837,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78242",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522098",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10869,7 +10869,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78201",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522115",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10901,7 +10901,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78209",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522109",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10965,7 +10965,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522471",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10997,7 +10997,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522487",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11061,7 +11061,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522484",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11093,7 +11093,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522476",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11125,7 +11125,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78258",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522492",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11157,7 +11157,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522477",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11189,7 +11189,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522494",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11221,7 +11221,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522480",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11285,7 +11285,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522498",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11317,7 +11317,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522486",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11349,7 +11349,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78254",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331546894",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11381,7 +11381,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331546889",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11413,7 +11413,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331546898",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11445,7 +11445,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331546891",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11477,7 +11477,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78216",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331583007",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11701,7 +11701,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78207",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588621",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11733,7 +11733,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78216",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588639",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11765,7 +11765,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78230",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588633",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11797,7 +11797,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78210",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588645",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11829,7 +11829,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588631",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11861,7 +11861,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592166",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11893,7 +11893,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592168",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11925,7 +11925,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592171",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11957,7 +11957,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78247",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592169",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11989,7 +11989,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78227",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592165",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12021,7 +12021,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78232",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592167",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12053,7 +12053,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78201",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331592170",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12085,7 +12085,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331593121",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12149,7 +12149,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78207",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330688849",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12181,7 +12181,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330706710",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12213,7 +12213,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330718295",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12245,7 +12245,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78218",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330742299",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12277,7 +12277,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330746917",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12309,7 +12309,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78222",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330746915",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12341,7 +12341,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78211",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330748080",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12373,7 +12373,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330748078",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12405,7 +12405,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78252",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330748093",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12469,7 +12469,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/321465436",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12501,7 +12501,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78245",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330749858",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12533,7 +12533,7 @@
       "mail_city": "VON ORMY",
       "mail_state": "TX",
       "mail_zip": "78073",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588617",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12565,7 +12565,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78221",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330861188",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -12597,7 +12597,7 @@
       "mail_city": "",
       "mail_state": "TX",
       "mail_zip": "",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522113",
       "flags": [
         "Pre-foreclosure",
         "Has address"

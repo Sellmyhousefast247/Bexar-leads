@@ -106,11 +106,12 @@ GHL_FIELDS = [
     "doc_num","doc_type","cat","cat_label","filed","owner","grantee",
     "amount","prop_address","prop_city","prop_state","prop_zip",
     "mail_address","mail_city","mail_state","mail_zip","legal","clerk_url","score","flags",
-    "first_seen","status",
+    "first_seen","status","auction_date",
 ]
 GHL_HEADERS = {f: f.replace("_", " ").title() for f in GHL_FIELDS}
 GHL_HEADERS["first_seen"] = "Date Entered System"
 GHL_HEADERS["status"] = "Status"
+GHL_HEADERS["auction_date"] = "Auction Date"
 
 @dataclass
 class LeadRecord:
@@ -138,6 +139,7 @@ class LeadRecord:
     first_seen: str = ""
     rid: str = ""
     content_hash: str = ""
+    auction_date: str = ""
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -520,6 +522,7 @@ class ClerkScraper:
                 "doc_num": doc_num,
                 "url": f"{CLERK_BASE_URL}/doc/{m.group(1)}",
                 "address": cells[8].get_text(" ", strip=True),
+                "sale": normalize_date(cells[5].get_text(" ", strip=True)),
             })
         return out
 
@@ -569,11 +572,12 @@ class ClerkScraper:
         while pages_done < self.FC_MAX_PAGES:
             recs = self._parse_fc_html(page.content())
             for r in recs:
-                by_docnum.setdefault(r["doc_num"], r["url"])
+                entry = {"url": r["url"], "sale": r.get("sale", "")}
+                by_docnum.setdefault(r["doc_num"], entry)
                 street = (r["address"] or "").split(",")[0]
                 num, core = _addr_key(street)
                 if num and core:
-                    by_addr.setdefault(f"{num} {core}", r["url"])
+                    by_addr.setdefault(f"{num} {core}", entry)
             if len(recs) < PAGE_SIZE:
                 break
             prev_first = recs[0]["doc_num"]
@@ -900,7 +904,7 @@ def _record_chash(r) -> str:
     """Content hash - changes when any meaningful field changes."""
     fields = "|".join(str(x or "") for x in (
         r.doc_num, r.doc_type, r.filed, r.owner, r.grantee, r.legal,
-        r.amount, r.prop_address, r.mail_address))
+        r.amount, r.prop_address, r.mail_address, r.auction_date))
     return hashlib.sha1(fields.encode()).hexdigest()[:16]
 
 
@@ -1010,6 +1014,12 @@ def fetch_foreclosure_gis(start, end):
                     prop_zip=zipcode,
                     clerk_url=f"https://maps.bexar.org/foreclosures/" if not doc_num else f"https://bexar.tx.publicsearch.us/results?department=RP&searchType=quickSearch&searchValue={doc_num}&keywordSearch=false&searchOcrText=false",
                 )
+                if year and month:
+                    # Texas foreclosure auctions are held the first Tuesday
+                    # of the month; exact FC posting sale dates override this.
+                    from datetime import date as _date
+                    first_tue = 1 + (1 - _date(int(year), int(month), 1).weekday()) % 7
+                    rec.auction_date = f"{int(year):04d}-{int(month):02d}-{first_tue:02d}"
                 if rec.prop_address:
                     records.append(rec)
         log.info("ForeclosuresProd total: %d records", len(records))
@@ -1127,13 +1137,15 @@ def main() -> None:
     fc = getattr(scraper, "fc_index", None) or {"by_docnum": {}, "by_addr": {}}
     fc_hits = 0
     for r in gis_recs:
-        url = fc["by_docnum"].get(r.doc_num)
-        if not url and r.prop_address:
+        entry = fc["by_docnum"].get(r.doc_num)
+        if not entry and r.prop_address:
             num, core = _addr_key(r.prop_address.split(",")[0])
             if num and core:
-                url = fc["by_addr"].get(f"{num} {core}")
-        if url:
-            r.clerk_url = url
+                entry = fc["by_addr"].get(f"{num} {core}")
+        if entry:
+            r.clerk_url = entry["url"]
+            if entry.get("sale"):
+                r.auction_date = entry["sale"]
             fc_hits += 1
         else:
             r.clerk_url = "https://maps.bexar.org/foreclosures/"

@@ -81,6 +81,8 @@ td{padding:12px 14px;vertical-align:top}
 .badge-chg{display:inline-block;font-size:8px;font-weight:800;letter-spacing:.08em;color:var(--orange);margin-left:6px;vertical-align:middle}
 .dtype{font-weight:700;font-size:12.5px}
 .dt-foreclosure{color:var(--red)}.dt-tax_lien{color:var(--yellow)}.dt-judgment{color:var(--cyan)}.dt-probate{color:var(--purple)}
+.row-auction{display:block;margin-top:4px;font-size:10px;font-weight:700;color:var(--muted2)}
+.row-auction.soon{color:var(--orange)}
 .row-doc{display:block;margin-top:5px;font-size:10px;font-weight:700;color:var(--blue);text-decoration:none;width:fit-content}
 .row-doc:hover{text-decoration:underline}
 .tag-active{display:inline-block;border:1px dashed var(--orange);color:var(--orange);border-radius:10px;font-size:8px;font-weight:800;padding:1px 7px;margin-left:7px;letter-spacing:.06em}
@@ -305,7 +307,13 @@ function row(r,idx){
   const sc=r.score||0,scls=sc>=70?'s-hi':sc>=50?'s-md':'s-lo';
   const addr=r.prop_address?`<div class="addr">${esc(r.prop_address)}${r.prop_zip?' '+esc(r.prop_zip):''}</div><div class="addr-sub">${esc(r.owner)||''}</div>`:`<div class="addr">${esc(r.doc_num)||'—'}</div><div class="addr-sub">${esc(r.owner)||''}</div>`;
   const doclink=r.clerk_url?`<a class="row-doc" href="${esc(r.clerk_url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">View filing ↗</a>`:'';
-  return `<tr onclick="showDetail(${idx},this)"><td class="rec-date">${r.first_seen||r.filed||'—'}${badge}</td><td><span class="dtype dt-${r.cat}">${esc(r.cat_label)}</span>${active}${doclink}</td><td>${addr}</td><td class="parties">${esc([r.owner,r.grantee].filter(Boolean).join(', '))}</td><td class="scorecell ${scls}">${sc}</td></tr>`;
+  let auct='';
+  if(r.auction_date){
+    const days=Math.round((new Date(r.auction_date+'T12:00:00')-Date.now())/864e5);
+    const soon=days>=0&&days<=21;
+    auct=`<div class="row-auction${soon?' soon':''}">⚖ Auction ${r.auction_date}${days>=0?` (${days}d)`:''}</div>`;
+  }
+  return `<tr onclick="showDetail(${idx},this)"><td class="rec-date">${r.first_seen||r.filed||'—'}${badge}</td><td><span class="dtype dt-${r.cat}">${esc(r.cat_label)}</span>${active}${auct}${doclink}</td><td>${addr}</td><td class="parties">${esc([r.owner,r.grantee].filter(Boolean).join(', '))}</td><td class="scorecell ${scls}">${sc}</td></tr>`;
 }
 
 function showDetail(idx,tr){
@@ -320,6 +328,7 @@ function showDetail(idx,tr){
   document.getElementById('detail').innerHTML=`
     <div class="det-type dt-${r.cat}">${esc(r.cat_label)}</div>
     <div class="det-doc">${esc(r.doc_num)||'—'} · filed ${r.filed||'—'} · entered ${r.first_seen||'—'} · ${r.status||''}</div>
+    ${r.auction_date?`<div class="det-sec">Auction / Sale Date</div><div class="det-val mono">${r.auction_date}</div>`:''}
     <div class="det-score"><span class="big ${scls}">${sc}</span><span class="of">/ 100 seller score</span></div>
     <div class="det-sec">Motivated Seller Flags</div>
     <div class="det-flags">${flags}</div>
@@ -339,8 +348,8 @@ function dlCSV(kind){
     rows.push(['First Name','Last Name','Mailing Address','Mailing City','Mailing State','Mailing Zip','Property Address','Property City','Property State','Property Zip'].join(','));
     FILT.forEach(r=>{const[f,l]=nm(r.owner);rows.push([q(f),q(l),q(r.mail_address),q(r.mail_city),q(r.mail_state||'TX'),q(r.mail_zip),q(r.prop_address),q(r.prop_city),q(r.prop_state||'TX'),q(r.prop_zip)].join(','))});
   }else{
-    rows.push(['First Name','Last Name','Mailing Address','Mailing City','Mailing State','Mailing Zip','Property Address','Property City','Property State','Property Zip','Lead Type','Document Type','Date Filed','Date Entered System','Document Number','Amount/Debt Owed','Seller Score','Motivated Seller Flags','Status','Source','Public Records URL'].join(','));
-    FILT.forEach(r=>{const[f,l]=nm(r.owner);rows.push([q(f),q(l),q(r.mail_address),q(r.mail_city),q(r.mail_state||'TX'),q(r.mail_zip),q(r.prop_address),q(r.prop_city),q(r.prop_state||'TX'),q(r.prop_zip),q(r.cat_label),q(r.doc_type),q(r.filed),q(r.first_seen),q(r.doc_num),r.amount?('$'+r.amount.toFixed(2)):'',r.score||0,q((r.flags||[]).join(' | ')),q(r.status),'Bexar County Clerk',q(r.clerk_url)].join(','))});
+    rows.push(['First Name','Last Name','Mailing Address','Mailing City','Mailing State','Mailing Zip','Property Address','Property City','Property State','Property Zip','Lead Type','Document Type','Date Filed','Date Entered System','Document Number','Amount/Debt Owed','Seller Score','Motivated Seller Flags','Status','Auction Date','Source','Public Records URL'].join(','));
+    FILT.forEach(r=>{const[f,l]=nm(r.owner);rows.push([q(f),q(l),q(r.mail_address),q(r.mail_city),q(r.mail_state||'TX'),q(r.mail_zip),q(r.prop_address),q(r.prop_city),q(r.prop_state||'TX'),q(r.prop_zip),q(r.cat_label),q(r.doc_type),q(r.filed),q(r.first_seen),q(r.doc_num),r.amount?('$'+r.amount.toFixed(2)):'',r.score||0,q((r.flags||[]).join(' | ')),q(r.status),q(r.auction_date),'Bexar County Clerk',q(r.clerk_url)].join(','))});
   }
   const blob=new Blob([rows.join('\n')],{type:'text/csv'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);

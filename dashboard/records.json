@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T00:16:00.715428",
+  "fetched_at": "2026-11-09T00:33:50.741994",
   "county": "Bexar",
   "source": "Bexar County, TX -- Clerk Portal + Parcel API + BCAD",
   "date_range": {
@@ -44,11 +44,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "622b3832d8227ec1",
       "content_hash": "74bb2c197997a814",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -83,6 +84,7 @@
       "rid": "b9625573b4464531",
       "content_hash": "e7c513d87654f6bb",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": false,
       "out_of_state": false
@@ -112,11 +114,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7c2475e016afd57f",
       "content_hash": "48f15476b018e012",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": false,
       "out_of_state": false
@@ -146,11 +149,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7b64ac23f173cd50",
       "content_hash": "2db886eb8a082607",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -180,11 +184,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d6fa0557fbb5b97c",
       "content_hash": "fc5b26d7582f34dd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -214,11 +219,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9c2df9d24eda821e",
       "content_hash": "da9f2922d6f50e26",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -248,11 +254,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "02391948bd607fb8",
       "content_hash": "179430dc70367fd7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": false,
       "out_of_state": false
@@ -282,11 +289,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d5ba2d92f8f45b42",
       "content_hash": "908e37ac3c816880",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -316,11 +324,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "06306cd6d3116902",
       "content_hash": "dd33c12a47720aac",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": false,
       "out_of_state": false
@@ -350,11 +359,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "03fd3878bf9ea092",
       "content_hash": "f5d8979058fdf9d1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -384,11 +394,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bf9ccc896e5bb8a2",
       "content_hash": "0a6e835efbb725f9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -418,11 +429,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e22bc348816e6fdd",
       "content_hash": "4a399d604bccc058",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": false,
       "out_of_state": false
@@ -452,11 +464,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "704a4288be2f0d07",
       "content_hash": "0f80ed103de7af3a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -486,11 +499,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1161cd270b3fd6cd",
       "content_hash": "1042ddde5b10530a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -520,11 +534,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b5a9367856d5101b",
       "content_hash": "3570bfc7ca6bf3e5",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -559,6 +574,7 @@
       "rid": "b9625573b4464531",
       "content_hash": "3dd2fa09d9be7016",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -588,11 +604,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "88d4a0983269f32b",
       "content_hash": "075bfce25554a44d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -622,11 +639,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "db2416a21d9ff707",
       "content_hash": "8997c091a8a87efd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -656,11 +674,12 @@
         "Has address"
       ],
       "score": 63,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "28a5923dcb5e5841",
       "content_hash": "a68d4c98e69d1e43",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "TAXFC",
       "absentee": true,
       "out_of_state": false
@@ -690,11 +709,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6b540d1955d7c8a4",
       "content_hash": "fafb94c15e0b5b12",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -724,11 +744,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f6116e75e2757240",
       "content_hash": "56285301e1cfbe74",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": true
@@ -758,11 +779,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8aedaafe897871ff",
       "content_hash": "7ed1ff5ac2e3f7a4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -792,11 +814,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e0b0d02dfa02a275",
       "content_hash": "fe89b419e572e306",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -826,11 +849,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2321e0e6afa86aa6",
       "content_hash": "b78a0d46e5c6c6c9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -860,11 +884,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0ca750f4ad928626",
       "content_hash": "9616d590084d42cd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -894,11 +919,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d32d895d4a373860",
       "content_hash": "3914a732712559fe",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -928,11 +954,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "186d5b0c20f09ba8",
       "content_hash": "8bcae7005e10c752",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -962,11 +989,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "33cdd976ae3a143f",
       "content_hash": "b78dc4a8fc3850b4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -996,11 +1024,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0b9025da2f30581d",
       "content_hash": "c0822b2451c469ec",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1030,11 +1059,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "33b08e4d7ba4dfe7",
       "content_hash": "1881ffd96e7f5bba",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1064,11 +1094,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc54c5d7cb17732c",
       "content_hash": "511af719a4eb5119",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1098,11 +1129,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9ed188367601093d",
       "content_hash": "4958fc294054bdd3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1125,18 +1157,19 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332160842",
+      "clerk_url": "https://maps.bexar.org/foreclosures/",
       "flags": [
         "Pre-foreclosure",
         "New this week",
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6ff76aa755892a03",
       "content_hash": "a355268290ea2704",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1166,11 +1199,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "159d896fffaab9c5",
       "content_hash": "573b3ec10b032999",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -1200,11 +1234,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4e3cd2f3c243fdac",
       "content_hash": "24db283fd6d9438b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1234,11 +1269,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1d49035dae17f2e1",
       "content_hash": "8c0d4effc2f4d7cf",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1268,11 +1304,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "27ff384326b915ed",
       "content_hash": "b091d9eda57f13ee",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1302,11 +1339,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "243bb3d9318b3bc3",
       "content_hash": "d0f36c280e6052bb",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -1336,11 +1374,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f9099419d5ee41af",
       "content_hash": "580080525fc337ad",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1370,11 +1409,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e2acc34afd27042e",
       "content_hash": "cb8972606a0a8aeb",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1404,11 +1444,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "536158cae18389ab",
       "content_hash": "a467410b5f15c83f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1438,11 +1479,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "93ba51c8af78c8b5",
       "content_hash": "a4b4d04c1d286454",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -1472,11 +1514,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "266ea4904c0eeb4f",
       "content_hash": "b18c5b9e36112d5b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1506,11 +1549,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "71884bc489b9c84e",
       "content_hash": "3eff2abadb7fb04a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1540,11 +1584,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c6aae808a91c33ad",
       "content_hash": "b52dc96b43ec0e15",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1574,11 +1619,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "04c6adfe7137ee9d",
       "content_hash": "58a4d99a467c26aa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1608,11 +1654,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4e8e9b7ce115f39b",
       "content_hash": "7a358deae00e32b8",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1642,11 +1689,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "392021f24d63f582",
       "content_hash": "2109539e92611501",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1676,11 +1724,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a746ebf870bd2620",
       "content_hash": "e856489ff2bcd1f4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1710,11 +1759,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6684aa5177241ea7",
       "content_hash": "fd263635eb1dabf9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1744,11 +1794,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7b73bafeca21a46f",
       "content_hash": "7093fc559bc51117",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -1778,11 +1829,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "742572064b357e75",
       "content_hash": "553fe6bd3d488eb1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -1812,11 +1864,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ad7e6796137d1129",
       "content_hash": "56bb405764ecc43c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1846,11 +1899,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "964d405b81367b4e",
       "content_hash": "97fc975e3eafe2e3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -1880,11 +1934,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8998c6d5971a7f64",
       "content_hash": "8ad9f0efb97d96aa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1914,11 +1969,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1a41ce70faace39f",
       "content_hash": "31248f5b332e0aba",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1948,11 +2004,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b5fd451c094b0cb7",
       "content_hash": "4ba969c6d4f46d08",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -1982,11 +2039,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cb748cb7bb61843b",
       "content_hash": "8ff90ed95a98ebae",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2016,11 +2074,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1ae949c7ed4934cf",
       "content_hash": "2b41a89c09673aaa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2050,11 +2109,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b2ac3600371be18b",
       "content_hash": "04e89531a760fc5f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2084,11 +2144,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f339768a721392af",
       "content_hash": "fa2303dfde657bae",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2118,11 +2179,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "523798b5da3b66b4",
       "content_hash": "38ebd46e37d65e05",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2152,11 +2214,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "dcd67926052db616",
       "content_hash": "481bdbc4c70789a8",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2186,11 +2249,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "79231f45dfa8cd77",
       "content_hash": "d59dcc315d475eec",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2220,11 +2284,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "95fcc3c5bf5a904b",
       "content_hash": "f8f5fe19a207bedb",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2254,11 +2319,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "37adb5f41ce24ef6",
       "content_hash": "0c6a2e9555a76548",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2288,11 +2354,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ce9fcb450d2839ae",
       "content_hash": "e3f8df55a13de880",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2322,11 +2389,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7794fa38efac3024",
       "content_hash": "0cf28d0ebc2c22e3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2356,11 +2424,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0868d686814614ae",
       "content_hash": "3cc9eda4c10eb8a0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2390,11 +2459,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f3df0cbf061e4c3e",
       "content_hash": "ff659daed0253680",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2424,11 +2494,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "43ffb1a5559bf766",
       "content_hash": "efbbcae1e521d8c9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2458,11 +2529,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5d7f8a73c7e78bfc",
       "content_hash": "e8ec3dfdef224ae9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2492,11 +2564,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "aff014e14ade226e",
       "content_hash": "74520bf616480963",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2526,11 +2599,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ffa299b31543cb38",
       "content_hash": "026ee2c707fb59fa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2560,11 +2634,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9af8f8c0cdd28118",
       "content_hash": "a92bc87d6dbe114b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2594,11 +2669,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b3db7c924bd015a9",
       "content_hash": "585ec9a9805d2221",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2628,11 +2704,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0edf961876d5ebe5",
       "content_hash": "cc97facbb1b635a3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2662,11 +2739,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8b2b946973194391",
       "content_hash": "2f7241ff14665369",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2696,11 +2774,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "10bc25b55f00fe91",
       "content_hash": "52ea3931ad0e2372",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2730,11 +2809,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8d9e0e3b9822cd62",
       "content_hash": "41fac8b57b29d89f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2764,11 +2844,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "89bdb91fcc1502e8",
       "content_hash": "38298e5a91b3021f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2798,11 +2879,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2f0cfc9b6cb3076f",
       "content_hash": "ba5e7ccf859c987f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2832,11 +2914,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "df955563812e1bb7",
       "content_hash": "9a5df95e9407080d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2866,11 +2949,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b2ee9a78b4f78598",
       "content_hash": "113122c9ddcb3e35",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -2900,11 +2984,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "63a9389f3725acfa",
       "content_hash": "ea48ee77a3b391bf",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2934,11 +3019,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "196954a4eff6a639",
       "content_hash": "37e2d385877c0b49",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -2968,11 +3054,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "28525642dac1b3ee",
       "content_hash": "2191b036fd7d87e9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3002,11 +3089,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0507eff56bae6ab1",
       "content_hash": "fecb0429356c521a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3036,11 +3124,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3a7f124b6222e924",
       "content_hash": "d1c01deb2da0f9bf",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3070,11 +3159,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "58c275d4bf5c9bbe",
       "content_hash": "280ef6c007966328",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3104,11 +3194,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ad2a9a0315338b7b",
       "content_hash": "db92bc2390eda131",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3138,11 +3229,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ec159ea597361250",
       "content_hash": "f1bdb6e5be1290dd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3172,11 +3264,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1e60db830f37a967",
       "content_hash": "4d2036b68e71cace",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3206,11 +3299,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c5ec1022fc4b9718",
       "content_hash": "de2a74dd44eb0da2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3240,11 +3334,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "09bb0104b1888328",
       "content_hash": "474a0e51069724e0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3274,11 +3369,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7640d29783c60213",
       "content_hash": "398891da1da3f936",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3308,11 +3404,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4149c4dceb368fa1",
       "content_hash": "eb8a2b852fb64984",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3342,11 +3439,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8f4e838356bc0e4f",
       "content_hash": "a035175424485d76",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3376,11 +3474,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4bca2b05661f51ed",
       "content_hash": "676ad5d0edb3d026",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3410,11 +3509,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c4c91c0a9fc61749",
       "content_hash": "f55eea06f47bd474",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3444,11 +3544,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1f03cdee51e768e4",
       "content_hash": "e0b84874afabe614",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3478,11 +3579,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b7aa0735db132b8d",
       "content_hash": "340e878a0437482d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3512,11 +3614,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "30a0aeb83ee52a7a",
       "content_hash": "182f0d4d5838c26b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3546,11 +3649,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "201f76c8d85e4258",
       "content_hash": "495a4c0314e956d5",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3580,11 +3684,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "aa88d5008a344566",
       "content_hash": "5dbfde8197c508cf",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3614,11 +3719,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4ff1aaafe15d6deb",
       "content_hash": "fa69e3677c301fc6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3648,11 +3754,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "26198eeb76a7f8d5",
       "content_hash": "8e736622d05e26e6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3682,11 +3789,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a83f712a1cf25c31",
       "content_hash": "0dc66b86f2ae4257",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3716,11 +3824,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d6d48053413200e2",
       "content_hash": "cbe9207ea1d31b00",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3750,11 +3859,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "82dc13a11275fa12",
       "content_hash": "b3b1c59180b517fa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3784,11 +3894,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8cedef66519d00be",
       "content_hash": "c800f195acfef189",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3818,11 +3929,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3e6b3a5b5c1cdca2",
       "content_hash": "fe9fb5d4702c5d22",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3852,11 +3964,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b9b9b3b5976252f7",
       "content_hash": "67ec50c8377139bd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3886,11 +3999,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "09621041fbaf7d66",
       "content_hash": "c0d18c5a5c2e57c9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3920,11 +4034,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2a4de19535b69f8c",
       "content_hash": "eb0cec06e9bea98a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -3954,11 +4069,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7671c580ace6adb4",
       "content_hash": "0aa26309180dd7c3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -3988,11 +4104,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "22e4ba049de3c603",
       "content_hash": "35628c86d5eeabd0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4022,11 +4139,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f42d54302bf980c5",
       "content_hash": "1a40f4cf3bec5c03",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4056,11 +4174,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "068f8780bd46f047",
       "content_hash": "acba22e6826b2ee4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4090,11 +4209,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "20166461b4e5da36",
       "content_hash": "e59a65bf37d99a17",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4124,11 +4244,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "25b9589447c9943f",
       "content_hash": "0df172126b9125b7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4158,11 +4279,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e65e0ce29ea11e16",
       "content_hash": "56560b8f53db007d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4192,11 +4314,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d9e4ada46623c408",
       "content_hash": "5eca7d3d63b5327b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4226,11 +4349,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c1cc4a5b46ab1953",
       "content_hash": "b63b5e619145db2b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4260,11 +4384,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "168f27a87cc4988a",
       "content_hash": "614bc538d3862bc6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4294,11 +4419,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "13d4a89160182979",
       "content_hash": "09a3ee417c3614fa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4328,11 +4454,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2045d2bb0e9e7324",
       "content_hash": "9071dbd263dcb34b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4362,11 +4489,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "acc3c1df910eee93",
       "content_hash": "9aaeb2b2055d4c8d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4396,11 +4524,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "17a4cc5fb2684eff",
       "content_hash": "28f09854ebfd204b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4430,11 +4559,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4294e1b9dcceaa97",
       "content_hash": "2f766d2ced618826",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4464,11 +4594,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "dbbdcafbec97cf4e",
       "content_hash": "80c7e2c594431b9d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4498,11 +4629,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "289fb71bcabdea8e",
       "content_hash": "cc1ae324eabee7f3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4532,11 +4664,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "42e1dc8e541b14df",
       "content_hash": "d54d40e1c1452f30",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4566,11 +4699,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "edccec73941582e3",
       "content_hash": "e7c20c269fe04f67",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4600,11 +4734,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ecbcc62d9ad89471",
       "content_hash": "4ae795a4f8cd3e9a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4634,11 +4769,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "91911bd19fa96dc2",
       "content_hash": "0adb6adc8c6ffd54",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4668,11 +4804,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "67cf77f7e14aeb1a",
       "content_hash": "3e8c9e0eb633faa9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4702,11 +4839,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "29dc050a71898d85",
       "content_hash": "a1e754140725f0f0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4736,11 +4874,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "12a22c3d0c0cec00",
       "content_hash": "2b002923d4f83a03",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4770,11 +4909,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4f73786f1efc9c03",
       "content_hash": "13cb4765e9ca8e73",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4804,11 +4944,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "699125e52dc0e2df",
       "content_hash": "c57107ba225d6c46",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4838,11 +4979,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8562ae65dcd1866e",
       "content_hash": "0df4a78259f39edb",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4872,11 +5014,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8091ce53d45133cf",
       "content_hash": "44c147c891bb2318",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4906,11 +5049,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a0b2d0be5917d2f8",
       "content_hash": "454e8ba1405c9a29",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -4940,11 +5084,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b026d8212b597031",
       "content_hash": "ec832b595f66b33c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -4974,11 +5119,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f59d9449bbf5c574",
       "content_hash": "5f649a3e5d345d10",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5008,11 +5154,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1f5fbca505a8ffcd",
       "content_hash": "25378f46520fe29c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5042,11 +5189,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1264a609a06c1130",
       "content_hash": "73ec822a19989fa1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5076,11 +5224,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6261655fbd489e90",
       "content_hash": "790243569c87dc78",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -5110,11 +5259,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5f23a911923d4ad5",
       "content_hash": "68c6fc243e08c158",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5144,11 +5294,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6dbc4b0536622874",
       "content_hash": "7fd51543079e36b6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5178,11 +5329,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "420921f8c1c630de",
       "content_hash": "f2b360904caeec7c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5212,11 +5364,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f4a5addb7d6e8f78",
       "content_hash": "bbd08d95d5d028c4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5246,11 +5399,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3a5317ea443d65f4",
       "content_hash": "4112fb555884d264",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5280,11 +5434,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6f613ff3aa1942b4",
       "content_hash": "e64f30b70623ba67",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5314,11 +5469,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f1c51f8db39fe81b",
       "content_hash": "5b574463c7cf928a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5348,11 +5504,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7aa8657e2963269b",
       "content_hash": "c064140f992861f4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5382,11 +5539,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "eba92129199bf352",
       "content_hash": "6ae1c51b6153b09a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5416,11 +5574,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "be43760366327799",
       "content_hash": "e22a886ed751351f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -5450,11 +5609,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ab94d5eb3625f9cc",
       "content_hash": "c2f4b7ecdb113f55",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5484,11 +5644,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1ad61b7d7511f85d",
       "content_hash": "178469c6edc64b78",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5518,11 +5679,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "48e31a9c98d63b33",
       "content_hash": "75eec3465964f8ed",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5552,11 +5714,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4e6165684922f38e",
       "content_hash": "325088deeeabfb9b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5586,11 +5749,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f5cbb895665a6ce6",
       "content_hash": "ac96886da5bb2aba",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -5620,11 +5784,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0341f0bab5b47cae",
       "content_hash": "7297ce5e03a9e833",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -5654,11 +5819,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "efa6ae4dbb36972f",
       "content_hash": "9009802ef2ac8b2f",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -5688,11 +5854,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "83158164b80ca826",
       "content_hash": "4d328ed9f47ddcc7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5722,11 +5889,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "13d4bdc90a8cbc25",
       "content_hash": "cdf4685494f53e8d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5756,11 +5924,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "03d90edf76bbeb9b",
       "content_hash": "eb74b77f0b1bb1e0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5790,11 +5959,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "70bf07f130dfd2e0",
       "content_hash": "414a03a763f5e0d9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5824,11 +5994,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1730fae588eb8b8e",
       "content_hash": "0e2510ce6baffc0f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -5858,11 +6029,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "012cde38f25528c4",
       "content_hash": "bf7562f6ca5283a7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5892,11 +6064,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c6386fe010f9d82e",
       "content_hash": "6b81e128c2197086",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5926,11 +6099,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "000f5f4e65eeb9eb",
       "content_hash": "9989a296ef7f3d18",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5960,11 +6134,12 @@
         "Has address"
       ],
       "score": 60,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2dbdfc7bcc9993d7",
       "content_hash": "d4ac69f2686efcf5",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -5994,11 +6169,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0af24ac63681765f",
       "content_hash": "1864b66907da4796",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6028,113 +6204,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-06",
       "rid": "c088c2241b8a0968",
       "content_hash": "6366efb27fdc8061",
       "auction_date": "",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260215320",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-03",
-      "owner": "DAVIS MICHAEL",
-      "grantee": "RANDOLPH CROSSING HOMEOWNERS ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: RANDOLPH CROSSING #3 Lot: 13 Block: 10 CBLK: 5099,, Reference - 20003 / 1420",
-      "prop_address": "10031 MATHER WAY",
-      "prop_city": "CONVERSE",
-      "prop_state": "TX",
-      "prop_zip": "78109",
-      "mail_address": "1619 E HIGHLAND BLVD",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78210",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332224975",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "CHANGED",
-      "first_seen": "2026-11-06",
-      "rid": "be0c828322636872",
-      "content_hash": "edfa9a508eef3495",
-      "auction_date": "",
-      "cat_code": "LP",
-      "absentee": true,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260215336",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-03",
-      "owner": "NIEMBRO MAURICE",
-      "grantee": "MERIDIAN AT BLUE SKIES HOMEOWNERS ASSOCIATION",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: BLUE SKIES #1 Lot: 11 Block: 14 CBLK: 4342,, Reference - 20001 / 2258",
-      "prop_address": "5006 JOVIAN",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78245",
-      "mail_address": "",
-      "mail_city": "",
-      "mail_state": "TX",
-      "mail_zip": "",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332224961",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "CHANGED",
-      "first_seen": "2026-11-06",
-      "rid": "c3330a69a2b3b746",
-      "content_hash": "36f904f96eeb0a14",
-      "auction_date": "",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260215373",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-03",
-      "owner": "ROSS MICHAEL L",
-      "grantee": "NOPALITO RESIDENTIAL COMMUNITY INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: NOPOLITO Lot: 50 Block: 10, Reference - 20001 / 550",
-      "prop_address": "7755 NOPALITOS COVE",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78239",
-      "mail_address": "7755 NOPALITOS COVE",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78239",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332225970",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "CHANGED",
-      "first_seen": "2026-11-06",
-      "rid": "a52ac31de94f9fb5",
-      "content_hash": "a8cc6c7d945559df",
-      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6164,11 +6239,117 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-06",
       "rid": "d0360f7d843e785c",
       "content_hash": "e1bc1f4445bb4ff0",
       "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": true,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260215336",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-03",
+      "owner": "NIEMBRO MAURICE",
+      "grantee": "MERIDIAN AT BLUE SKIES HOMEOWNERS ASSOCIATION",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: BLUE SKIES #1 Lot: 11 Block: 14 CBLK: 4342,, Reference - 20001 / 2258",
+      "prop_address": "5006 JOVIAN",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78245",
+      "mail_address": "",
+      "mail_city": "",
+      "mail_state": "TX",
+      "mail_zip": "",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332224961",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-06",
+      "rid": "c3330a69a2b3b746",
+      "content_hash": "36f904f96eeb0a14",
+      "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260215373",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-03",
+      "owner": "ROSS MICHAEL L",
+      "grantee": "NOPALITO RESIDENTIAL COMMUNITY INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: NOPOLITO Lot: 50 Block: 10, Reference - 20001 / 550",
+      "prop_address": "7755 NOPALITOS COVE",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78239",
+      "mail_address": "7755 NOPALITOS COVE",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78239",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332225970",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-06",
+      "rid": "a52ac31de94f9fb5",
+      "content_hash": "a8cc6c7d945559df",
+      "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260215320",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-03",
+      "owner": "DAVIS MICHAEL",
+      "grantee": "RANDOLPH CROSSING HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: RANDOLPH CROSSING #3 Lot: 13 Block: 10 CBLK: 5099,, Reference - 20003 / 1420",
+      "prop_address": "10031 MATHER WAY",
+      "prop_city": "CONVERSE",
+      "prop_state": "TX",
+      "prop_zip": "78109",
+      "mail_address": "1619 E HIGHLAND BLVD",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78210",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332224975",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-06",
+      "rid": "be0c828322636872",
+      "content_hash": "edfa9a508eef3495",
+      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6198,11 +6379,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-06",
       "rid": "348138c7f29b77a8",
       "content_hash": "cec4f36d54341819",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6232,11 +6414,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "40634e0772fe2658",
       "content_hash": "5602bc70f21b9306",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6266,11 +6449,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-06",
       "rid": "85ce957e52d43d43",
       "content_hash": "3838261de0e043db",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6300,11 +6484,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9a4fb9cadde4b92c",
       "content_hash": "a06eb06b2e3de91f",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -6334,45 +6519,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2c1663bda9463f03",
       "content_hash": "c00122f8ca1d4af8",
       "auction_date": "",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260215417",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-03",
-      "owner": "CARRILLO MICA ANN",
-      "grantee": "SWR HOMEOWNERS ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: STILLWATER RANCH #22 Lot: 65 Block: 180, Reference - 9709 / 148",
-      "prop_address": "12007 CASPARIS",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78254",
-      "mail_address": "12007 CASPARIS",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78254",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332226005",
-      "flags": [
-        "Lis pendens",
-        "New this week",
-        "Has address"
-      ],
-      "score": 55,
-      "status": "CHANGED",
-      "first_seen": "2026-11-06",
-      "rid": "7a5f44eda6d3d72e",
-      "content_hash": "0600489c8daf5aaf",
-      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6402,13 +6554,49 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-06",
       "rid": "f9d7017fd369308e",
       "content_hash": "347cc6bd837a2ec5",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260215417",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-03",
+      "owner": "CARRILLO MICA ANN",
+      "grantee": "SWR HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: STILLWATER RANCH #22 Lot: 65 Block: 180, Reference - 9709 / 148",
+      "prop_address": "12007 CASPARIS",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78254",
+      "mail_address": "12007 CASPARIS",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78254",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332226005",
+      "flags": [
+        "Lis pendens",
+        "New this week",
+        "Has address"
+      ],
+      "score": 55,
+      "status": "EXISTING",
+      "first_seen": "2026-11-06",
+      "rid": "7a5f44eda6d3d72e",
+      "content_hash": "0600489c8daf5aaf",
+      "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": false,
       "out_of_state": false
     },
     {
@@ -6436,11 +6624,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2d85d0b6bcbd9933",
       "content_hash": "a8dfd020cb8b0717",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -6469,11 +6658,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6614dd5f4bc7e905",
       "content_hash": "8e7b9d1d76f1be02",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -6502,11 +6692,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "125ef9c365e20b20",
       "content_hash": "99c2d3cbb599b71b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6535,11 +6726,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "29818da1fe23b9b0",
       "content_hash": "3d13e8e75b50d698",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6568,11 +6760,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2329978633cdc0ca",
       "content_hash": "ed2809643928dac2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6601,11 +6794,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9e4da7e7f1a388e2",
       "content_hash": "c8b65972f534d04f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6634,11 +6828,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "16f82d541bbfb24f",
       "content_hash": "459ee18b879af247",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -6667,11 +6862,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9d979165781957ea",
       "content_hash": "f68bb989de406f3d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6700,11 +6896,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b2a8a13bb70f2dd1",
       "content_hash": "6067e5a81790b6a4",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6733,11 +6930,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5d916e685ec86187",
       "content_hash": "45aa48ffdcc4a490",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -6766,11 +6964,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f5019bf9ec6fb76f",
       "content_hash": "2ca6d971a87fb098",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -6799,11 +6998,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d26e17958f9979fa",
       "content_hash": "7ab4d0028eb4aa9b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6832,11 +7032,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "aa14183a6212d58b",
       "content_hash": "ed6c200cf4bd04d4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6865,11 +7066,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "79ac3fe13dd91407",
       "content_hash": "84f1fc42c997d7f3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6898,11 +7100,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4389cbcafd2c91e5",
       "content_hash": "991ac0f4499a84c6",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -6931,11 +7134,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6901008bd12db477",
       "content_hash": "76156805a2ddd3d5",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6964,11 +7168,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "11733ff68d33c375",
       "content_hash": "75bbda76b67746c2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -6997,11 +7202,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a667bb362642ef04",
       "content_hash": "8d704c203b42f5ff",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7030,11 +7236,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a66a2caa3f3c7ab2",
       "content_hash": "b7266b59c5788344",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7063,11 +7270,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7a8bcaf8a7c1c6e1",
       "content_hash": "d5f12ce36065f7a0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7096,11 +7304,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5d5db98eee76568d",
       "content_hash": "95ae81d40a0b2e9d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7129,11 +7338,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "af4306c5f244a276",
       "content_hash": "c90b57ab70ed7701",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7162,11 +7372,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "49bebfffb6868998",
       "content_hash": "0df45e8e6be3f389",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7195,11 +7406,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7a5f8f85806e6bc8",
       "content_hash": "6a967d4782926f2e",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7228,11 +7440,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "81936b0df8388e34",
       "content_hash": "41c1ee77aa4927b2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7261,11 +7474,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "fd1fa60918bfa680",
       "content_hash": "0debec91ca0a3c1b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7294,11 +7508,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a198178d452caff6",
       "content_hash": "4062be455dc9722d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -7327,11 +7542,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "111df5acedda64ee",
       "content_hash": "94582f496e905d05",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7360,11 +7576,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "33c69abceda59207",
       "content_hash": "46038527b8fbd438",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7393,11 +7610,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "232b09c4de0410ca",
       "content_hash": "8de76551f98401e4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7420,7 +7638,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78223",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330861199",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7429,8 +7647,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "3c5a3b9700fb2228",
-      "content_hash": "cbce4c469a8e84a6",
-      "auction_date": "2026-11-03",
+      "content_hash": "e894ae670455bbc7",
+      "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -7459,11 +7678,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "40e66c0af1f03a92",
       "content_hash": "5bac1c0c806f7797",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7492,11 +7712,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0d40636d08d5babc",
       "content_hash": "81dc71b931439c7e",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7519,7 +7740,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78230",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871045",
+      "clerk_url": "https://maps.bexar.org/foreclosures/",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7528,8 +7749,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "d3fb2937cdbab826",
-      "content_hash": "f01e98233fca25cc",
-      "auction_date": "2026-12-01",
+      "content_hash": "ab7bb08715dd4c43",
+      "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7558,11 +7780,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3f874a431a4ccc25",
       "content_hash": "df26f981e3e271c7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7591,11 +7814,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8a173d737f38f2b7",
       "content_hash": "5f316247c9087bf6",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -7624,11 +7848,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d3f016f7e721a120",
       "content_hash": "887b405750208398",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7657,11 +7882,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9e1aee703a5a069a",
       "content_hash": "72fdd90cf159f1dc",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7690,11 +7916,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f783e3bd9548eeda",
       "content_hash": "933b259f0cff8343",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -7723,11 +7950,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "76f0dc18648feb88",
       "content_hash": "79a77071da68b198",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7756,11 +7984,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "fc38d322083f6e01",
       "content_hash": "89dd77250d6b038a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7789,11 +8018,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6253c67cd77bd066",
       "content_hash": "1787144ab6a93ea0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7822,11 +8052,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "717bff375b70089d",
       "content_hash": "9ec12f3480aaf807",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7855,11 +8086,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c9b3e0f64128e052",
       "content_hash": "934b2a384bf864c2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7882,7 +8114,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78211",
-      "clerk_url": "https://maps.bexar.org/foreclosures/",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871362",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7891,8 +8123,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "3cc8e1d5e3898e3f",
-      "content_hash": "e53f46b3ed38ed2e",
-      "auction_date": "2026-11-03",
+      "content_hash": "a934d0963df87dc0",
+      "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7921,11 +8154,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5a33ebadc7357a51",
       "content_hash": "a98d1ec3c174f68c",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -7948,7 +8182,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78203",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/327671107",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330871354",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -7957,8 +8191,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "ea8bcc6aa786404e",
-      "content_hash": "0ce0af91beb3c990",
-      "auction_date": "2026-09-01",
+      "content_hash": "dd3308751359fd39",
+      "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -7987,11 +8222,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ab87149b32095311",
       "content_hash": "fc5a45be4a537ef2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8020,11 +8256,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "178ce604da42982b",
       "content_hash": "bb251fbb4006d4db",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8053,11 +8290,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7609dffb0f6a401c",
       "content_hash": "a4d30eee8d09f5c6",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8086,11 +8324,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5ab7815bdb8f94c1",
       "content_hash": "b85f72f17d725ffa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8119,11 +8358,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "dffd1115b4890d8c",
       "content_hash": "b6830856446d23c4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8152,11 +8392,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1b560e6bd799b7fe",
       "content_hash": "c89dbfb62582a2b4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8185,11 +8426,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "51c8ec91d53bb5a7",
       "content_hash": "fbe206ec0299d3aa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8218,11 +8460,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "93df648f87ef298c",
       "content_hash": "d419b127bc036209",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8251,11 +8494,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c16b48e95a360f73",
       "content_hash": "8a3b03bc7a61d03c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8284,11 +8528,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "18739504b98b6984",
       "content_hash": "42f2d12e91608a23",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8317,11 +8562,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5bafcdf061fa6c65",
       "content_hash": "6497a44b63a630a3",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8350,11 +8596,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "92cad19d88dd0a9d",
       "content_hash": "e2228e57b71ec7d6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8383,11 +8630,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b6d9eb28d81cf270",
       "content_hash": "52323fc7af5e1862",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8416,11 +8664,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a057e4bddea696e1",
       "content_hash": "1f01af2bb949cec7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8443,7 +8692,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78264",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/330872313",
+      "clerk_url": "https://maps.bexar.org/foreclosures/",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -8452,8 +8701,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "dd2a45a503cd8042",
-      "content_hash": "6e4394c2e734f1fb",
-      "auction_date": "2026-12-01",
+      "content_hash": "e0028ed518926870",
+      "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8482,11 +8732,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c42c791f280bae41",
       "content_hash": "b8c26b524bba0b37",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8515,11 +8766,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a2082a7ce285b30e",
       "content_hash": "b2a3ae459c3a17a3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -8548,11 +8800,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a24e2dc3d044ec76",
       "content_hash": "9d6d1e6a16952a9f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -8581,11 +8834,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "11fc4e03550f1e9b",
       "content_hash": "6d46edb478cd3332",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8614,11 +8868,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e0f20f1d5dcc52e7",
       "content_hash": "7bb933cbc87e0a09",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8647,11 +8902,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "96664e241f016213",
       "content_hash": "431f987516525f98",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8680,11 +8936,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0c276291065cbb25",
       "content_hash": "7cabb42804d8ef37",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8713,11 +8970,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "69df58af8b42b6c8",
       "content_hash": "c685a34ace5a49c1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8746,11 +9004,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "789b3c0fdc9e1812",
       "content_hash": "d085df5570af1106",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8779,11 +9038,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d7add1b3d7eaebef",
       "content_hash": "8261a8f9946bc553",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8812,11 +9072,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "81738703353b6790",
       "content_hash": "0d2976a0c5c3d640",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8845,11 +9106,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc80c910148f59cc",
       "content_hash": "ccc463f3cc6d3481",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8878,11 +9140,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "31ae54e86900fb9b",
       "content_hash": "b380158f6de834aa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -8911,11 +9174,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4e2d1abb42aa06ed",
       "content_hash": "407b9545c458742f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8944,11 +9208,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a0623e1328326220",
       "content_hash": "5b0db4a21c04b39a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -8977,11 +9242,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ea3d4d4c1256fe67",
       "content_hash": "228a4843c4be875c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9010,11 +9276,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f4408e8052835207",
       "content_hash": "0313e1d1f55fa9bb",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9043,11 +9310,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8fb77b4700a0653e",
       "content_hash": "be68fa3dbb4944e8",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9076,11 +9344,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5f864c99c89eac6f",
       "content_hash": "f90529738c5f1409",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9109,11 +9378,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc52c75a8918833c",
       "content_hash": "cdc9911349158d2e",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9142,11 +9412,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ec155ac8a1db4285",
       "content_hash": "503c299c24943759",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9175,11 +9446,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cde0f7b0ece29c9a",
       "content_hash": "14ac51a12906d4c7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9208,11 +9480,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2f42de7065f6f68f",
       "content_hash": "bc66d8ba4c80eff6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9241,11 +9514,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bba3a146c0c0b3c7",
       "content_hash": "e0bda279acc248f9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9274,11 +9548,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7eeeedb53c39c74b",
       "content_hash": "6d1ec64284dffcee",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9307,11 +9582,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b3062adebdf0d88a",
       "content_hash": "e72cc66e6db637a2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9340,11 +9616,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d6c8dd7ad62f2a8f",
       "content_hash": "444f764d5a760f01",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9373,11 +9650,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4c53e3b7e49209a5",
       "content_hash": "73df9ef718245be9",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9406,11 +9684,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6ee7e329c82bad96",
       "content_hash": "6fe8e551fff8014b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9439,11 +9718,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cf7b0a09540831cb",
       "content_hash": "e62488a4fe6cb485",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9472,11 +9752,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "246f3e86e3fb901f",
       "content_hash": "76ad969cc060bfbd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9505,11 +9786,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "64b0f84029bc92d4",
       "content_hash": "61089ba077552473",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9538,11 +9820,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc4aa6c0f28bc586",
       "content_hash": "76838a8b4dd24254",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9571,11 +9854,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "fd487c1d70219bd8",
       "content_hash": "9b4c3f529bcb7e9b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9604,11 +9888,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f12b1e9d66385562",
       "content_hash": "9946d8cf3873577f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9637,11 +9922,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e332ea88d9ce8067",
       "content_hash": "ca75d94991749fde",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9670,11 +9956,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cf8f9e94c0d93207",
       "content_hash": "3f74cb513749ed1f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -9703,11 +9990,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c1b8bfce8bb9ccfa",
       "content_hash": "5fa074fe19da3b42",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9736,11 +10024,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2fc25680ebb9a81e",
       "content_hash": "26ee1609603bec07",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9769,11 +10058,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "458bacfb554af2cd",
       "content_hash": "7e8143ea74d91670",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9802,11 +10092,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1f3aebcbc2567c85",
       "content_hash": "23e91b66f0db6783",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9835,11 +10126,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7feaaef2a712eb2b",
       "content_hash": "9e19c3949a29c210",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9868,11 +10160,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "31a1152bb2f7baf7",
       "content_hash": "5314581089d5edfa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9901,11 +10194,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5e0bea110b589b1c",
       "content_hash": "2cb712fa54fb5369",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9934,11 +10228,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8bd9226fb6e567f0",
       "content_hash": "7ab9f3b28f024a22",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -9967,11 +10262,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1d699a1f79e278ba",
       "content_hash": "6b86554e57008c24",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -10000,11 +10296,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "73b3d14dcaac81eb",
       "content_hash": "b23e0aebfb2ea170",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10033,11 +10330,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e2e6bccd7e133619",
       "content_hash": "3c64733635ca5fc3",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -10066,11 +10364,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b75fed157ed20bb3",
       "content_hash": "10cebd8d6b7e7589",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10099,11 +10398,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8f1dae7f33e918d9",
       "content_hash": "3adbe2f9e0694a23",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10132,11 +10432,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d1c2c7845b35ab8a",
       "content_hash": "870e141820d50984",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10165,11 +10466,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e260e78d824bbdfc",
       "content_hash": "0b2199d00ccad532",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10198,11 +10500,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f82520ce6d3d2c7c",
       "content_hash": "7782f4304e7dbf99",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10231,11 +10534,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "57a9e451177de0e7",
       "content_hash": "d6d4843455f8e6de",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10264,11 +10568,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "df822351af5dd669",
       "content_hash": "7af9894ee0ec897c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10297,11 +10602,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7ba15507be32dac2",
       "content_hash": "4b9229e504de205e",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -10330,11 +10636,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "51b52282eef1278f",
       "content_hash": "ddf399136d9d17d1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10363,11 +10670,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1b17fb6f2b542baf",
       "content_hash": "21a9ee17bf1ca3f8",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -10396,11 +10704,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ec6805008cbaeb45",
       "content_hash": "1e4c3aa9fb94f65b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10429,11 +10738,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "81c8c18f2058beea",
       "content_hash": "9d09c2512f1b73e1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10462,11 +10772,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b0eb60964a6fa3f1",
       "content_hash": "71c83649f08a8cd8",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10495,11 +10806,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "780201756eb1221d",
       "content_hash": "cebcdfaa8a902488",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10528,11 +10840,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a51e64f7b74d8ce3",
       "content_hash": "4a53b639d44c2955",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10561,11 +10874,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1237ecae870d8318",
       "content_hash": "4acf0541cffd730b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10594,11 +10908,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b470b17f1bc179ce",
       "content_hash": "c8bea6247f030bdc",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10627,11 +10942,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b0fefbf12c2ab52c",
       "content_hash": "53819365af8ee01f",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -10660,11 +10976,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2c4e05e410676a07",
       "content_hash": "ca96de7aa94cfd7b",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10693,11 +11010,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e3a2ff26f97f6ca6",
       "content_hash": "6b64a7391c6bc987",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10720,7 +11038,7 @@
       "mail_city": "CONVERSE",
       "mail_state": "TX",
       "mail_zip": "78109",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522481",
+      "clerk_url": "https://maps.bexar.org/foreclosures/",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10729,8 +11047,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "6c5a1d37c96fe3bf",
-      "content_hash": "b9bc3e7442ed770a",
-      "auction_date": "2026-12-01",
+      "content_hash": "cddc78843e8411b0",
+      "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10759,11 +11078,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a145e2d578c6e10b",
       "content_hash": "bfa9de585f6cbad7",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10792,11 +11112,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a88561aec688530a",
       "content_hash": "b1da83a66e379219",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10825,11 +11146,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "17b03ce717ad6980",
       "content_hash": "6f3847f3b0a0acea",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10858,11 +11180,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4f6f1021908f38b2",
       "content_hash": "22ecc2dd8ed0a7c1",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10891,11 +11214,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c1f60c11543fedcd",
       "content_hash": "cc3f9ede12f1db38",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10924,11 +11248,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e61f7690d447f2b6",
       "content_hash": "c0e2eec0c1fbe0fd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10951,7 +11276,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78233",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331522501",
+      "clerk_url": "https://maps.bexar.org/foreclosures/",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -10960,8 +11285,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "dc8681fe183eff32",
-      "content_hash": "a74c45527dedaa6f",
-      "auction_date": "2026-12-01",
+      "content_hash": "a7ca1e66210413e8",
+      "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -10990,11 +11316,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e816385bf382e028",
       "content_hash": "4187887618ceca01",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11023,11 +11350,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6c5467d0cbd7b9aa",
       "content_hash": "94a4755b458be55e",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11056,11 +11384,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2b4e469939248a21",
       "content_hash": "123b8df98cadf9ae",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11089,11 +11418,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "61ade1be00293d82",
       "content_hash": "96c0ffa9c468f683",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11122,11 +11452,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "436728c5f3703292",
       "content_hash": "8cc539da739651b6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11155,11 +11486,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "445be3f62752f025",
       "content_hash": "349b3227319d0239",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11188,11 +11520,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7138c2c8f929384f",
       "content_hash": "1ea176dc04d60b8d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11221,11 +11554,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a8ae030560fe8940",
       "content_hash": "238d90084828e301",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -11254,11 +11588,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "db9439d00c24e29b",
       "content_hash": "9a13ce82950dfdbb",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11287,11 +11622,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d4549d2f4631a60e",
       "content_hash": "ac28ac3e91e89f98",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11314,7 +11650,7 @@
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
       "mail_zip": "78253",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/331588618",
+      "clerk_url": "https://maps.bexar.org/foreclosures/",
       "flags": [
         "Pre-foreclosure",
         "Has address"
@@ -11323,8 +11659,9 @@
       "status": "CHANGED",
       "first_seen": "2026-11-07",
       "rid": "237877b74510aa85",
-      "content_hash": "725d9fa9477aa8e1",
-      "auction_date": "2026-12-01",
+      "content_hash": "fd596cb06b0d3bad",
+      "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11353,11 +11690,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6f53b18c3c018ba9",
       "content_hash": "997d5532e8da747c",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11386,11 +11724,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4da60a78b1859f16",
       "content_hash": "6f2da227f5b7e3f3",
       "auction_date": "2026-11-03",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11419,11 +11758,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "219d4c30ff9120f6",
       "content_hash": "4cc498d7eee92772",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11452,11 +11792,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "79aeff44de808e73",
       "content_hash": "895885831e4aa23f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -11485,11 +11826,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f04ee5c8a4799e46",
       "content_hash": "f45f75e4b3981358",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -11518,11 +11860,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a8c3455929ada446",
       "content_hash": "8f3dfc8d3a818e11",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11551,11 +11894,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "20bb240f5be5bf26",
       "content_hash": "793e9ab530f0cc3f",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11584,11 +11928,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b16feca8adcc2628",
       "content_hash": "a0c0260fa4fb38aa",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11617,11 +11962,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cea35423ca4d3bc2",
       "content_hash": "431c0297320a73b2",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11650,11 +11996,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8f188b732d15d281",
       "content_hash": "8db871442d3e38f5",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11683,11 +12030,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "96a9979896ab55ba",
       "content_hash": "46ca623170520196",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11716,11 +12064,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6af349aa416a5d8d",
       "content_hash": "9174f2a0960f2eba",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -11749,11 +12098,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ab8f8125e99825d6",
       "content_hash": "746e2f446f9fc90c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11782,11 +12132,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ba650f8f87cac98b",
       "content_hash": "863bf05a8c2d8e4a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11815,11 +12166,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ccfdc025d4c43bc1",
       "content_hash": "4e755cb45fcdd27a",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11848,11 +12200,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "38a7ddd60e2661fd",
       "content_hash": "9d8bb5889dcc66e9",
       "auction_date": "2026-10-06",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11881,11 +12234,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7d37db6ad5050662",
       "content_hash": "29d17dc8d7212548",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -11914,11 +12268,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "42e83f05f4850c46",
       "content_hash": "30651ffc2ed0ef07",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11947,11 +12302,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "19886ec3fde20c53",
       "content_hash": "c0a3960f45e035ae",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -11980,11 +12336,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "64f2b4b2fb480fa8",
       "content_hash": "f76a9d1357decea0",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12013,11 +12370,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f48316fd6ef28926",
       "content_hash": "4415a8f66ed1b3dd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12046,11 +12404,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "19831338b621626c",
       "content_hash": "7939b44ff7cf6f97",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12079,11 +12438,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7b5d6fcf1e5c87ab",
       "content_hash": "0d2113aed118088d",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12112,11 +12472,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "26f2121163692c9d",
       "content_hash": "64ab93f4e10410dd",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12145,11 +12506,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d39d22ecec9b04c0",
       "content_hash": "85a19f70a3bf4bae",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12178,11 +12540,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "89c2a848e6c33d0a",
       "content_hash": "abecee2342cd9a0e",
       "auction_date": "2026-10-06",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -12211,11 +12574,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1c70c3d35b043be2",
       "content_hash": "f1046a020a7be867",
       "auction_date": "2026-09-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12244,11 +12608,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "db1fec818ad86d60",
       "content_hash": "1614e6cb2403b9f4",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12277,11 +12642,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3e0f97f207920a4d",
       "content_hash": "480f304663d75e1c",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
       "out_of_state": false
@@ -12310,11 +12676,12 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c9a2e3ad4d2935b8",
       "content_hash": "ee064aa22c71cdd6",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": true,
       "out_of_state": false
@@ -12343,46 +12710,14 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a02a591d758d3487",
       "content_hash": "29cc1ea1f593d039",
       "auction_date": "2026-12-01",
+      "cancelled_date": "",
       "cat_code": "FC",
       "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260213777",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "VELA VICTORIA",
-      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: SILOS #9B&9C Lot: 22 Block: 33 CBLK: 5752,, Reference - 20002 / 2552",
-      "prop_address": "7206 OX PL",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78252",
-      "mail_address": "110 BELLVIEW ST",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78209",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198497",
-      "flags": [
-        "Lis pendens",
-        "Has address"
-      ],
-      "score": 50,
-      "status": "CHANGED",
-      "first_seen": "2026-11-05",
-      "rid": "67cb49443de87a7f",
-      "content_hash": "b3fba45e3165d47a",
-      "auction_date": "",
-      "cat_code": "LP",
-      "absentee": true,
       "out_of_state": false
     },
     {
@@ -12409,46 +12744,48 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "ef2c99ddf7e8213a",
       "content_hash": "6b6edd35f4d4524e",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
     },
     {
-      "doc_num": "20260214048",
+      "doc_num": "20260213777",
       "doc_type": "LIS PENDENS",
       "cat": "foreclosure",
       "cat_label": "Lis Pendens",
       "filed": "2026-11-02",
-      "owner": "SMITH NICHOLAS VINCENT",
-      "grantee": "PROVINCIA VILLAS HOMEOWNERS ASSOCIATION",
+      "owner": "VELA VICTORIA",
+      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
       "amount": 0.0,
-      "legal": "Subdivision-  Name: PROVINCIA VILLAS Lot: 9 Block: 11 NCB: 16099,, Reference - 9560 / 31",
-      "prop_address": "6710 BISCAY BAY",
+      "legal": "Subdivision-  Name: SILOS #9B&9C Lot: 22 Block: 33 CBLK: 5752,, Reference - 20002 / 2552",
+      "prop_address": "7206 OX PL",
       "prop_city": "SAN ANTONIO",
       "prop_state": "TX",
-      "prop_zip": "78249",
-      "mail_address": "6710 BISCAY BAY",
+      "prop_zip": "78252",
+      "mail_address": "110 BELLVIEW ST",
       "mail_city": "SAN ANTONIO",
       "mail_state": "TX",
-      "mail_zip": "78249",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201025",
+      "mail_zip": "78209",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198497",
       "flags": [
         "Lis pendens",
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
-      "rid": "7a3e355dfb6f25a4",
-      "content_hash": "ae3e2cc8ba3e9388",
+      "rid": "67cb49443de87a7f",
+      "content_hash": "b3fba45e3165d47a",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
-      "absentee": false,
+      "absentee": true,
       "out_of_state": false
     },
     {
@@ -12475,11 +12812,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "72550e78608eeac0",
       "content_hash": "254f6b1b6db99fa4",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -12508,11 +12846,46 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "dc2465ea6750e947",
       "content_hash": "460e59c2c8b8a202",
       "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260214048",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "SMITH NICHOLAS VINCENT",
+      "grantee": "PROVINCIA VILLAS HOMEOWNERS ASSOCIATION",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: PROVINCIA VILLAS Lot: 9 Block: 11 NCB: 16099,, Reference - 9560 / 31",
+      "prop_address": "6710 BISCAY BAY",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78249",
+      "mail_address": "6710 BISCAY BAY",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78249",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201025",
+      "flags": [
+        "Lis pendens",
+        "Has address"
+      ],
+      "score": 50,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "7a3e355dfb6f25a4",
+      "content_hash": "ae3e2cc8ba3e9388",
+      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12541,11 +12914,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "765b24c4bb2b7e57",
       "content_hash": "a07fb0f0a2574938",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12574,11 +12948,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "692f56bd946f744e",
       "content_hash": "bcb76a765e78e237",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -12607,11 +12982,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "c61aee6079d033a7",
       "content_hash": "9bc97b3aa34547b8",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false
@@ -12640,11 +13016,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "9786802141870133",
       "content_hash": "a094b9c2f7aee2f3",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12673,77 +13050,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "f1e6c9c54bdaa36c",
       "content_hash": "45e5dafb98414bd5",
       "auction_date": "",
-      "cat_code": "LP",
-      "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260214040",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "ZAFAR NAUSHAD",
-      "grantee": "HUNTINGTON HOMEOWNERS ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: SHAVANO PARK #19C Lot: 2163 Block: 35, Reference - 20001 / 335",
-      "prop_address": "148 KINNAN WAY",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78231",
-      "mail_address": "239 WINDING LN",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78231",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201075",
-      "flags": [
-        "Lis pendens",
-        "Has address"
-      ],
-      "score": 50,
-      "status": "CHANGED",
-      "first_seen": "2026-11-05",
-      "rid": "528ac75cb6b1e22f",
-      "content_hash": "0e2fde8aeb1136a6",
-      "auction_date": "",
-      "cat_code": "LP",
-      "absentee": true,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260213774",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "AULD BASHIR NATHANIEL",
-      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: SILOS #2C,3C Lot: 22 Block: 9 CBLK: 5752,, Reference - 20001 / 2427",
-      "prop_address": "6724 BEEHIVE DR",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78252",
-      "mail_address": "6724 BEEHIVE DR",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78252",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198474",
-      "flags": [
-        "Lis pendens",
-        "Has address"
-      ],
-      "score": 50,
-      "status": "CHANGED",
-      "first_seen": "2026-11-05",
-      "rid": "4b8accc0278e426f",
-      "content_hash": "7d84974be43c2029",
-      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12772,11 +13084,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "074b82e9d9ffa529",
       "content_hash": "3d9ed4b27e526488",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12805,11 +13118,46 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "50945ca99a0c8596",
       "content_hash": "d0425dc6d8e9bfc3",
       "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260213774",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "AULD BASHIR NATHANIEL",
+      "grantee": "SILOS COMMUNITY ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: SILOS #2C,3C Lot: 22 Block: 9 CBLK: 5752,, Reference - 20001 / 2427",
+      "prop_address": "6724 BEEHIVE DR",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78252",
+      "mail_address": "6724 BEEHIVE DR",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78252",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332198474",
+      "flags": [
+        "Lis pendens",
+        "Has address"
+      ],
+      "score": 50,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "4b8accc0278e426f",
+      "content_hash": "7d84974be43c2029",
+      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12838,13 +13186,48 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "7bec41a11a4d8000",
       "content_hash": "d7be538543eba623",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260214040",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "ZAFAR NAUSHAD",
+      "grantee": "HUNTINGTON HOMEOWNERS ASSOCIATION INC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: SHAVANO PARK #19C Lot: 2163 Block: 35, Reference - 20001 / 335",
+      "prop_address": "148 KINNAN WAY",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78231",
+      "mail_address": "239 WINDING LN",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78231",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332201075",
+      "flags": [
+        "Lis pendens",
+        "Has address"
+      ],
+      "score": 50,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "528ac75cb6b1e22f",
+      "content_hash": "0e2fde8aeb1136a6",
+      "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": true,
       "out_of_state": false
     },
     {
@@ -12871,11 +13254,12 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "1a4e95abc9d5085e",
       "content_hash": "ee2e8744562fe0eb",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
       "out_of_state": false
@@ -12904,46 +13288,14 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "980b649969dc57ce",
       "content_hash": "e04f92489eac0019",
       "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": false,
-      "out_of_state": false
-    },
-    {
-      "doc_num": "20260214004",
-      "doc_type": "LIS PENDENS",
-      "cat": "foreclosure",
-      "cat_label": "Lis Pendens",
-      "filed": "2026-11-02",
-      "owner": "HERNANDEZ DANNY",
-      "grantee": "CARRINGTON MORTGAGE SERVICES LLC",
-      "amount": 0.0,
-      "legal": "Subdivision-  Name: KAHN & GRAY Lot: 37 Block: 16 NCB: 10743,, Reference - - / 232",
-      "prop_address": "144 ROESLER ROAD",
-      "prop_city": "SAN ANTONIO",
-      "prop_state": "TX",
-      "prop_zip": "78220",
-      "mail_address": "144 ROESLER RD",
-      "mail_city": "SAN ANTONIO",
-      "mail_state": "TX",
-      "mail_zip": "78220",
-      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332200589",
-      "flags": [
-        "Lis pendens",
-        "Has address"
-      ],
-      "score": 50,
-      "status": "CHANGED",
-      "first_seen": "2026-11-05",
-      "rid": "54ae535eeebb5cd7",
-      "content_hash": "265b2c984fd6d082",
-      "auction_date": "",
-      "cat_code": "LP",
-      "absentee": true,
       "out_of_state": false
     },
     {
@@ -12970,11 +13322,46 @@
         "Has address"
       ],
       "score": 50,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-05",
       "rid": "16484aa859920bc9",
       "content_hash": "4f809886fef021d7",
       "auction_date": "",
+      "cancelled_date": "",
+      "cat_code": "LP",
+      "absentee": true,
+      "out_of_state": false
+    },
+    {
+      "doc_num": "20260214004",
+      "doc_type": "LIS PENDENS",
+      "cat": "foreclosure",
+      "cat_label": "Lis Pendens",
+      "filed": "2026-11-02",
+      "owner": "HERNANDEZ DANNY",
+      "grantee": "CARRINGTON MORTGAGE SERVICES LLC",
+      "amount": 0.0,
+      "legal": "Subdivision-  Name: KAHN & GRAY Lot: 37 Block: 16 NCB: 10743,, Reference - - / 232",
+      "prop_address": "144 ROESLER ROAD",
+      "prop_city": "SAN ANTONIO",
+      "prop_state": "TX",
+      "prop_zip": "78220",
+      "mail_address": "144 ROESLER RD",
+      "mail_city": "SAN ANTONIO",
+      "mail_state": "TX",
+      "mail_zip": "78220",
+      "clerk_url": "https://bexar.tx.publicsearch.us/doc/332200589",
+      "flags": [
+        "Lis pendens",
+        "Has address"
+      ],
+      "score": 50,
+      "status": "EXISTING",
+      "first_seen": "2026-11-05",
+      "rid": "54ae535eeebb5cd7",
+      "content_hash": "265b2c984fd6d082",
+      "auction_date": "",
+      "cancelled_date": "",
       "cat_code": "LP",
       "absentee": true,
       "out_of_state": false

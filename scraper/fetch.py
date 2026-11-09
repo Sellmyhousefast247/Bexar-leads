@@ -792,7 +792,17 @@ def _addr_key(addr: str) -> tuple:
     return num, rest
 
 
+_ARC_ERRS = 0
+
+
 def _arcgis_query(session, where: str, count: int = 5) -> list:
+    """Query the parcel layer with retry/backoff.
+
+    Under sustained per-record lookups the service intermittently rejects
+    requests (HTTP errors or a 200 carrying an {'error': ...} payload). The
+    old code swallowed those as 'no match', which silently zeroed owner
+    enrichment for every record late in the queue."""
+    global _ARC_ERRS
     params = {
         "where": where,
         "outFields": "Owner,Situs,AddrLn1,AddrLn2,AddrCity,AddrSt,Zip,TotVal,YrBlt",
@@ -800,12 +810,20 @@ def _arcgis_query(session, where: str, count: int = 5) -> list:
         "f": "json",
         "resultRecordCount": count,
     }
-    try:
-        r = session.get(PARCEL_API_URL, params=params, timeout=REQUEST_TIMEOUT)
-        return r.json().get("features", []) or []
-    except Exception as exc:
-        log.debug("ArcGIS query error: %s", exc)
-        return []
+    for attempt in range(3):
+        try:
+            r = session.get(PARCEL_API_URL, params=params, timeout=REQUEST_TIMEOUT)
+            data = r.json()
+            if isinstance(data, dict) and "error" in data:
+                raise RuntimeError(str(data["error"])[:120])
+            return data.get("features", []) or []
+        except Exception as exc:
+            _ARC_ERRS += 1
+            if attempt < 2:
+                time.sleep(2.0 * (attempt + 1))
+            else:
+                log.debug("ArcGIS query failed after retries: %s", exc)
+    return []
 
 
 def enrich_parcels(records: list, use_bcad: bool = True) -> None:
@@ -833,7 +851,7 @@ def enrich_parcels(records: list, use_bcad: bool = True) -> None:
             if ms:
                 rec.mail_address, rec.mail_city, rec.mail_state, rec.mail_zip = ms, mc, mst, mz
                 owner_hits += 1
-        time.sleep(0.12)
+        time.sleep(0.2)
     log.info("ArcGIS owner-lookup: %d mailing fills", owner_hits)
 
     # PASS 2 — reverse by address: records that have a property address but no
@@ -857,8 +875,10 @@ def enrich_parcels(records: list, use_bcad: bool = True) -> None:
                 ms, mc, mst, mz = _mailing_from_parcel(att)
                 if ms:
                     rec.mail_address, rec.mail_city, rec.mail_state, rec.mail_zip = ms, mc, mst, mz
-        time.sleep(0.12)
+        time.sleep(0.2)
     log.info("ArcGIS address-lookup: %d owner fills", addr_hits)
+    if _ARC_ERRS:
+        log.warning("ArcGIS query errors during enrichment (after retries): %d", _ARC_ERRS)
 
     # BCAD fallback
     if not use_bcad:

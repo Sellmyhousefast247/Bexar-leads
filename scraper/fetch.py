@@ -1112,6 +1112,19 @@ def write_outputs(records: list, start: datetime, end: datetime) -> None:
     log.info("Skip trace CSV written: %s (%d records)", skip_path, len(records))
 
 
+def _fc_split_address(raw: str) -> tuple:
+    """Split an FC-grid address ('STREET, CITY, TX 78201') into
+    (street, city, zip). The grid puts state+zip in one comma segment,
+    which ClerkScraper._parse_address mis-handles."""
+    raw = (raw or "").strip()
+    if not raw or raw.upper() in ("N/A", "NA"):
+        return "", "", ""
+    m = re.match(r"^(.*?),\s*(.*?),?\s*TX\.?\s*(\d{5})?(?:-\d{4})?\s*$", raw, re.I)
+    if m:
+        return m.group(1).strip(), m.group(2).strip().rstrip(","), (m.group(3) or "")
+    return raw, "", ""
+
+
 def carry_cancelled(records: list) -> list:
     """Detect cancelled foreclosure sales by disappearance.
 
@@ -1240,7 +1253,7 @@ def main() -> None:
         sale = e.get("sale") or ""
         if len(sale) != 10 or sale < today_s:
             continue
-        street, fc_city, fc_zip = ClerkScraper._parse_address(e.get("address") or "")
+        street, fc_city, fc_zip = _fc_split_address(e.get("address") or "")
         rec = LeadRecord(
             doc_num=dn,
             doc_type="FORECLOSURE_POSTING",

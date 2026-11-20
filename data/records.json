@@ -1,13 +1,13 @@
 {
-  "fetched_at": "2026-11-19T21:25:23.563913",
+  "fetched_at": "2026-11-20T21:12:12.820527",
   "county": "Bexar",
   "source": "Bexar County, TX -- Clerk Portal + Parcel API + BCAD",
   "date_range": {
-    "start": "2026-11-12",
-    "end": "2026-11-19"
+    "start": "2026-11-13",
+    "end": "2026-11-20"
   },
   "total": 703,
-  "new_7d": 29,
+  "new_7d": 17,
   "with_address": 703,
   "by_cat": {
     "FC": 684,
@@ -12110,7 +12110,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6614dd5f4bc7e905",
       "content_hash": "cbb784a67f36f4d5",
@@ -12144,7 +12144,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "125ef9c365e20b20",
       "content_hash": "8ef5ae57da489074",
@@ -12178,7 +12178,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "29818da1fe23b9b0",
       "content_hash": "365cc88260701329",
@@ -12212,7 +12212,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2329978633cdc0ca",
       "content_hash": "6affb859c4949039",
@@ -12246,7 +12246,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9e4da7e7f1a388e2",
       "content_hash": "4bd6cdf2edf3bced",
@@ -12280,7 +12280,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "16f82d541bbfb24f",
       "content_hash": "03b44f725143990d",
@@ -12314,7 +12314,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9d979165781957ea",
       "content_hash": "782e462090250c64",
@@ -12348,7 +12348,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b2a8a13bb70f2dd1",
       "content_hash": "6067e5a81790b6a4",
@@ -12382,7 +12382,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5d916e685ec86187",
       "content_hash": "45aa48ffdcc4a490",
@@ -12416,7 +12416,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f5019bf9ec6fb76f",
       "content_hash": "b0538c4a8c719262",
@@ -12450,7 +12450,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d26e17958f9979fa",
       "content_hash": "41e38ff1e715722e",
@@ -12484,7 +12484,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "aa14183a6212d58b",
       "content_hash": "a33013ab0ba5b040",
@@ -12518,7 +12518,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "79ac3fe13dd91407",
       "content_hash": "1fcf825f73c8b48a",
@@ -12552,7 +12552,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4389cbcafd2c91e5",
       "content_hash": "991ac0f4499a84c6",
@@ -12586,7 +12586,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6901008bd12db477",
       "content_hash": "6f4f93dab8830edd",
@@ -12620,7 +12620,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "11733ff68d33c375",
       "content_hash": "f54889948fab0782",
@@ -12654,7 +12654,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a667bb362642ef04",
       "content_hash": "8d704c203b42f5ff",
@@ -12688,7 +12688,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a66a2caa3f3c7ab2",
       "content_hash": "ab1b195c0b4f478d",
@@ -12722,7 +12722,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7a8bcaf8a7c1c6e1",
       "content_hash": "59c913e1dd65db1a",
@@ -12756,7 +12756,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5d5db98eee76568d",
       "content_hash": "b0e8e127d68310f6",
@@ -12790,7 +12790,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "af4306c5f244a276",
       "content_hash": "e14aea2baf82aa44",
@@ -12824,7 +12824,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "49bebfffb6868998",
       "content_hash": "30a8c86ec87856df",
@@ -12858,7 +12858,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7a5f8f85806e6bc8",
       "content_hash": "f5b59c21cf66f0db",
@@ -12892,7 +12892,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "81936b0df8388e34",
       "content_hash": "de16d5b59f60f549",
@@ -12926,7 +12926,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "fd1fa60918bfa680",
       "content_hash": "8d33491aff5a6fb7",
@@ -12960,7 +12960,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a198178d452caff6",
       "content_hash": "acb71957f7720c29",
@@ -12994,7 +12994,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "111df5acedda64ee",
       "content_hash": "85869972fdd40aa9",
@@ -13028,7 +13028,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "33c69abceda59207",
       "content_hash": "a849ef132eacc562",
@@ -13062,7 +13062,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "232b09c4de0410ca",
       "content_hash": "cdac7d994e1c8aa6",
@@ -13096,7 +13096,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3c5a3b9700fb2228",
       "content_hash": "cbce4c469a8e84a6",
@@ -13130,7 +13130,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "40e66c0af1f03a92",
       "content_hash": "2c6d163e1b5347e2",
@@ -13164,7 +13164,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0d40636d08d5babc",
       "content_hash": "aa47695b00f726a1",
@@ -13198,7 +13198,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d3fb2937cdbab826",
       "content_hash": "ab7bb08715dd4c43",
@@ -13232,7 +13232,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3f874a431a4ccc25",
       "content_hash": "16acc93651276740",
@@ -13266,7 +13266,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8a173d737f38f2b7",
       "content_hash": "5f316247c9087bf6",
@@ -13300,7 +13300,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d3f016f7e721a120",
       "content_hash": "fb884a833a60abc8",
@@ -13334,7 +13334,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "9e1aee703a5a069a",
       "content_hash": "a1d824a0b3411c63",
@@ -13368,7 +13368,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f783e3bd9548eeda",
       "content_hash": "14c2f2d43812a82e",
@@ -13402,7 +13402,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "76f0dc18648feb88",
       "content_hash": "79a77071da68b198",
@@ -13436,7 +13436,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "fc38d322083f6e01",
       "content_hash": "f573ed0f771ff91c",
@@ -13470,7 +13470,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6253c67cd77bd066",
       "content_hash": "1b4a50849eaeb554",
@@ -13504,7 +13504,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "717bff375b70089d",
       "content_hash": "229f8dfadb55ef8d",
@@ -13538,7 +13538,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c9b3e0f64128e052",
       "content_hash": "d5d852c724481cad",
@@ -13572,7 +13572,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3cc8e1d5e3898e3f",
       "content_hash": "e53f46b3ed38ed2e",
@@ -13606,7 +13606,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5a33ebadc7357a51",
       "content_hash": "a98d1ec3c174f68c",
@@ -13640,7 +13640,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ea8bcc6aa786404e",
       "content_hash": "7518ed030f79e875",
@@ -13674,7 +13674,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ab87149b32095311",
       "content_hash": "e88c3cb8fdbda4b6",
@@ -13708,7 +13708,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "178ce604da42982b",
       "content_hash": "ba16f0c90053df0f",
@@ -13742,7 +13742,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7609dffb0f6a401c",
       "content_hash": "a4d30eee8d09f5c6",
@@ -13776,7 +13776,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5ab7815bdb8f94c1",
       "content_hash": "3e52eec85158cf6c",
@@ -13810,7 +13810,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "dffd1115b4890d8c",
       "content_hash": "548ba7794109faa3",
@@ -13844,7 +13844,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1b560e6bd799b7fe",
       "content_hash": "4f6790c0369df91a",
@@ -13878,7 +13878,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "51c8ec91d53bb5a7",
       "content_hash": "c87c7b30c74d66b3",
@@ -13912,7 +13912,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "93df648f87ef298c",
       "content_hash": "22034eed7c020798",
@@ -13946,7 +13946,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c16b48e95a360f73",
       "content_hash": "588d7f94c025c434",
@@ -13980,7 +13980,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "18739504b98b6984",
       "content_hash": "42f2d12e91608a23",
@@ -14014,7 +14014,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5bafcdf061fa6c65",
       "content_hash": "6497a44b63a630a3",
@@ -14048,7 +14048,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "92cad19d88dd0a9d",
       "content_hash": "b39e69ac94fc2c52",
@@ -14082,7 +14082,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b6d9eb28d81cf270",
       "content_hash": "52323fc7af5e1862",
@@ -14116,7 +14116,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a057e4bddea696e1",
       "content_hash": "ebdfb77b53882a7e",
@@ -14150,7 +14150,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "dd2a45a503cd8042",
       "content_hash": "e0028ed518926870",
@@ -14184,7 +14184,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c42c791f280bae41",
       "content_hash": "81905420842bf556",
@@ -14218,7 +14218,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a2082a7ce285b30e",
       "content_hash": "85e58c449dc34805",
@@ -14252,7 +14252,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a24e2dc3d044ec76",
       "content_hash": "40267d13ad1a16dc",
@@ -14286,7 +14286,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "11fc4e03550f1e9b",
       "content_hash": "feeb9d99432effcf",
@@ -14320,7 +14320,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e0f20f1d5dcc52e7",
       "content_hash": "5390c50de1ae0949",
@@ -14354,7 +14354,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "96664e241f016213",
       "content_hash": "460ee45bda621f56",
@@ -14388,7 +14388,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "0c276291065cbb25",
       "content_hash": "0c7d3d2bca57e617",
@@ -14422,7 +14422,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "69df58af8b42b6c8",
       "content_hash": "a547ec99f5fea74a",
@@ -14456,7 +14456,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "789b3c0fdc9e1812",
       "content_hash": "d085df5570af1106",
@@ -14490,7 +14490,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d7add1b3d7eaebef",
       "content_hash": "c7315e7a53b06762",
@@ -14524,7 +14524,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "81738703353b6790",
       "content_hash": "19979bc9663a99c1",
@@ -14558,7 +14558,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc80c910148f59cc",
       "content_hash": "808cfd18e94e6f42",
@@ -14592,7 +14592,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "31ae54e86900fb9b",
       "content_hash": "bee6328094ca7a2d",
@@ -14626,7 +14626,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4e2d1abb42aa06ed",
       "content_hash": "a0f107c96d74d294",
@@ -14660,7 +14660,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a0623e1328326220",
       "content_hash": "af1c6a4493313c3d",
@@ -14694,7 +14694,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ea3d4d4c1256fe67",
       "content_hash": "0286e445982ff89a",
@@ -14728,7 +14728,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f4408e8052835207",
       "content_hash": "e769d17389bad514",
@@ -14762,7 +14762,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8fb77b4700a0653e",
       "content_hash": "92753c3d983267bf",
@@ -14796,7 +14796,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5f864c99c89eac6f",
       "content_hash": "129f1c27b0f2fc81",
@@ -14830,7 +14830,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc52c75a8918833c",
       "content_hash": "22ee6c97e49df4ec",
@@ -14864,7 +14864,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ec155ac8a1db4285",
       "content_hash": "e5fa1866d261d7dd",
@@ -14898,7 +14898,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cde0f7b0ece29c9a",
       "content_hash": "880f033c09ea1ea5",
@@ -14932,7 +14932,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2f42de7065f6f68f",
       "content_hash": "ccb637468f5c8793",
@@ -14966,7 +14966,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bba3a146c0c0b3c7",
       "content_hash": "33dbf32e233e3d33",
@@ -15000,7 +15000,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7eeeedb53c39c74b",
       "content_hash": "d762e6c985f65f4f",
@@ -15034,7 +15034,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b3062adebdf0d88a",
       "content_hash": "da87bf4a76859bd8",
@@ -15068,7 +15068,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d6c8dd7ad62f2a8f",
       "content_hash": "248d4c9308a6299a",
@@ -15102,7 +15102,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4c53e3b7e49209a5",
       "content_hash": "e9cba34d9b29f7b7",
@@ -15136,7 +15136,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6ee7e329c82bad96",
       "content_hash": "e50e5ccf2857355a",
@@ -15170,7 +15170,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cf7b0a09540831cb",
       "content_hash": "4025795320d3fc99",
@@ -15204,7 +15204,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "246f3e86e3fb901f",
       "content_hash": "6613a19518c2f0fa",
@@ -15238,7 +15238,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "64b0f84029bc92d4",
       "content_hash": "a06244e681e1575e",
@@ -15272,7 +15272,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "bc4aa6c0f28bc586",
       "content_hash": "45dd64d7b187fddf",
@@ -15306,7 +15306,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "fd487c1d70219bd8",
       "content_hash": "79caa19c9d15fff3",
@@ -15340,7 +15340,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f12b1e9d66385562",
       "content_hash": "e07a0fc441e681be",
@@ -15374,7 +15374,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e332ea88d9ce8067",
       "content_hash": "19a31bdbbb702bc1",
@@ -15408,7 +15408,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cf8f9e94c0d93207",
       "content_hash": "74cc52de091b9f02",
@@ -15442,7 +15442,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c1b8bfce8bb9ccfa",
       "content_hash": "98a97fcc2d80a011",
@@ -15476,7 +15476,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2fc25680ebb9a81e",
       "content_hash": "bc84c060da6da51b",
@@ -15510,7 +15510,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "458bacfb554af2cd",
       "content_hash": "addb7488dd7db00f",
@@ -15544,7 +15544,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1f3aebcbc2567c85",
       "content_hash": "3bc3208ed87af9bb",
@@ -15578,7 +15578,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7feaaef2a712eb2b",
       "content_hash": "142a5fc3608a752d",
@@ -15612,7 +15612,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "31a1152bb2f7baf7",
       "content_hash": "e7144de66ce7dad5",
@@ -15646,7 +15646,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "5e0bea110b589b1c",
       "content_hash": "07aba4497122db81",
@@ -15680,7 +15680,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8bd9226fb6e567f0",
       "content_hash": "03732e4823f8618d",
@@ -15714,7 +15714,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1d699a1f79e278ba",
       "content_hash": "a3489e07d654de28",
@@ -15748,7 +15748,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "73b3d14dcaac81eb",
       "content_hash": "6e55d90586577b85",
@@ -15782,7 +15782,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e2e6bccd7e133619",
       "content_hash": "8590b2d5e85f782c",
@@ -15816,7 +15816,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b75fed157ed20bb3",
       "content_hash": "911b7422c0be6deb",
@@ -15850,7 +15850,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8f1dae7f33e918d9",
       "content_hash": "e8051d6a15f1cb95",
@@ -15884,7 +15884,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d1c2c7845b35ab8a",
       "content_hash": "9037115fb28fb967",
@@ -15918,7 +15918,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e260e78d824bbdfc",
       "content_hash": "6515337e0bd5bb2c",
@@ -15952,7 +15952,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f82520ce6d3d2c7c",
       "content_hash": "bf8daf2991641941",
@@ -15986,7 +15986,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "57a9e451177de0e7",
       "content_hash": "fe9717d8553f8bb2",
@@ -16020,7 +16020,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "df822351af5dd669",
       "content_hash": "0b0ec83069e08fa2",
@@ -16054,7 +16054,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7ba15507be32dac2",
       "content_hash": "e06b104ee186ac2b",
@@ -16088,7 +16088,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "51b52282eef1278f",
       "content_hash": "edfbbb4aa8ef2dc2",
@@ -16122,7 +16122,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1b17fb6f2b542baf",
       "content_hash": "bdc1c38aa35185e3",
@@ -16156,7 +16156,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ec6805008cbaeb45",
       "content_hash": "305c6d7dd5be14f7",
@@ -16190,7 +16190,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "81c8c18f2058beea",
       "content_hash": "e082cb7bd8122eeb",
@@ -16224,7 +16224,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b0eb60964a6fa3f1",
       "content_hash": "71c83649f08a8cd8",
@@ -16258,7 +16258,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "780201756eb1221d",
       "content_hash": "cebcdfaa8a902488",
@@ -16292,7 +16292,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a51e64f7b74d8ce3",
       "content_hash": "bf009de44c3f15ae",
@@ -16326,7 +16326,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1237ecae870d8318",
       "content_hash": "ed914bbc790bba57",
@@ -16360,7 +16360,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b470b17f1bc179ce",
       "content_hash": "a35eea53ac1c1b8d",
@@ -16394,7 +16394,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b0fefbf12c2ab52c",
       "content_hash": "53819365af8ee01f",
@@ -16428,7 +16428,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2c4e05e410676a07",
       "content_hash": "3c5b4f5776b29e62",
@@ -16462,7 +16462,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e3a2ff26f97f6ca6",
       "content_hash": "165a9c69f857cb7c",
@@ -16496,7 +16496,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6c5a1d37c96fe3bf",
       "content_hash": "cddc78843e8411b0",
@@ -16530,7 +16530,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a145e2d578c6e10b",
       "content_hash": "c83d6ef1325b01b1",
@@ -16564,7 +16564,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a88561aec688530a",
       "content_hash": "aa8c1f1a57a1569f",
@@ -16598,7 +16598,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "17b03ce717ad6980",
       "content_hash": "e91beabe6584e60a",
@@ -16632,7 +16632,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4f6f1021908f38b2",
       "content_hash": "22022c996337fc62",
@@ -16666,7 +16666,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c1f60c11543fedcd",
       "content_hash": "616661e3a466d686",
@@ -16700,7 +16700,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e61f7690d447f2b6",
       "content_hash": "93fe0f5c7b0f5195",
@@ -16734,7 +16734,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "dc8681fe183eff32",
       "content_hash": "a7ca1e66210413e8",
@@ -16768,7 +16768,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "e816385bf382e028",
       "content_hash": "fb71cbfd66f6514e",
@@ -16802,7 +16802,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6c5467d0cbd7b9aa",
       "content_hash": "8a642652e0188165",
@@ -16836,7 +16836,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "2b4e469939248a21",
       "content_hash": "51d4a2647dc9b5b3",
@@ -16870,7 +16870,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "61ade1be00293d82",
       "content_hash": "b974a5a7bc70d84f",
@@ -16904,7 +16904,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "436728c5f3703292",
       "content_hash": "2648c9c4684538c6",
@@ -16938,7 +16938,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "445be3f62752f025",
       "content_hash": "c977057c7386d26a",
@@ -16972,7 +16972,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7138c2c8f929384f",
       "content_hash": "2ec299a000968f01",
@@ -17006,7 +17006,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a8ae030560fe8940",
       "content_hash": "238d90084828e301",
@@ -17040,7 +17040,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "db9439d00c24e29b",
       "content_hash": "9a13ce82950dfdbb",
@@ -17074,7 +17074,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d4549d2f4631a60e",
       "content_hash": "ac28ac3e91e89f98",
@@ -17108,7 +17108,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "237877b74510aa85",
       "content_hash": "fd596cb06b0d3bad",
@@ -17142,7 +17142,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6f53b18c3c018ba9",
       "content_hash": "997d5532e8da747c",
@@ -17176,7 +17176,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "4da60a78b1859f16",
       "content_hash": "6f2da227f5b7e3f3",
@@ -17210,7 +17210,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "219d4c30ff9120f6",
       "content_hash": "2d4a33256c5f5406",
@@ -17244,7 +17244,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "79aeff44de808e73",
       "content_hash": "cab8fc9ecddda7c1",
@@ -17278,7 +17278,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f04ee5c8a4799e46",
       "content_hash": "7d21820fbb8c3c99",
@@ -17312,7 +17312,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a8c3455929ada446",
       "content_hash": "f7350a6c554b0d29",
@@ -17346,7 +17346,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "20bb240f5be5bf26",
       "content_hash": "c7fcab99d0073069",
@@ -17380,7 +17380,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "b16feca8adcc2628",
       "content_hash": "778290edb92813fe",
@@ -17414,7 +17414,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "cea35423ca4d3bc2",
       "content_hash": "97bb446c14d1089b",
@@ -17448,7 +17448,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "8f188b732d15d281",
       "content_hash": "53d5d5a5980b5b75",
@@ -17482,7 +17482,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "96a9979896ab55ba",
       "content_hash": "92d554205d4416d9",
@@ -17516,7 +17516,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "6af349aa416a5d8d",
       "content_hash": "49671fd5ca908a7d",
@@ -17550,7 +17550,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ab8f8125e99825d6",
       "content_hash": "761f5a5ce1d62b81",
@@ -17584,7 +17584,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ba650f8f87cac98b",
       "content_hash": "a0eacb39c0353c2f",
@@ -17618,7 +17618,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "ccfdc025d4c43bc1",
       "content_hash": "4ee7436907ca45ac",
@@ -17652,7 +17652,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "38a7ddd60e2661fd",
       "content_hash": "9d8bb5889dcc66e9",
@@ -17686,7 +17686,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7d37db6ad5050662",
       "content_hash": "840d5b866286203c",
@@ -17720,7 +17720,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "42e83f05f4850c46",
       "content_hash": "129afd1681e2815c",
@@ -17754,7 +17754,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "19886ec3fde20c53",
       "content_hash": "4c9947d3dec10d77",
@@ -17788,7 +17788,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "64f2b4b2fb480fa8",
       "content_hash": "845eb1530f33778c",
@@ -17822,7 +17822,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "f48316fd6ef28926",
       "content_hash": "38c6cde975c22dae",
@@ -17856,7 +17856,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "19831338b621626c",
       "content_hash": "01fd53fbaca0c649",
@@ -17890,7 +17890,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "7b5d6fcf1e5c87ab",
       "content_hash": "c312e55094d68084",
@@ -17924,7 +17924,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "26f2121163692c9d",
       "content_hash": "8304d52d8367bb64",
@@ -17958,7 +17958,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "d39d22ecec9b04c0",
       "content_hash": "449b01ea92754329",
@@ -17992,7 +17992,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "89c2a848e6c33d0a",
       "content_hash": "abecee2342cd9a0e",
@@ -18026,7 +18026,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "1c70c3d35b043be2",
       "content_hash": "02a3a67120aeccad",
@@ -18060,7 +18060,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "db1fec818ad86d60",
       "content_hash": "fbbb66642b6cb660",
@@ -18094,7 +18094,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "3e0f97f207920a4d",
       "content_hash": "9fea2249c37dd8d0",
@@ -18128,7 +18128,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "c9a2e3ad4d2935b8",
       "content_hash": "5c7d072b3dcd1a28",
@@ -18162,7 +18162,7 @@
         "Has address"
       ],
       "score": 55,
-      "status": "CHANGED",
+      "status": "EXISTING",
       "first_seen": "2026-11-07",
       "rid": "a02a591d758d3487",
       "content_hash": "32de05290b043535",

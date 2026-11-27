@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-11-26T22:21:31.681498",
+  "fetched_at": "2026-11-27T22:04:26.937958",
   "county": "Bexar",
   "source": "Bexar County, TX -- Clerk Portal + Parcel API + BCAD",
   "date_range": {
-    "start": "2026-11-19",
-    "end": "2026-11-26"
+    "start": "2026-11-20",
+    "end": "2026-11-27"
   },
   "total": 703,
   "new_7d": 0,
